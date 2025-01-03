@@ -17,7 +17,7 @@
 
         #logo {
             position: absolute;
-            top: 10%;
+            top: 20%;
             left: 50%;
             transform: translate(-50%, -50%);
             opacity: 0;
@@ -75,6 +75,33 @@
                 margin: 5px;
                 padding: 5px;
             }
+
+
+            @media only screen and (max-width: 600px) {
+            #logo {
+                width: 60%; /* Adjust as needed */
+                height: auto; /* Maintain aspect ratio */
+            }
+
+            #text {
+                font-size: 12px; /* Adjust as needed */
+                width: 50%; /* Adjust as needed */
+                margin-left: 5%; /* Center align */
+            }
+
+            #inputContainer {
+                left: 50%; /* Center align */
+                transform: translateX(-50%);
+            }
+
+            div[style*="position: fixed; bottom: 20px;"] {
+                width: 100%;
+                text-align: center;
+            }
+            }
+
+
+
     </style>
 </head>
 <body>
@@ -406,9 +433,9 @@
         }
 
         #text {
-            font-size: 20px; /* Adjust as needed */
+            font-size: 12px; /* Adjust as needed */
             width: 50%; /* Adjust as needed */
-            margin-left: 10%; /* Center align */
+            margin-left: 5%; /* Center align */
         }
 
         #inputContainer {
