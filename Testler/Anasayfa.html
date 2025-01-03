@@ -449,3 +449,81 @@
         }
     }
 </style></style>
+
+
+
+
+<script>/* Ekran çift tıklama ve zirve hareketler */
+    document.addEventListener('dblclick', function(event) {
+        var height = window.innerHeight;
+        var y = event.clientY;
+
+        if (y < height * 0.33) {
+            changeLogo();
+        } else if (y < height * 0.66) {
+            changeText();
+        } else {
+            changeBackground();
+        }
+    });
+
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault();
+        var width = window.innerWidth;
+        var x = event.clientX;
+
+        if (x > width / 2) {
+            nextContent();
+        } else {
+            previousContent();
+        }
+    });
+
+    function changeLogo() {
+        var logoImages = [
+            'https://psv4.userapi.com/s/v1/d/qINF9Yd65pxPkU--vl7EGsVsdYuPqltZSdcZxRY1xDEBH-6twXkrygKq_JoebTyHxfdrO4YWd-xFSaiRI4wY8Yib7O-J7G1rvxz3R9hs-koukclwEn3vfA/LogoMorAylinSema.png',
+            'https://psv4.userapi.com/s/v1/d/VNm7q-1w47-yLWm22d-0pneFFF8xZPunmNnjSLdvyECHJEAlyKSUWp9fTaDuhL8wedOhVtkNPcq2dFldX73ABBRoqwvd--Q5ZOm9mDNICvmi_JPO0x3ing/AylinSemaLogoBeyaz3.png'
+        ];
+        var currentLogo = document.getElementById('logo').src;
+        var currentIndex = logoImages.indexOf(currentLogo);
+        var nextIndex = (currentIndex + 1) % logoImages.length;
+        document.getElementById('logo').src = logoImages[nextIndex];
+        localStorage.setItem('logoImage', logoImages[nextIndex]);
+    }
+
+    function changeText() {
+        var textOptions = [
+            "Yaş Alırken Güzelliğinizi Koruyun! Sağlıklı bir cilde ve doğal bir güzelliğe ulaşmak için 27 yıllık dermatoloji uzmanlığımı sizinle paylaşıyorum. Zamanı geri alamayız, ama cildinizin gençliğini ve ışıltısını korumak elinizde. Daha sağlıklı ve mutlu bir yaşlanma için birlikte keşfe çıkalım!",
+            "Güzellik ve Sağlık İçin Doğru Adres! Cildinizin ihtiyaçlarına uygun çözümlerle yanınızdayım. Genç ve sağlıklı bir cilt için birlikte çalışalım."
+        ];
+        var currentText = document.getElementById('text').innerText;
+        var currentIndex = textOptions.indexOf(currentText);
+        var nextIndex = (currentIndex + 1) % textOptions.length;
+        document.getElementById('text').innerText = textOptions[nextIndex];
+        localStorage.setItem('textContent', textOptions[nextIndex]);
+    }
+
+    function changeBackground() {
+        var backgroundImages = [
+            'https://sun9-37.userapi.com/impg/3Xv5e5X4qRSdzy01jbG_0PgnERormdZ_WouGaQ/YfYX9_7RsnI.jpg?size=1472x832&quality=95&sign=403e7045bf1623cd6635ea4e9912a702&type=album',
+            'https://sun9-66.userapi.com/impg/3sxuir5eSyriDhl-HA-eUb59TMlG63SG_bFEsg/kb52rVrjLto.jpg?size=1472x832&quality=95&sign=8ae2d5aab773cf5020f8467475283732&type=album'
+        ];
+        var currentBackground = document.body.style.backgroundImage;
+        var currentIndex = backgroundImages.findIndex(image => currentBackground.includes(image));
+        var nextIndex = (currentIndex + 1) % backgroundImages.length;
+        document.body.style.backgroundImage = 'url(' + backgroundImages[nextIndex] + ')';
+        localStorage.setItem('backgroundImage', backgroundImages[nextIndex]);
+    }
+
+    function nextContent() {
+        changeLogo();
+        changeText();
+        changeBackground();
+    }
+
+    function previousContent() {
+        changeLogo();
+        changeText();
+        changeBackground();
+    }
+</script>
