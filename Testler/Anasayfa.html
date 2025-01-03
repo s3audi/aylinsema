@@ -77,28 +77,7 @@
             }
 
 
-            @media only screen and (max-width: 600px) {
-            #logo {
-                width: 60%; /* Adjust as needed */
-                height: auto; /* Maintain aspect ratio */
-            }
-
-            #text {
-                font-size: 12px; /* Adjust as needed */
-                width: 50%; /* Adjust as needed */
-                margin-left: 5%; /* Center align */
-            }
-
-            #inputContainer {
-                left: 50%; /* Center align */
-                transform: translateX(-50%);
-            }
-
-            div[style*="position: fixed; bottom: 20px;"] {
-                width: 100%;
-                text-align: center;
-            }
-            }
+           
 
 
 
@@ -428,13 +407,13 @@
 <style>
     @media only screen and (max-width: 600px) {
         #logo {
-            width: 60%; /* Adjust as needed */
+            width: 75%; /* Adjust as needed */
             height: auto; /* Maintain aspect ratio */
         }
 
         #text {
-            font-size: 12px; /* Adjust as needed */
-            width: 50%; /* Adjust as needed */
+            font-size: 15px; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
             margin-left: 5%; /* Center align */
         }
 
@@ -506,7 +485,10 @@
     function changeBackground() {
         var backgroundImages = [
             'https://sun9-37.userapi.com/impg/3Xv5e5X4qRSdzy01jbG_0PgnERormdZ_WouGaQ/YfYX9_7RsnI.jpg?size=1472x832&quality=95&sign=403e7045bf1623cd6635ea4e9912a702&type=album',
-            'https://sun9-66.userapi.com/impg/3sxuir5eSyriDhl-HA-eUb59TMlG63SG_bFEsg/kb52rVrjLto.jpg?size=1472x832&quality=95&sign=8ae2d5aab773cf5020f8467475283732&type=album'
+
+            'https://sun9-66.userapi.com/impg/3sxuir5eSyriDhl-HA-eUb59TMlG63SG_bFEsg/kb52rVrjLto.jpg?size=1472x832&quality=95&sign=8ae2d5aab773cf5020f8467475283732&type=album',
+
+            "https://sun9-50.userapi.com/impg/zfBbXavdtmFIXMtZctLZTRyEpC_5XU8LbM90zA/df2YU-qymOo.jpg?size=1472x832&quality=95&sign=425fc578797e5a986168ffc5266ff679&type=album"
         ];
         var currentBackground = document.body.style.backgroundImage;
         var currentIndex = backgroundImages.findIndex(image => currentBackground.includes(image));
