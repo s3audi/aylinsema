@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Changer</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        #textInput, #urlInput {
+            padding: 10px;
+            font-size: 16px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            width: 45%;
+            position: absolute;
+            bottom: 20px;
+        }
+        #textInput {
+            right: 5%;
+        }
+        #urlInput {
+            left: 5%;
+        }
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="urlInput" placeholder="Paste image URL here" oninput="changeBackground()">
+    <p></p>
+    <script>
+        function changeBackground() {
+            const url = document.getElementById('urlInput').value;
+            document.body.style.backgroundImage = `url(${url})`;
+            localStorage.setItem('backgroundImageUrl', url);
+        }
+
+        window.onload = function() {
+            const savedUrl = localStorage.getItem('backgroundImageUrl');
+            if (savedUrl) {
+                document.body.style.backgroundImage = `url(${savedUrl})`;
+                document.getElementById('urlInput').value = savedUrl;
+            }
+        }
+    </script>
+</body>
+</html>
+<style>
+    #textInput {
+        padding: 10px;
+        font-size: 16px;
+        width: 300px;
+        margin-top: 20px;
+    }
+    #animatedText {
+        font-size: 4em;
+        
+        font-family: 'Courier New', Courier, monospace;
+        color: wheat;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid;
+        animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    }
+    @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+    }
+    @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: black; }
+    }
+</style>
+
+<input type="text" id="textInput" placeholder="Type text here" oninput="showAnimatedText()">
+<h1 id="animatedText"></h1>
+<p></p>
+
+<script>
+    function showAnimatedText() {
+        const text = document.getElementById('textInput').value;
+        const animatedTextElement = document.getElementById('animatedText');
+        animatedTextElement.textContent = text;
+        animatedTextElement.style.animation = 'none';
+        animatedTextElement.offsetHeight; // trigger reflow
+        animatedTextElement.style.animation = null;
+    }
+</script>
+
+
+
+<script>
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'G' || event.key === 'g') {
+            document.getElementById('urlInput').style.visibility = 'visible';
+            document.getElementById('textInput').style.visibility = 'visible';
+        }
+    });
+
+    window.onload = function() {
+        document.getElementById('urlInput').style.visibility = 'hidden';
+        document.getElementById('textInput').style.visibility = 'hidden';
+        const savedUrl = localStorage.getItem('backgroundImageUrl');
+        if (savedUrl) {
+            document.body.style.backgroundImage = `url(${savedUrl})`;
+            document.getElementById('urlInput').value = savedUrl;
+        }
+    }
+</script></script>
+
+<script>
+    function saveText() {
+        const text = document.getElementById('textInput').value;
+        localStorage.setItem('savedText', text);
+    }
+
+    function loadText() {
+        const savedText = localStorage.getItem('savedText');
+        if (savedText) {
+            document.getElementById('textInput').value = savedText;
+            document.getElementById('animatedText').textContent = savedText;
+        }
+    }
+
+    document.getElementById('textInput').addEventListener('input', saveText);
+
+    window.onload = function() {
+        document.getElementById('urlInput').style.visibility = 'hidden';
+        document.getElementById('textInput').style.visibility = 'hidden';
+        const savedUrl = localStorage.getItem('backgroundImageUrl');
+        if (savedUrl) {
+            document.body.style.backgroundImage = `url(${savedUrl})`;
+            document.getElementById('urlInput').value = savedUrl;
+        }
+        loadText();
+    }
+</script>

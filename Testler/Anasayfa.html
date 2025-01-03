@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out 1s;
+        }
+
+        #logo {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            z-index: 99;
+        }
+      
+        #logoShadow {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px; /* Adjust size as needed */
+            height: 250px; /* Adjust size as needed */
+            background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+            border-radius: 50%; /* Make it circular */
+            z-index: -1; /* Place it behind the logo */
+        }
+
+        #text {
+            position: absolute;
+            bottom: 300px;
+            width: 30%;
+            text-align: left;
+            margin-left: 100px;
+            margin-bottom: 200px;
+            font-size: 24px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            opacity: 0;
+            z-index: 999; /* Place it behind the logo */
+            transition: bottom 8s ease-in-out 1s, opacity 5s ease-in-out 1s;
+        }
+
+
+       
+            #inputContainer {
+                display: none;
+                position: fixed;
+                bottom: 20px;
+                left: 80%;
+                transform: translateX(-50%);
+                background-color: rgba(0, 0, 0, 0.8);
+                padding: 20px;
+                border-radius: 10px;
+                color: white;
+            }
+
+            #inputContainer input {
+                margin: 5px;
+                padding: 5px;
+            }
+
+            #inputContainer button {
+                margin: 5px;
+                padding: 5px;
+            }
+    </style>
+</head>
+<body>
+    <img id="logo" src="logo.png" alt="Logo">
+    <div id="text">Hoşgeldiniz!</div>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('logo').style.opacity = 1;
+            }, 10);
+
+            setTimeout(function() {
+                document.body.style.opacity = 1;
+            }, 30);
+
+            setTimeout(function() {
+                document.getElementById('text').style.bottom = '50px';
+                document.getElementById('text').style.opacity = 1;
+            }, 50);
+        }
+    </script>
+</body>
+</html>
+
+
+
+<div id="inputContainer">
+    <label for="backgroundInput">Background Image URL:</label>
+    <input type="text" id="backgroundInput"><br>
+    <label for="logoInput">Logo Image URL:</label>
+    <input type="text" id="logoInput"><br>
+    <label for="textInput">Text:</label>
+    <input type="text" id="textInput"><br>
+    <button onclick="updateContent()">Update</button>
+</div>
+
+
+<script>
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'g' || event.key === 'G') {
+            var inputContainer = document.getElementById('inputContainer');
+            inputContainer.style.display = inputContainer.style.display === 'none' ? 'block' : 'none';
+        }
+    });
+
+    function updateContent() {
+        var backgroundInput = document.getElementById('backgroundInput').value;
+        var logoInput = document.getElementById('logoInput').value;
+        var textInput = document.getElementById('textInput').value;
+
+        if (backgroundInput) {
+            document.body.style.backgroundImage = 'url(' + backgroundInput + ')';
+        }
+
+        if (logoInput) {
+            document.getElementById('logo').src = logoInput;
+        }
+
+        if (textInput) {
+            document.getElementById('text').innerText = textInput;
+        }
+    }
+</script>
+
+
+
+<script>
+    window.onload = function() {
+        var savedBackground = localStorage.getItem('backgroundImage');
+        var savedLogo = localStorage.getItem('logoImage');
+        var savedText = localStorage.getItem('textContent');
+
+        if (savedBackground) {
+            document.body.style.backgroundImage = 'url(' + savedBackground + ')';
+        }
+
+        if (savedLogo) {
+            document.getElementById('logo').src = savedLogo;
+        }
+
+        if (savedText) {
+            document.getElementById('text').innerText = savedText;
+        }
+
+        setTimeout(function() {
+            document.getElementById('logo').style.opacity = 1;
+        }, 100);
+
+        setTimeout(function() {
+            document.body.style.opacity = 1;
+        }, 300);
+
+        setTimeout(function() {
+            document.getElementById('text').style.bottom = '50px';
+            document.getElementById('text').style.opacity = 1;
+        }, 500);
+    }
+
+    function updateContent() {
+        var backgroundInput = document.getElementById('backgroundInput').value;
+        var logoInput = document.getElementById('logoInput').value;
+        var textInput = document.getElementById('textInput').value;
+
+        if (backgroundInput) {
+            document.body.style.backgroundImage = 'url(' + backgroundInput + ')';
+            localStorage.setItem('backgroundImage', backgroundInput);
+        }
+
+        if (logoInput) {
+            document.getElementById('logo').src = logoInput;
+            localStorage.setItem('logoImage', logoInput);
+        }
+
+        if (textInput) {
+            document.getElementById('text').innerText = textInput;
+            localStorage.setItem('textContent', textInput);
+        }
+    }
+</script>
+
+<script>
+    window.onload = function() {
+        var savedBackground = localStorage.getItem('backgroundImage');
+        var savedLogo = localStorage.getItem('logoImage');
+        var savedText = localStorage.getItem('textContent');
+
+        if (savedBackground) {
+            document.body.style.backgroundImage = 'url(' + savedBackground + ')';
+            document.getElementById('backgroundInput').value = savedBackground;
+        }
+
+        if (savedLogo) {
+            document.getElementById('logo').src = savedLogo;
+            document.getElementById('logoInput').value = savedLogo;
+        }
+
+        if (savedText) {
+            document.getElementById('text').innerText = savedText;
+            document.getElementById('textInput').value = savedText;
+        }
+
+        setTimeout(function() {
+            document.getElementById('logo').style.opacity = 1;
+        }, 10);
+
+        setTimeout(function() {
+            document.body.style.opacity = 1;
+        }, 30);
+
+        setTimeout(function() {
+            document.getElementById('text').style.bottom = '50px';
+            document.getElementById('text').style.opacity = 1;
+        }, 50);
+    }
+
+    function updateContent() {
+        var backgroundInput = document.getElementById('backgroundInput').value;
+        var logoInput = document.getElementById('logoInput').value;
+        var textInput = document.getElementById('textInput').value;
+
+        if (backgroundInput) {
+            document.body.style.backgroundImage = 'url(' + backgroundInput + ')';
+            localStorage.setItem('backgroundImage', backgroundInput);
+        }
+
+        if (logoInput) {
+            document.getElementById('logo').src = logoInput;
+            localStorage.setItem('logoImage', logoInput);
+        }
+
+        if (textInput) {
+            document.getElementById('text').innerText = textInput;
+            localStorage.setItem('textContent', textInput);
+        }
+    }
+</script>
+
+
+
+<div id="logoShadowSS"></div></style> 
+
+
+<style> /* Vignet efekti */
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200%;  /* 100 olursa tam orta aydınlık */
+        height: 100%;
+        background: radial-gradient(circle, transparent, black);
+        z-index: 1;
+        pointer-events: none;
+    }
+</style></style>
+
+
+
+
+<style>      /* Content gizleme */
+    #gizle {
+        display: none;
+    }
+</style>
+
+
+<div id="gizle">
+    "Yaş Alırken Güzelliğinizi Koruyun!"
+
+"Sağlıklı bir cilde ve doğal bir güzelliğe ulaşmak için 27 yıllık dermatoloji uzmanlığımı sizinle paylaşıyorum. Zamanı geri alamayız, ama cildinizin gençliğini ve ışıltısını korumak elimizde. Daha sağlıklı ve mutlu bir yaşlanma için birlikte keşfe çıkalım!"
+
+</div>
+
+
+
+<div style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); color: white; font-size: 18px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; z-index: 1000;">
+
+    Sitemiz yapım aşamasındadır.
+</div>
+
+
+
+<script>   /* Default Background belirleme */
+    document.addEventListener('DOMContentLoaded', function() {
+        var defaultBackground = 'https://sun9-37.userapi.com/impg/3Xv5e5X4qRSdzy01jbG_0PgnERormdZ_WouGaQ/YfYX9_7RsnI.jpg?size=1472x832&quality=95&sign=403e7045bf1623cd6635ea4e9912a702&type=album';
+        var savedBackground = localStorage.getItem('backgroundImage');
+
+        if (!savedBackground) {
+            document.body.style.backgroundImage = 'url(' + defaultBackground + ')';
+        }
+    });
+</script>
+
+<script> /* Default Yazı belirleme */
+    document.addEventListener('DOMContentLoaded', function() {
+        var defaultText = "Yaş Alırken Güzelliğinizi Koruyun! Sağlıklı bir cilde ve doğal bir güzelliğe ulaşmak için 27 yıllık dermatoloji uzmanlığımı sizinle paylaşıyorum. Zamanı geri alamayız, ama cildinizin gençliğini ve ışıltısını korumak elinizde. Daha sağlıklı ve mutlu bir yaşlanma için birlikte keşfe çıkalım!";
+        var savedText = localStorage.getItem('textContent');
+
+        if (!savedText) {
+            document.getElementById('text').innerText = defaultText;
+        }
+    });
+</script>
+
+<script>  /* Default Logo belirleme */
+    document.addEventListener('DOMContentLoaded', function() {
+        var defaultLogo = 'https://psv4.userapi.com/s/v1/d/qINF9Yd65pxPkU--vl7EGsVsdYuPqltZSdcZxRY1xDEBH-6twXkrygKq_JoebTyHxfdrO4YWd-xFSaiRI4wY8Yib7O-J7G1rvxz3R9hs-koukclwEn3vfA/LogoMorAylinSema.png';
+        var savedLogo = localStorage.getItem('logoImage');
+
+        if (!savedLogo) {
+            document.getElementById('logo').src = defaultLogo;
+        }
+    });
+</script>
+
+
+
+<script>  /* Klavye 1-2-3-4-5 fotoğrafları değiştir */
+    document.addEventListener('keydown', function(event) {
+        var backgroundImages = {
+            '1': 'https://sun9-37.userapi.com/impg/3Xv5e5X4qRSdzy01jbG_0PgnERormdZ_WouGaQ/YfYX9_7RsnI.jpg?size=1472x832&quality=95&sign=403e7045bf1623cd6635ea4e9912a702&type=album',
+            '2': 'https://sun9-66.userapi.com/impg/3sxuir5eSyriDhl-HA-eUb59TMlG63SG_bFEsg/kb52rVrjLto.jpg?size=1472x832&quality=95&sign=8ae2d5aab773cf5020f8467475283732&type=album',
+            '3': 'https://sun9-65.userapi.com/impg/e2r-7Tp5C8_9V7y1VtWH73mPGqPhDoAbm0Offw/9njUgEPFoQc.jpg?size=1472x832&quality=95&sign=ffafe47017123d6e939fb1be906440d3&type=album',
+            '4': 'https://sun9-37.userapi.com/impg/3Xv5e5X4qRSdzy01jbG_0PgnERormdZ_WouGaQ/YfYX9_7RsnI.jpg?size=1472x832&quality=95&sign=403e7045bf1623cd6635ea4e9912a702&type=album',
+            '5': 'https://sun9-50.userapi.com/impg/zfBbXavdtmFIXMtZctLZTRyEpC_5XU8LbM90zA/df2YU-qymOo.jpg?size=1472x832&quality=95&sign=425fc578797e5a986168ffc5266ff679&type=album'
+        };
+
+        if (backgroundImages[event.key]) {
+            document.body.style.backgroundImage = 'url(' + backgroundImages[event.key] + ')';
+            localStorage.setItem('backgroundImage', backgroundImages[event.key]);
+        }
+    });
+</script>
+
+
+<script> /* Klavye L LOGOLARI değiştir */
+    document.addEventListener('keydown', function(event) {
+        var logoImages = [
+            'https://psv4.userapi.com/s/v1/d/qINF9Yd65pxPkU--vl7EGsVsdYuPqltZSdcZxRY1xDEBH-6twXkrygKq_JoebTyHxfdrO4YWd-xFSaiRI4wY8Yib7O-J7G1rvxz3R9hs-koukclwEn3vfA/LogoMorAylinSema.png',
+            'https://psv4.userapi.com/s/v1/d/VNm7q-1w47-yLWm22d-0pneFFF8xZPunmNnjSLdvyECHJEAlyKSUWp9fTaDuhL8wedOhVtkNPcq2dFldX73ABBRoqwvd--Q5ZOm9mDNICvmi_JPO0x3ing/AylinSemaLogoBeyaz3.png',
+            'https://psv4.userapi.com/s/v1/d/qINF9Yd65pxPkU--vl7EGsVsdYuPqltZSdcZxRY1xDEBH-6twXkrygKq_JoebTyHxfdrO4YWd-xFSaiRI4wY8Yib7O-J7G1rvxz3R9hs-koukclwEn3vfA/LogoMorAylinSema.png',
+            'https://psv4.userapi.com/s/v1/d/VNm7q-1w47-yLWm22d-0pneFFF8xZPunmNnjSLdvyECHJEAlyKSUWp9fTaDuhL8wedOhVtkNPcq2dFldX73ABBRoqwvd--Q5ZOm9mDNICvmi_JPO0x3ing/AylinSemaLogoBeyaz3.png',
+            'https://psv4.userapi.com/s/v1/d/qINF9Yd65pxPkU--vl7EGsVsdYuPqltZSdcZxRY1xDEBH-6twXkrygKq_JoebTyHxfdrO4YWd-xFSaiRI4wY8Yib7O-J7G1rvxz3R9hs-koukclwEn3vfA/LogoMorAylinSema.png'
+        ];
+
+        if (event.key === 'l' || event.key === 'L') {
+            var currentLogo = document.getElementById('logo').src;
+            var currentIndex = logoImages.indexOf(currentLogo);
+            var nextIndex = (currentIndex + 1) % logoImages.length;
+            document.getElementById('logo').src = logoImages[nextIndex];
+            localStorage.setItem('logoImage', logoImages[nextIndex]);
+        }
+    });
+</script></script>
+
+
+<script>   /* Klavye Y YAZILARI değiştir */
+    document.addEventListener('keydown', function(event) {
+        var textOptions = [
+            "Yaş Alırken Güzelliğinizi Koruyun! Sağlıklı bir cilde ve doğal bir güzelliğe ulaşmak için 27 yıllık dermatoloji uzmanlığımı sizinle paylaşıyorum. Zamanı geri alamayız, ama cildinizin gençliğini ve ışıltısını korumak elinizde. Daha sağlıklı ve mutlu bir yaşlanma için birlikte keşfe çıkalım!",
+
+            "Güzellik ve Sağlık İçin Doğru Adres! Cildinizin ihtiyaçlarına uygun çözümlerle yanınızdayım. Genç ve sağlıklı bir cilt için birlikte çalışalım.",
+
+            "Cildinizin Işıltısını Koruyun! Dermatoloji uzmanlığım ile cildinizin gençliğini ve sağlığını korumak için buradayım.",
+
+            "Doğal Güzelliğinizi Ortaya Çıkarın! Sağlıklı ve parlak bir cilt için dermatoloji uzmanlığımı sizinle paylaşıyorum.",
+
+            "Cildiniz İçin En İyi Bakım! 27 yıllık dermatoloji tecrübemle cildinizin gençliğini ve sağlığını korumak için buradayım."
+        ];
+
+        if (event.key === 'y' || event.key === 'Y') {
+            var currentText = document.getElementById('text').innerText;
+            var currentIndex = textOptions.indexOf(currentText);
+            var nextIndex = (currentIndex + 1) % textOptions.length;
+            document.getElementById('text').innerText = textOptions[nextIndex];
+            localStorage.setItem('textContent', textOptions[nextIndex]);
+        }
+    });
+</script>

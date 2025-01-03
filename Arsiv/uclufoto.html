@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Background Image</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+        }
+        #uploadButton {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <input type="file" id="uploadButton" accept="image/*">
+    <script>
+        document.getElementById('uploadButton').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.body.style.backgroundImage = `url(${e.target.result})`;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
+<style>
+    #uploadButton {
+        display: none;
+    }
+</style>
+<script>
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'u' || event.key === 'U') {
+            document.getElementById('uploadButton').click();
+        }
+    });
+
+    document.getElementById('uploadButton').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const imageUrl = e.target.result;
+                document.body.style.backgroundImage = `url(${imageUrl})`;
+                localStorage.setItem('backgroundImage', imageUrl);
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    window.addEventListener('load', function() {
+        const savedImage = localStorage.getItem('backgroundImage');
+        if (savedImage) {
+            document.body.style.backgroundImage = `url(${savedImage})`;
+        }
+    });
+</script>

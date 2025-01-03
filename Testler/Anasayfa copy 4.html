@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out 1s;
+        }
+
+        #logo {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            z-index: 99;
+        }
+      
+        #logoShadow {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px; /* Adjust size as needed */
+            height: 250px; /* Adjust size as needed */
+            background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+            border-radius: 50%; /* Make it circular */
+            z-index: -1; /* Place it behind the logo */
+        }
+
+        #text {
+            position: absolute;
+            bottom: 300px;
+            width: 30%;
+            text-align: left;
+            margin-left: 100px;
+            margin-bottom: 200px;
+            font-size: 24px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            opacity: 0;
+            z-index: 999; /* Place it behind the logo */
+            transition: bottom 8s ease-in-out 1s, opacity 5s ease-in-out 1s;
+        }
+
+
+       
+            #inputContainer {
+                display: none;
+                position: fixed;
+                bottom: 20px;
+                left: 80%;
+                transform: translateX(-50%);
+                background-color: rgba(0, 0, 0, 0.8);
+                padding: 20px;
+                border-radius: 10px;
+                color: white;
+            }
+
+            #inputContainer input {
+                margin: 5px;
+                padding: 5px;
+            }
+
+            #inputContainer button {
+                margin: 5px;
+                padding: 5px;
+            }
+    </style>
+</head>
+<body>
+    <img id="logo" src="logo.png" alt="Logo">
+    <div id="text">Hoşgeldiniz!</div>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('logo').style.opacity = 1;
+            }, 10);
+
+            setTimeout(function() {
+                document.body.style.opacity = 1;
+            }, 30);
+
+            setTimeout(function() {
+                document.getElementById('text').style.bottom = '50px';
+                document.getElementById('text').style.opacity = 1;
+            }, 50);
+        }
+    </script>
+</body>
+</html>
+
+
+
+<div id="inputContainer">
+    <label for="backgroundInput">Background Image URL:</label>
+    <input type="text" id="backgroundInput"><br>
+    <label for="logoInput">Logo Image URL:</label>
+    <input type="text" id="logoInput"><br>
+    <label for="textInput">Text:</label>
+    <input type="text" id="textInput"><br>
+    <button onclick="updateContent()">Update</button>
+</div>
+
+
+<script>
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'g' || event.key === 'G') {
+            var inputContainer = document.getElementById('inputContainer');
+            inputContainer.style.display = inputContainer.style.display === 'none' ? 'block' : 'none';
+        }
+    });
+
+    function updateContent() {
+        var backgroundInput = document.getElementById('backgroundInput').value;
+        var logoInput = document.getElementById('logoInput').value;
+        var textInput = document.getElementById('textInput').value;
+
+        if (backgroundInput) {
+            document.body.style.backgroundImage = 'url(' + backgroundInput + ')';
+        }
+
+        if (logoInput) {
+            document.getElementById('logo').src = logoInput;
+        }
+
+        if (textInput) {
+            document.getElementById('text').innerText = textInput;
+        }
+    }
+</script>
+
+
+
+<script>
+    window.onload = function() {
+        var savedBackground = localStorage.getItem('backgroundImage');
+        var savedLogo = localStorage.getItem('logoImage');
+        var savedText = localStorage.getItem('textContent');
+
+        if (savedBackground) {
+            document.body.style.backgroundImage = 'url(' + savedBackground + ')';
+        }
+
+        if (savedLogo) {
+            document.getElementById('logo').src = savedLogo;
+        }
+
+        if (savedText) {
+            document.getElementById('text').innerText = savedText;
+        }
+
+        setTimeout(function() {
+            document.getElementById('logo').style.opacity = 1;
+        }, 100);
+
+        setTimeout(function() {
+            document.body.style.opacity = 1;
+        }, 300);
+
+        setTimeout(function() {
+            document.getElementById('text').style.bottom = '50px';
+            document.getElementById('text').style.opacity = 1;
+        }, 500);
+    }
+
+    function updateContent() {
+        var backgroundInput = document.getElementById('backgroundInput').value;
+        var logoInput = document.getElementById('logoInput').value;
+        var textInput = document.getElementById('textInput').value;
+
+        if (backgroundInput) {
+            document.body.style.backgroundImage = 'url(' + backgroundInput + ')';
+            localStorage.setItem('backgroundImage', backgroundInput);
+        }
+
+        if (logoInput) {
+            document.getElementById('logo').src = logoInput;
+            localStorage.setItem('logoImage', logoInput);
+        }
+
+        if (textInput) {
+            document.getElementById('text').innerText = textInput;
+            localStorage.setItem('textContent', textInput);
+        }
+    }
+</script>
+
+<script>
+    window.onload = function() {
+        var savedBackground = localStorage.getItem('backgroundImage');
+        var savedLogo = localStorage.getItem('logoImage');
+        var savedText = localStorage.getItem('textContent');
+
+        if (savedBackground) {
+            document.body.style.backgroundImage = 'url(' + savedBackground + ')';
+            document.getElementById('backgroundInput').value = savedBackground;
+        }
+
+        if (savedLogo) {
+            document.getElementById('logo').src = savedLogo;
+            document.getElementById('logoInput').value = savedLogo;
+        }
+
+        if (savedText) {
+            document.getElementById('text').innerText = savedText;
+            document.getElementById('textInput').value = savedText;
+        }
+
+        setTimeout(function() {
+            document.getElementById('logo').style.opacity = 1;
+        }, 10);
+
+        setTimeout(function() {
+            document.body.style.opacity = 1;
+        }, 30);
+
+        setTimeout(function() {
+            document.getElementById('text').style.bottom = '50px';
+            document.getElementById('text').style.opacity = 1;
+        }, 50);
+    }
+
+    function updateContent() {
+        var backgroundInput = document.getElementById('backgroundInput').value;
+        var logoInput = document.getElementById('logoInput').value;
+        var textInput = document.getElementById('textInput').value;
+
+        if (backgroundInput) {
+            document.body.style.backgroundImage = 'url(' + backgroundInput + ')';
+            localStorage.setItem('backgroundImage', backgroundInput);
+        }
+
+        if (logoInput) {
+            document.getElementById('logo').src = logoInput;
+            localStorage.setItem('logoImage', logoInput);
+        }
+
+        if (textInput) {
+            document.getElementById('text').innerText = textInput;
+            localStorage.setItem('textContent', textInput);
+        }
+    }
+</script>
+
+
+
+<div id="logoShadowSS"></div></style> 
+
+
+<style> /* Vignet efekti */
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200%;  /* 100 olursa tam orta aydınlık */
+        height: 100%;
+        background: radial-gradient(circle, transparent, black);
+        z-index: 1;
+        pointer-events: none;
+    }
+</style></style>
+
+
+
+
+<style>      /* Content gizleme */
+    #gizle {
+        display: none;
+    }
+</style>
+
+
+<div id="gizle">
+    "Yaş Alırken Güzelliğinizi Koruyun!"
+
+"Sağlıklı bir cilde ve doğal bir güzelliğe ulaşmak için 27 yıllık dermatoloji uzmanlığımı sizinle paylaşıyorum. Zamanı geri alamayız, ama cildinizin gençliğini ve ışıltısını korumak elimizde. Daha sağlıklı ve mutlu bir yaşlanma için birlikte keşfe çıkalım!"
+
+</div>
+
+
+
+<div style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); color: white; font-size: 18px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; z-index: 1000;">
+
+    Sitemiz yapım aşamasındadır.
+</div>
+
