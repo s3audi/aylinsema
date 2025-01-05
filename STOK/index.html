@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stok Uygulaması</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        .update-photo {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stok Uygulaması</h1>
+
+    <h2>Hareket Ekle</h2>
+    <form id="hareketEkleForm">
+        <textarea for="urunAdi">Ürün Linki:</textarea>
+        <label for="urunAdi">Ürün Adı:</label>
+    
+        <input type="text" id="urunAdi" name="urunAdi" required>
+        <label for="girisMiktari">Giriş Miktarı:</label>
+        <input type="number" id="girisMiktari" name="girisMiktari" value="0" required>
+        <label for="cikisMiktari">Çıkış Miktari:</label>
+        <input type="number" id="cikisMiktari" name="cikisMiktari" value="0" required>
+        <button type="submit">Ekle</button>
+    </form>
+
+    <h2>Ürün Listesi ve Depo Adetleri</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Ürün Adı</th>
+                <th>Depo Adedi</th>
+                <th>Fotoğraf</th>
+                <th>Güncelle</th>
+            </tr>
+        </thead>
+        <tbody id="urunListesi"></tbody>
+        
+            <!-- Ürünler buraya eklenecek -->
+        </tbody>
+</thead>     </table>
+
+    <h2>Hareket Tablosu</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Ürün Adı</th>
+                <th>Giriş Miktarı</th>
+                <th>Çıkış Miktarı</th>
+                <th>Açıklama</th>
+                <th>Tarih</th>
+            </tr>
+        </thead>
+        <tbody id="hareketTablosu">
+            <!-- Hareketler buraya eklenecek -->
+        </tbody>
+    </table>
+    
+    <script>
+        document.getElementById('hareketEkleForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const urunAdi = document.getElementById('urunAdi').value;
+            const girisMiktari = parseInt(document.getElementById('girisMiktari').value);
+            const cikisMiktari = parseInt(document.getElementById('cikisMiktari').value);
+            const urunListesi = document.getElementById('urunListesi');
+            const hareketTablosu = document.getElementById('hareketTablosu');
+
+            // Update product list
+            let urunRow = document.querySelector(`#urunListesi tr[data-urun-adi="${urunAdi}"]`);
+            if (!urunRow) {
+                urunRow = document.createElement('tr');
+                urunRow.setAttribute('data-urun-adi', urunAdi);
+                urunRow.innerHTML = `
+                    <td>${urunAdi}</td>
+                    <td class="depo-adedi">${girisMiktari - cikisMiktari}</td>
+                    <td><img src="" alt="Fotoğraf" width="50"></td>
+                    <td><span class="update-photo">Güncelle</span></td>
+                `;
+                urunListesi.appendChild(urunRow);
+            } else {
+                const depoAdediCell = urunRow.querySelector('.depo-adedi');
+                depoAdediCell.textContent = parseInt(depoAdediCell.textContent) + girisMiktari - cikisMiktari;
+            }
+
+            // Add to movement table
+            const hareketRow = document.createElement('tr');
+            hareketRow.innerHTML = `
+                <td>${urunAdi}</td>
+                <td>${girisMiktari}</td>
+                <td>${cikisMiktari}</td>
+                <td></td>
+                <td>${new Date().toLocaleString()}</td>
+            `;
+            hareketTablosu.appendChild(hareketRow);
+
+            // Clear form
+            document.getElementById('hareketEkleForm').reset();
+        });
+
+        document.getElementById('urunListesi').addEventListener('click', function(event) {
+            if (event.target.classList.contains('update-photo')) {
+                const urunRow = event.target.closest('tr');
+                const urunAdi = urunRow.getAttribute('data-urun-adi');
+                const newPhotoUrl = prompt(`Yeni fotoğraf URL'sini girin (${urunAdi}):`);
+                if (newPhotoUrl) {
+                    urunRow.querySelector('img').src = newPhotoUrl;
+                }
+            }
+        });
+    </script></script>
+
+</html>

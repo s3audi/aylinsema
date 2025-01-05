@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürün Tablosu</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        .action-btns button {
+            margin: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Ürün Yönetim Tablosu</h2>
+
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Ürün Açıklaması</th>
+                <th>Ürün Fotoğraf Linki</th>
+                <th>Fotoğraf</th>
+                <th>Stok Girişi</th>
+                <th>Stok Çıkışı</th>
+                <th>Duplicate/Delete/New/Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Örnek Ürün 1</td>
+                <td><input type="text" value="https://example.com/photo1.jpg" oninput="updateImage(this)" /></td>
+                <td><img src="https://example.com/photo1.jpg" width="100" class="product-image" /></td>
+                <td><input type="number" value="10" /></td>
+                <td><input type="number" value="5" /></td>
+                <td class="action-btns">
+                    <button onclick="duplicateRow(this)">Duplicate</button>
+                    <button onclick="deleteRow(this)">Delete</button>
+                    <button onclick="newRow()">New</button>
+                    <button onclick="editRow(this)">Edit</button>
+                </td>
+            </tr>
+            <!-- Diğer ürünler buraya eklenebilir -->
+        </tbody>
+    </table>
+
+    <script>
+        function updateImage(inputElement) {
+            // 2. sütundaki fotoğraf linkine göre, 3. sütundaki fotoğrafı güncelleme
+            var row = inputElement.closest("tr");
+            var imgElement = row.querySelector(".product-image");
+            imgElement.src = inputElement.value;
+        }
+
+        function duplicateRow(button) {
+            var row = button.closest("tr");
+            var clone = row.cloneNode(true);
+            document.querySelector("#productTable tbody").appendChild(clone);
+        }
+
+        function deleteRow(button) {
+            var row = button.closest("tr");
+            row.remove();
+        }
+
+        function newRow() {
+            var table = document.querySelector("#productTable tbody");
+            var newRow = table.insertRow();
+            
+            for (var i = 0; i < 6; i++) {
+                var cell = newRow.insertCell();
+                if (i === 0) {
+                    cell.innerHTML = "Yeni Ürün";
+                } else if (i === 1) {
+                    cell.innerHTML = "<input type='text' value='https://example.com/newphoto.jpg' oninput='updateImage(this)' />";
+                } else if (i === 2) {
+                    cell.innerHTML = "<img src='https://example.com/newphoto.jpg' width='100' class='product-image' />";
+                } else if (i === 3 || i === 4) {
+                    cell.innerHTML = "<input type='number' value='0' />";
+                } else if (i === 5) {
+                    cell.innerHTML = "<div class='action-btns'><button onclick='duplicateRow(this)'>Duplicate</button><button onclick='deleteRow(this)'>Delete</button><button onclick='newRow()'>New</button><button onclick='editRow(this)'>Edit</button></div>";
+                }
+            }
+        }
+
+        function editRow(button) {
+            var row = button.closest("tr");
+            var cells = row.querySelectorAll("td");
+            
+            // Edit butonuna tıklandığında, hücreleri düzenlenebilir alanlara dönüştür
+            cells[0].innerHTML = `<input type="text" value="${cells[0].textContent}" />`;  // Ürün Açıklaması
+            cells[1].innerHTML = `<input type="text" value="${cells[1].querySelector('input').value}" oninput="updateImage(this)" />`;  // Fotoğraf Linki
+            cells[2].innerHTML = `<img src="${cells[1].querySelector('input').value}" width="100" class="product-image" />`; // Fotoğraf
+            cells[3].innerHTML = `<input type="number" value="${cells[3].querySelector('input').value}" />`;  // Stok Girişi
+            cells[4].innerHTML = `<input type="number" value="${cells[4].querySelector('input').value}" />`;  // Stok Çıkışı
+
+            // Edit butonunu "Save" olarak değiştir
+            var actionBtns = cells[5].querySelector('.action-btns');
+            actionBtns.innerHTML = `<button onclick="saveRow(this)">Save</button>`;
+        }
+
+        function saveRow(button) {
+            var row = button.closest("tr");
+            var cells = row.querySelectorAll("td");
+
+            // Düzenlenmiş verileri geri yaz
+            cells[0].textContent = cells[0].querySelector('input').value;  // Ürün Açıklaması
+            cells[1].textContent = cells[1].querySelector('input').value;  // Fotoğraf Linki
+            cells[2].innerHTML = `<img src="${cells[1].querySelector('input').value}" width="100" class="product-image" />`; // Fotoğraf
+            cells[3].textContent = cells[3].querySelector('input').value;  // Stok Girişi
+            cells[4].textContent = cells[4].querySelector('input').value;  // Stok Çıkışı
+
+            // Save butonunu tekrar Edit butonuna dönüştür
+            var actionBtns = cells[5].querySelector('.action-btns');
+            actionBtns.innerHTML = `<button onclick="duplicateRow(this)">Duplicate</button><button onclick="deleteRow(this)">Delete</button><button onclick="newRow()">New</button><button onclick="editRow(this)">Edit</button>`;
+        }
+    </script>
+
+</body>
+</html>

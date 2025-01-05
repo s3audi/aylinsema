@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stok Uygulaması</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        .update-photo {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+        .edit-name {
+            cursor: pointer;
+            color: green;
+            text-decoration: underline;
+        }
+        .action-button {
+            cursor: pointer;
+            color: red;
+            text-decoration: underline;
+            margin-right: 10px;
+        }
+        .add-product-btn {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .add-product-btn:hover {
+            background-color: #45a049;
+        }
+        .import-export-btns {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stok Uygulaması</h1>
+
+    <!-- Import/Export Buttons -->
+    <div class="import-export-btns">
+        <button id="importDataBtn">Veri Yükle (Import)</button>
+        <button id="exportDataBtn">Veri Dışa Aktar (Export)</button>
+    </div>
+
+    <h2>Hareket Ekle</h2>
+    <form id="hareketEkleForm">
+        <label for="urunAdi">Ürün Adı:</label>
+        <select id="urunAdi" name="urunAdi" required>
+            <!-- Ürünler buraya dinamik olarak eklenecek -->
+        </select>
+        <label for="girisMiktari">Giriş Miktarı:</label>
+        <input type="number" id="girisMiktari" name="girisMiktari" value="0" required>
+        <label for="cikisMiktari">Çıkış Miktarı:</label>
+        <input type="number" id="cikisMiktari" name="cikisMiktari" value="0" required>
+        <button type="submit">Ekle</button>
+    </form>
+
+    <h2>Ürün Listesi ve Depo Adetleri</h2>
+    <button class="add-product-btn" id="addProductBtn">Yeni Ürün Ekle</button>
+    <button class="add-product-btn" id="calculateStockBtn">HESAPLA</button> <!-- HESAPLA butonu -->
+    <table>
+        <thead>
+            <tr>
+                <th>Ürün Adı</th>
+                <th>Depo Adedi</th>
+                <th>Fotoğraf</th>
+                <th>Güncelle</th>
+            </tr>
+        </thead>
+        <tbody id="urunListesi"></tbody>
+    </table>
+
+    <h2>Hareket Tablosu</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Ürün Adı</th>
+                <th>Giriş Miktarı</th>
+                <th>Çıkış Miktarı</th>
+                <th>Tarih</th>
+                <th>İşlem</th>
+            </tr>
+        </thead>
+        <tbody id="hareketTablosu"></tbody>
+    </table>
+
+    <!-- Yeni Ürün Ekleme Modal -->
+    <div id="addProductModal" style="display: none;">
+        <h3>Yeni Ürün Ekle</h3>
+        <label for="newUrunAdi">Ürün Adı:</label>
+        <input type="text" id="newUrunAdi">
+        <label for="newDepoAdedi">Depo Adedi:</label>
+        <input type="number" id="newDepoAdedi" value="0">
+        <button id="saveProductBtn">Kaydet</button>
+        <button id="cancelAddProductBtn">İptal</button>
+    </div>
+
+    <script>
+        const hareketler = [
+            { urunAdi: 'Ürün A', girisMiktari: 10, cikisMiktari: 2, tarih: '2023-10-01' },
+            { urunAdi: 'Ürün B', girisMiktari: 5, cikisMiktari: 1, tarih: '2023-10-02' },
+        ];
+
+        const urunler = [
+            { urunAdi: 'Ürün A', depoAdedi: 0, fotoUrl: 'https://via.placeholder.com/50' },
+            { urunAdi: 'Ürün B', depoAdedi: 0, fotoUrl: 'https://via.placeholder.com/50' },
+        ];
+
+        function hareketTablosunuGuncelle() {
+            const hareketTablosu = document.getElementById('hareketTablosu');
+            hareketTablosu.innerHTML = '';
+            hareketler.forEach((hareket, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${hareket.urunAdi}</td>
+                    <td>${hareket.girisMiktari}</td>
+                    <td>${hareket.cikisMiktari}</td>
+                    <td>${hareket.tarih}</td>
+                    <td>
+                        <span class="action-button delete" data-index="${index}">Sil</span>
+                        | <span class="action-button duplicate" data-index="${index}">Kopyala</span>
+                        | <span class="action-button edit" data-index="${index}">Düzenle</span>
+                    </td>
+                `;
+                hareketTablosu.appendChild(row);
+            });
+        }
+
+        function urunListesiniGuncelle() {
+            const urunListesi = document.getElementById('urunListesi');
+            const urunAdiSelect = document.getElementById('urunAdi');
+            urunListesi.innerHTML = '';
+            urunAdiSelect.innerHTML = ''; // Açılır menüyü temizle
+
+            urunler.forEach(urun => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${urun.urunAdi}</td>
+                    <td>${urun.depoAdedi}</td>
+                    <td><img src="${urun.fotoUrl || 'default.jpg'}" alt="${urun.urunAdi}" width="50" height="50"></td>
+                    <td>
+                        <span class="update-photo" data-urun-adi="${urun.urunAdi}">Fotoğraf Güncelle</span>
+                        | <span class="edit-name" data-urun-adi="${urun.urunAdi}">Edit</span>
+                    </td>
+                `;
+                urunListesi.appendChild(row);
+
+                const option = document.createElement('option');
+                option.value = urun.urunAdi;
+                option.textContent = urun.urunAdi;
+                urunAdiSelect.appendChild(option);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            hareketTablosunuGuncelle();
+            urunListesiniGuncelle();
+        });
+
+        // Hareket ekleme
+        document.getElementById('hareketEkleForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const urunAdi = document.getElementById('urunAdi').value;
+            const girisMiktari = parseInt(document.getElementById('girisMiktari').value);
+            const cikisMiktari = parseInt(document.getElementById('cikisMiktari').value);
+            const tarih = new Date().toISOString().split('T')[0];
+
+            const yeniHareket = { urunAdi, girisMiktari, cikisMiktari, tarih };
+            hareketler.push(yeniHareket);
+
+            hareketTablosunuGuncelle();
+        });
+
+        // Yeni Ürün Ekleme Butonu
+        document.getElementById('addProductBtn').addEventListener('click', () => {
+            document.getElementById('addProductModal').style.display = 'block';
+        });
+
+        // Yeni Ürün Kaydetme Butonu
+        document.getElementById('saveProductBtn').addEventListener('click', () => {
+            const yeniUrunAdi = document.getElementById('newUrunAdi').value;
+            const yeniDepoAdedi = parseInt(document.getElementById('newDepoAdedi').value);
+
+            urunler.push({ urunAdi: yeniUrunAdi, depoAdedi: yeniDepoAdedi, fotoUrl: 'https://via.placeholder.com/50' });
+            urunListesiniGuncelle();
+            document.getElementById('addProductModal').style.display = 'none';
+        });
+
+        // Yeni Ürün İptal Etme Butonu
+        document.getElementById('cancelAddProductBtn').addEventListener('click', () => {
+            document.getElementById('addProductModal').style.display = 'none';
+        });
+
+        // HESAPLA Butonu: Depo adetlerini güncelle
+        document.getElementById('calculateStockBtn').addEventListener('click', () => {
+            // Tüm ürünlerin depo adetlerini sıfırla
+            urunler.forEach(urun => urun.depoAdedi = 0);
+
+            // Hareketler üzerinden depo adetlerini güncelle
+            hareketler.forEach(hareket => {
+                const urun = urunler.find(u => u.urunAdi === hareket.urunAdi);
+                if (urun) {
+                    urun.depoAdedi += hareket.girisMiktari - hareket.cikisMiktari;
+                } else {
+                    urunler.push({ urunAdi: hareket.urunAdi, depoAdedi: hareket.girisMiktari - hareket.cikisMiktari });
+                }
+            });
+
+            urunListesiniGuncelle(); // Depo adetlerini güncelle
+        });
+
+        // Silme, Kopyalama ve Düzenleme Butonları
+        document.getElementById('hareketTablosu').addEventListener('click', function(event) {
+            if (event.target.classList.contains('delete')) {
+                const index = event.target.dataset.index;
+                hareketler.splice(index, 1); // Silme
+                hareketTablosunuGuncelle();
+            }
+
+            if (event.target.classList.contains('duplicate')) {
+                const index = event.target.dataset.index;
+                const hareket = { ...hareketler[index], tarih: new Date().toISOString().split('T')[0] };
+                hareketler.push(hareket); // Kopyalama
+                hareketTablosunuGuncelle();
+            }
+
+            if (event.target.classList.contains('edit')) {
+                const index = event.target.dataset.index;
+                const hareket = hareketler[index];
+                const yeniGirisMiktari = prompt('Yeni Giriş Miktarını Girin:', hareket.girisMiktari);
+                const yeniCikisMiktari = prompt('Yeni Çıkış Miktarını Girin:', hareket.cikisMiktari);
+
+                if (yeniGirisMiktari !== null && yeniCikisMiktari !== null) {
+                    hareket.girisMiktari = parseInt(yeniGirisMiktari);
+                    hareket.cikisMiktari = parseInt(yeniCikisMiktari);
+                    hareketTablosunuGuncelle();
+                    urunler.forEach(urun => {
+                        if (urun.urunAdi === hareket.urunAdi) {
+                            urun.depoAdedi += hareket.girisMiktari - hareket.cikisMiktari;
+                        }
+                    });
+                    urunListesiniGuncelle();
+                }
+            }
+        });
+
+        // Update Photo Button
+        document.getElementById('urunListesi').addEventListener('click', function(event) {
+            if (event.target.classList.contains('update-photo')) {
+                const urunAdi = event.target.dataset.urunAdi;
+                const newPhotoUrl = prompt('Yeni fotoğraf URL\'sini girin:');
+                if (newPhotoUrl) {
+                    const urun = urunler.find(u => u.urunAdi === urunAdi);
+                    if (urun) {
+                        urun.fotoUrl = newPhotoUrl;
+                        urunListesiniGuncelle();
+                    }
+                }
+            }
+        });
+
+        // Edit Product Name
+        document.getElementById('urunListesi').addEventListener('click', function(event) {
+            if (event.target.classList.contains('edit-name')) {
+                const urunAdi = event.target.dataset.urunAdi;
+                const newUrunAdi = prompt('Yeni ürün adını girin:', urunAdi);
+                if (newUrunAdi && newUrunAdi !== urunAdi) {
+                    const urun = urunler.find(u => u.urunAdi === urunAdi);
+                    if (urun) {
+                        urun.urunAdi = newUrunAdi;
+                        urunListesiniGuncelle();
+                    }
+                }
+            }
+        });
+
+        // Export Data
+        document.getElementById('exportDataBtn').addEventListener('click', function() {
+            const data = JSON.stringify(urunler);
+            const blob = new Blob([data], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'urunler.json';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+
+        // Import Data
+        document.getElementById('importDataBtn').addEventListener('click', function() {
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.accept = '.json';
+            fileInput.addEventListener('change', function(event) {
+                const file = event.target.files[0];
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const importedData = JSON.parse(e.target.result);
+                    urunler.length = 0;
+                    Array.prototype.push.apply(urunler, importedData);
+                    urunListesiniGuncelle();
+                };
+                reader.readAsText(file);
+            });
+            fileInput.click();
+        });
+    </script>
+</body>
+</html>
