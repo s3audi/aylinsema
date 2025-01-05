@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo in Center</title>
+    <style>
+        body, html {
+            height: 1500px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        .logo {
+            width: 20½;
+            height: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://psv4.userapi.com/s/v1/d/qINF9Yd65pxPkU--vl7EGsVsdYuPqltZSdcZxRY1xDEBH-6twXkrygKq_JoebTyHxfdrO4YWd-xFSaiRI4wY8Yib7O-J7G1rvxz3R9hs-koukclwEn3vfA/LogoMorAylinSema.png" alt="Logo" class="logo">
+</body>
+
+
+
+
+</html>
+
+<script>
+    window.addEventListener('scroll', function() {
+        const logo = document.querySelector('.logo');
+        const scrollY = window.scrollY;
+        const scrollX = window.scrollX;
+        const scale = Math.max(0.5, 1 - scrollY / 50);
+        
+        logo.style.transform = `scale(${scale})`;
+        logo.style.position = 'relative';
+        logo.style.top = `${Math.min(scrollY, -90)}px`;
+        logo.style.left = `${Math.min(scrollY, -40)}px`;
+    });
+</script>

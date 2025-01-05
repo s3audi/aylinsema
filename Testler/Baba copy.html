@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo in Center</title>
+    <style>
+        body, html {
+            height: 1500px;
+            margin: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: black;
+        }
+        .logo {
+            width: 20%;
+            vertical-align: center;
+            height: 20%;
+            margin-left: 20px; /* Optional: Add some margin to the left */
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://psv4.userapi.com/s/v1/d/qINF9Yd65pxPkU--vl7EGsVsdYuPqltZSdcZxRY1xDEBH-6twXkrygKq_JoebTyHxfdrO4YWd-xFSaiRI4wY8Yib7O-J7G1rvxz3R9hs-koukclwEn3vfA/LogoMorAylinSema.png" alt="Logo" class="logo">
+</body>
+
+</html>
+
+<script>
+    window.addEventListener('scroll', function() {
+        const logo = document.querySelector('.logo');
+        const scrollY = window.scrollY;
+        const scale = Math.max(0.5, 1 - scrollY / 1000);
+        logo.style.transform = `scale(${scale})`;
+    });
+</script>
+<style>
+    .logo {
+        object-fit: contain;
+    <style>
+        body, html {
+            height: 1500px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        .logo {
+            width: 100%;
+            height: auto;
+            position: fixed;
+            top: 75%; /* Start from the middle bottom */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.3s, top 0.3s, left 0.3s, width 0.3s;
+        }
+    </style>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const logo = document.querySelector('.logo');
+            const scrollY = window.scrollY;
+            const scale = Math.max(0.5, 1 - scrollY / 1000);
+            logo.style.transform = `translate(-50%, -50%) scale(${scale})`;
+            logo.style.top = `${Math.max(0, 75 - scrollY / 30)}%`; /* Adjusted to start from middle bottom */
+            logo.style.left = `${Math.max(0, 500 - scrollY / 3000)}%`;
+            logo.style.width = `${Math.max(50, 100 - scrollY / 10)}%`;
+        });
+    </script>
+    });
+</script>
