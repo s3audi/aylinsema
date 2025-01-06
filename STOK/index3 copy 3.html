@@ -55,8 +55,6 @@
     <div class="import-export-btns">
         <button id="importDataBtn">Veri Yükle (Import)</button>
         <button id="exportDataBtn">Veri Dışa Aktar (Export)</button>
-        <button id="exportHareketBtn">Hareket Tablosunu Dışa Aktar (Export)</button>
-        <button id="importHareketBtn">Hareket Tablosunu Yükle (Import)</button>
     </div>
 
     <h2>Hareket Ekle</h2>
@@ -291,7 +289,7 @@
             }
         });
 
-        // Export Ürünler
+        // Export Data
         document.getElementById('exportDataBtn').addEventListener('click', function() {
             const data = JSON.stringify(urunler);
             const blob = new Blob([data], { type: 'application/json' });
@@ -304,57 +302,21 @@
             document.body.removeChild(link);
         });
 
-        // Export Hareketler
-        document.getElementById('exportHareketBtn').addEventListener('click', function() {
-            const data = JSON.stringify(hareketler);
-            const blob = new Blob([data], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = 'hareketler.json';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        });
-
-        // Import Ürünler
+        // Import Data
         document.getElementById('importDataBtn').addEventListener('click', function() {
             const fileInput = document.createElement('input');
             fileInput.type = 'file';
             fileInput.accept = '.json';
             fileInput.addEventListener('change', function(event) {
                 const file = event.target.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        const data = JSON.parse(e.target.result);
-                        urunler.length = 0; // Eski verileri sil
-                        urunler.push(...data); // Yeni verileri ekle
-                        urunListesiniGuncelle();
-                    };
-                    reader.readAsText(file);
-                }
-            });
-            fileInput.click();
-        });
-
-        // Import Hareketler
-        document.getElementById('importHareketBtn').addEventListener('click', function() {
-            const fileInput = document.createElement('input');
-            fileInput.type = 'file';
-            fileInput.accept = '.json';
-            fileInput.addEventListener('change', function(event) {
-                const file = event.target.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        const data = JSON.parse(e.target.result);
-                        hareketler.length = 0; // Eski verileri sil
-                        hareketler.push(...data); // Yeni verileri ekle
-                        hareketTablosunuGuncelle();
-                    };
-                    reader.readAsText(file);
-                }
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const importedData = JSON.parse(e.target.result);
+                    urunler.length = 0;
+                    Array.prototype.push.apply(urunler, importedData);
+                    urunListesiniGuncelle();
+                };
+                reader.readAsText(file);
             });
             fileInput.click();
         });
