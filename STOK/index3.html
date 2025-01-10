@@ -361,3 +361,30 @@
     </script>
 </body>
 </html>
+
+<script>
+    // Save data to localStorage before leaving the page
+    window.addEventListener('beforeunload', function() {
+        localStorage.setItem('urunler', JSON.stringify(urunler));
+        localStorage.setItem('hareketler', JSON.stringify(hareketler));
+    });
+
+    // Load data from localStorage when the page is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedUrunler = localStorage.getItem('urunler');
+        const savedHareketler = localStorage.getItem('hareketler');
+
+        if (savedUrunler) {
+            urunler.length = 0;
+            urunler.push(...JSON.parse(savedUrunler));
+        }
+
+        if (savedHareketler) {
+            hareketler.length = 0;
+            hareketler.push(...JSON.parse(savedHareketler));
+        }
+
+        hareketTablosunuGuncelle();
+        urunListesiniGuncelle();
+    });
+</script>

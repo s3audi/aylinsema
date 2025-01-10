@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tek Sayfa Web Sitesi</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        section {
+            padding: 50px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        section:last-child {
+            border-bottom: none;
+        }
+        #about {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            text-align: left;
+        }
+        #about img {
+            max-width: 40%;
+            border-radius: 10px;
+        }
+        #about .text {
+            max-width: 50%;
+        }
+        #about .leaf {
+            position: absolute;
+            opacity: 0;
+            animation: fly-in 3s ease-in-out forwards;
+        }
+        #about .leaf.left {
+            left: 0;
+            animation-delay: 0.5s;
+        }
+        #about .leaf.right {
+            right: 0;
+            animation-delay: 1s;
+        }
+        @keyframes fly-in {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        #footer {
+            background-color: #f8f8f8;
+            text-align: left;
+            padding: 30px;
+        }
+        #footer .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        #footer .column {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+        #footer h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        #footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        #footer ul li {
+            margin-bottom: 5px;
+        }
+        #footer ul li a {
+            text-decoration: none;
+            color: #555;
+        }
+        #footer ul li a:hover {
+            text-decoration: underline;
+        }
+        #footer p {
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Bölüm 1: Başlık ve Giriş -->
+    <section id="header">
+        <h1>Başlık ve Giriş</h1>
+    </section>
+
+    <!-- Bölüm 2: Hakkımızda -->
+    <section id="about">
+        <img src="https://via.placeholder.com/300" alt="Hakkımızda Görseli">
+        <div class="text">
+            <h2>Hakkımızda</h2>
+            <p>Şirketimiz, müşteri memnuniyetini ön planda tutarak en kaliteli hizmeti sunmayı amaçlamaktadır. Uzman ekibimiz ve yenilikçi çözümlerimizle sektörümüzde lider olmayı hedefliyoruz.</p>
+        </div>
+        <img class="leaf left" src="https://via.placeholder.com/50" alt="Yaprak Sol">
+        <img class="leaf right" src="https://via.placeholder.com/50" alt="Yaprak Sağ">
+    </section>
+
+    <!-- Bölüm 3: Hizmetlerimiz -->
+    <section id="services">
+        <h2>Hizmetlerimiz</h2>
+    </section>
+
+    <!-- Bölüm 4: Uzmanlarımız -->
+    <section id="experts">
+        <h2>Uzmanlarımız</h2>
+    </section>
+
+    <!-- Bölüm 5: Referanslar -->
+    <section id="testimonials">
+        <h2>Referanslar</h2>
+    </section>
+
+    <!-- Bölüm 6: Blog Yazıları -->
+    <section id="blog">
+        <h2>Blog Yazıları</h2>
+    </section>
+
+    <!-- Bölüm 7: Fotoğraf Galerisi -->
+    <section id="gallery">
+        <h2>Fotoğraf Galerisi</h2>
+    </section>
+
+    <!-- Bölüm 8: Sık Sorulan Sorular -->
+    <section id="faq">
+        <h2>Sık Sorulan Sorular</h2>
+    </section>
+
+    <!-- Bölüm 9: İletişim Formu -->
+    <section id="contact-form">
+        <h2>İletişim Formu</h2>
+    </section>
+
+    <!-- Bölüm 10: Adres ve Harita -->
+    <section id="map">
+        <h2>Adres ve Harita</h2>
+    </section>
+
+    <!-- Bölüm 11: Özel Teklifler -->
+    <section id="special-offers">
+        <h2>Özel Teklifler</h2>
+    </section>
+
+    <!-- Bölüm 12: Müşteri Yorumları -->
+    <section id="reviews">
+        <h2>Müşteri Yorumları</h2>
+    </section>
+
+    <!-- Bölüm 13: Alt Bilgi -->
+    <section id="footer">
+        <div class="container">
+            <div class="column">
+                <h3>Hakkımızda</h3>
+                <ul>
+                    <li><a href="#">Biz Kimiz</a></li>
+                    <li><a href="#">Misyonumuz</a></li>
+                    <li><a href="#">Vizyonumuz</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Hizmetlerimiz</h3>
+                <ul>
+                    <li><a href="#">Danışmanlık</a></li>
+                    <li><a href="#">Eğitimler</a></li>
+                    <li><a href="#">Destek</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>İletişim</h3>
+                <ul>
+                    <li><a href="#">Telefon: +90 555 555 55 55</a></li>
+                    <li><a href="#">E-posta: info@example.com</a></li>
+                    <li><a href="#">Adres: İstanbul, Türkiye</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2025 Tüm Hakları Saklıdır.</p>
+    </section>
+</body>
+</html>
