@@ -1,5 +1,5 @@
  .u-section-1 {
-  background-image: linear-gradient(0deg, rgba(115, 57, 125, 0.5), rgba(115, 57, 125, 0.5)), url('images/HeaderYoutube.jpg');
+  background-image: linear-gradient(0deg, rgba(115, 57, 125, 0.5), rgba(115, 57, 125, 0.5)) no-repeat 50% 50% / contain;
   background-position: 50% 50%, 50% 25.23%;
   background-repeat: no-repeat, no-repeat;
   background-size: contain, cover;

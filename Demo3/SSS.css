@@ -1,5 +1,5 @@
  .u-section-1 {
-  background-image: linear-gradient(0deg, rgba(115, 57, 125, 0.5), rgba(115, 57, 125, 0.5)), url('images/Morarkadesendedermatolojiileilgilistokfotorafolutur..jpg');
+  background-image: linear-gradient(0deg, rgba(115, 57, 125, 0.5), rgba(115, 57, 125, 0.5)) 50% 50%;
   background-position: 50% 50%;
 }
 
@@ -669,7 +669,7 @@
   min-height: 546px;
   background-position: 50% 50%, 50% 50%;
   background-repeat: no-repeat, no-repeat;
-  background-image: linear-gradient(to bottom, rgba(69, 53, 103, 0.5), rgba(115, 57, 125, 0.5)), url('images/cN6EQJ8NYks.jpg');
+  background-image: linear-gradient(to bottom, rgba(69, 53, 103, 0.5), rgba(115, 57, 125, 0.5)) no-repeat 50% 50% / cover;
   background-size: cover, cover;
 }
 
@@ -896,6 +896,10 @@
   .u-section-3 .u-layout-cell-2 {
     min-height: 100px;
   }
+
+  .u-section-3 .u-container-layout-2 {
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1019,7 +1023,7 @@
   min-height: 546px;
   background-position: 50% 50%;
   background-repeat: no-repeat, no-repeat;
-  background-image: linear-gradient(to bottom, rgba(69, 53, 103, 0.5), rgba(115, 57, 125, 0.5)), url('images/u6cA5ZITh-g.jpg');
+  background-image: linear-gradient(to bottom, rgba(69, 53, 103, 0.5), rgba(115, 57, 125, 0.5)) no-repeat 50% 50% / cover;
   background-size: cover, cover;
 }
 
@@ -1265,6 +1269,10 @@
 
   .u-section-4 .u-layout-cell-2 {
     min-height: 100px;
+  }
+
+  .u-section-4 .u-container-layout-2 {
+    padding-right: 0;
   }
 }
 

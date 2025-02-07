@@ -1,6 +1,6 @@
  .u-section-1 {
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-image: linear-gradient(359deg, rgba(0, 0, 0, 0), rgba(115, 57, 125, 0.5625)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('images/dfff.jpg');
+  background-image: linear-gradient(359deg, rgba(0, 0, 0, 0), rgba(115, 57, 125, 0.5625)) no-repeat  / cover,linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)) no-repeat  / cover;
   background-size: cover, cover, cover;
 }
 

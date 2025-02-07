@@ -27,7 +27,7 @@
 }
 
 .u-section-1 .u-image-1 {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('images/u6cA5ZITh-g.jpg');
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)) 50% 50% / cover;
   background-position: 50% 50%;
   background-size: cover, cover;
 }
@@ -54,7 +54,7 @@
 }
 
 .u-section-1 .u-image-2 {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('images/cN6EQJ8NYks.jpg');
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)) 50% 50% / cover;
   background-position: 50% 50%;
   background-size: cover, cover;
 }
@@ -81,7 +81,7 @@
 }
 
 .u-section-1 .u-image-3 {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('images/GreenPeel.jpg');
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)) 50% 50% / cover;
   background-position: 50% 50%, 50% 50%;
   background-size: cover, cover;
 }
@@ -108,7 +108,7 @@
 }
 
 .u-section-1 .u-image-4 {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('images/beautiful-womans-face-with-juicy-orange_155003-41007.jpg');
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)) 50% 50% / cover;
   background-position: 50% 50%, 50% 50%;
   background-size: cover, cover;
 }
@@ -238,7 +238,7 @@
 }
 
 .u-section-2 .u-image-1 {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('images/6803.jpg');
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)) 50% 50%;
   background-position: 50% 50%;
 }
 
@@ -263,7 +263,7 @@
 }
 
 .u-section-2 .u-image-2 {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('images/grand-canyon-nature-footage-arizona-usa4.jpg');
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)) 50% 50%;
   background-position: 50% 50%;
 }
 
@@ -288,7 +288,7 @@
 }
 
 .u-section-2 .u-image-3 {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('images/y8.jpg');
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)) 50% 50%;
   background-position: 50% 50%;
 }
 
@@ -313,7 +313,7 @@
 }
 
 .u-section-2 .u-image-4 {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('images/man-walking-stone-pathway-surrou.jpg');
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)) 50% 50%;
   background-position: 50% 50%;
 }
 
@@ -338,7 +338,7 @@
 }
 
 .u-section-2 .u-image-5 {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('images/14.jpg');
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)) 50% 50%;
   background-position: 50% 50%;
 }
 
@@ -364,7 +364,7 @@
 }
 
 .u-section-2 .u-image-6 {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('images/579.jpg');
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)) 50% 50%;
   background-position: 50% 50%;
 }
 
@@ -389,7 +389,7 @@
 }
 
 .u-section-2 .u-image-7 {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('images/45677.jpg');
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)) 50% 50%;
   background-position: 50% 50%;
 }
 
@@ -414,7 +414,7 @@
 }
 
 .u-section-2 .u-image-8 {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('images/6890.jpg');
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)) 50% 50%;
   background-position: 50% 50%;
 }
 
@@ -439,7 +439,7 @@
 }
 
 .u-section-2 .u-image-9 {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('images/brown-wooden-pathway-green-trees.jpg');
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)) 50% 50%;
   background-position: 50% 50%;
 }
 
@@ -627,7 +627,7 @@
   --animation-custom_in-rotate: 0deg;
   --animation-custom_in-scale: 1;
   --radius: 5px;
-  background-image: linear-gradient(150deg, rgba(115, 57, 125, 0.5), rgba(69, 53, 103, 0.5)), url("images/front-view-women-correcting-gram.jpg");
+  background-image: linear-gradient(150deg, rgba(115, 57, 125, 0.5), rgba(69, 53, 103, 0.5)) no-repeat 50% 50% / cover;
   background-position: 50% 50%, 50% 50%;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
@@ -676,7 +676,7 @@
   --animation-custom_in-rotate: 0deg;
   --animation-custom_in-scale: 1;
   --radius: 5px;
-  background-image: linear-gradient(150deg, rgba(115, 57, 125, 0.5), rgba(69, 53, 103, 0.5)), url("images/it-s-your-result-is-higher-than.jpg");
+  background-image: linear-gradient(150deg, rgba(115, 57, 125, 0.5), rgba(69, 53, 103, 0.5)) no-repeat 50% 50% / cover;
   background-position: 50% 50%, 50% 50%;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
@@ -725,7 +725,7 @@
   --animation-custom_in-rotate: 0deg;
   --animation-custom_in-scale: 1;
   --radius: 5px;
-  background-image: linear-gradient(150deg, rgba(115, 57, 125, 0.5), rgba(69, 53, 103, 0.5)), url("images/group-creative-people-analyzing.jpg");
+  background-image: linear-gradient(150deg, rgba(115, 57, 125, 0.5), rgba(69, 53, 103, 0.5)) no-repeat 50% 50% / cover;
   background-position: 50% 50%, 50% 50%;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
@@ -774,7 +774,7 @@
   --animation-custom_in-rotate: 0deg;
   --animation-custom_in-scale: 1;
   --radius: 5px;
-  background-image: linear-gradient(150deg, rgba(115, 57, 125, 0.5), rgba(69, 53, 103, 0.5)), url("images/meeting-young-designers_1098-142.jpg");
+  background-image: linear-gradient(150deg, rgba(115, 57, 125, 0.5), rgba(69, 53, 103, 0.5)) no-repeat 50% 50% / cover;
   background-position: 50% 50%, 50% 50%;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
@@ -823,7 +823,7 @@
   --animation-custom_in-rotate: 0deg;
   --animation-custom_in-scale: 1;
   --radius: 5px;
-  background-image: linear-gradient(150deg, rgba(115, 57, 125, 0.5), rgba(69, 53, 103, 0.5)), url("images/Untitled-3u.jpg");
+  background-image: linear-gradient(150deg, rgba(115, 57, 125, 0.5), rgba(69, 53, 103, 0.5)) no-repeat 50% 50% / cover;
   background-position: 50% 50%, 50% 50%;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
@@ -872,7 +872,7 @@
   --animation-custom_in-rotate: 0deg;
   --animation-custom_in-scale: 1;
   --radius: 5px;
-  background-image: linear-gradient(150deg, rgba(115, 57, 125, 0.5), rgba(69, 53, 103, 0.5)), url("images/woman-working-office_144627-4422.jpg");
+  background-image: linear-gradient(150deg, rgba(115, 57, 125, 0.5), rgba(69, 53, 103, 0.5)) no-repeat 50% 50% / cover;
   background-position: 50% 50%, 50% 50%;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
@@ -951,6 +951,42 @@
     grid-template-columns: repeat(2, calc(50% - 15px));
     min-height: 1288px;
     grid-auto-columns: calc(50% - 15px);
+  }
+
+  .u-section-3 .u-container-layout-1 {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .u-section-3 .u-container-layout-3 {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .u-section-3 .u-container-layout-5 {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .u-section-3 .u-container-layout-7 {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .u-section-3 .u-container-layout-9 {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .u-section-3 .u-container-layout-11 {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
   }
 }
 

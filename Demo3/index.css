@@ -1,5 +1,5 @@
  .u-section-1 {
-  background-image: linear-gradient(to bottom, rgba(69, 53, 103, 0.5), rgba(115, 57, 125, 0.5)), url('images/Morarkadesendedermatolojiileilgilistokfotorafolutur..jpg'), linear-gradient(to bottom, rgba(115, 57, 125, 0.8), rgba(115, 57, 125, 0.8));
+  background-image: linear-gradient(to bottom, rgba(69, 53, 103, 0.5), rgba(115, 57, 125, 0.5)) no-repeat 50% 50% / cover,linear-gradient(to bottom, rgba(115, 57, 125, 0.8), rgba(115, 57, 125, 0.8)) no-repeat 50% 50% / cover;
   background-position: 50% 50%, 50% 50%, 50% 50%;
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: cover, cover, cover;
@@ -78,7 +78,7 @@
   --animation-custom_in-scale: 1;
   line-height: 1.33;
   font-family: Oswald, sans-serif;
-  margin: -153px 533px 32px 0;
+  margin: -153px 798px 32px 0;
 }
 
 @media (max-width: 1199px) {
@@ -100,7 +100,7 @@
   }
 
   .u-section-1 .u-text-4 {
-    margin-right: 333px;
+    margin-right: 598px;
   }
 }
 
@@ -109,8 +109,15 @@
     min-height: 512px;
   }
 
-  .u-section-1 .u-container-layout-2 {
+  .u-section-1 .u-container-layout-1 {
+    padding-top: 0;
     padding-left: 0;
+  }
+
+  .u-section-1 .u-container-layout-2 {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .u-section-1 .u-text-2 {
@@ -133,7 +140,7 @@
   .u-section-1 .u-text-4 {
     width: auto;
     margin-top: -278px;
-    margin-right: 113px;
+    margin-right: 378px;
     margin-bottom: 60px;
   }
 }
@@ -158,7 +165,7 @@
   }
 
   .u-section-1 .u-text-4 {
-    margin-right: 0;
+    margin-right: 198px;
     margin-bottom: -22px;
   }
 }
@@ -192,6 +199,7 @@
 
   .u-section-1 .u-text-4 {
     margin-top: -247px;
+    margin-right: 0;
     margin-bottom: 37px;
   }
 }.u-section-2 .u-sheet-1 {
@@ -368,9 +376,7 @@
   }
 
   .u-section-2 .u-container-layout-1 {
-    padding-top: 0;
-    padding-left: 19px;
-    padding-right: 19px;
+    padding: 0 19px;
   }
 
   .u-section-2 .u-text-1 {
@@ -388,6 +394,10 @@
 
   .u-section-2 .u-layout-cell-2 {
     min-height: 100px;
+  }
+
+  .u-section-2 .u-container-layout-2 {
+    padding: 0;
   }
 
   .u-section-2 .u-list-1 {
@@ -802,6 +812,21 @@
     grid-template-columns: repeat(2, calc(50% - 5px));
     min-height: 838px;
   }
+
+  .u-section-3 .u-container-layout-1 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .u-section-3 .u-container-layout-3 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .u-section-3 .u-container-layout-5 {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1167,7 +1192,7 @@
     font-size: 1.5rem;
   }
 } .u-section-5 {
-  background-image: linear-gradient(0deg, rgba(115, 57, 125, 0.65), rgba(115, 57, 125, 0.65)), url('images/DrAylinSemaKlinikFigma.jpg');
+  background-image: linear-gradient(0deg, rgba(115, 57, 125, 0.65), rgba(115, 57, 125, 0.65)) 50% 50% / cover;
   background-position: 50% 50%, 50% 50%;
   background-size: cover, cover;
 }
@@ -1230,7 +1255,6 @@
   width: 141px;
   height: 141px;
   box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
-  background-image: url("images/70a780b1b9ec6d93c2007e966b21668335a14d2de6e35d113632d6252e8ab6f621604d34249f7db43a21b64fb314be76d58a4ebc03fa3def94f84e_1280.jpg");
   background-position: 50% 50%;
   margin: -244px 369px 103px auto;
 }
@@ -1263,7 +1287,6 @@
   width: 141px;
   height: 141px;
   box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
-  background-image: url("images/afb0b2b2-365e-4e48-887c-6dacc605f7c5.jpg");
   background-position: 50% 50%;
   margin: -297px 369px 156px auto;
 }
@@ -1296,7 +1319,6 @@
   width: 141px;
   height: 141px;
   box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
-  background-image: url("images/71bc2592ad80925e5f38bcaad7899106c114d1d5c9fa6d5b134a0b81e6d5cc7247e3353375160b9741a721ea7dc46a459a63ce398cb01007eca217_1280.jpg");
   background-position: 50% 50%;
   margin: -297px 369px 156px auto;
 }
@@ -1329,7 +1351,6 @@
   width: 141px;
   height: 141px;
   box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
-  background-image: url("images/83be5ddd9d9602c8606e5a797dcb3b2796ab30085098368ba2725e8d1da4d6739e8dbc219c6f2f44bb435b246af755ed5ec8d1bcd3a298665efb31_1280.jpg");
   background-position: 50% 50%;
   margin: -244px 369px 103px auto;
 }
@@ -1738,7 +1759,7 @@
   --radius: 30px;
   background-position: 50% 50%, 50% 50%, 50% 50%;
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-image: linear-gradient(to bottom, rgba(69, 53, 103, 0.5), rgba(115, 57, 125, 0.5)), url('images/8dcf2dd17fcceeed530caf74e3bcc486854f615a94ef2e662e2a831daa948902679822150fd1397230638ffcc9523293b6464c8ac642a5e4a88d06_1280.jpg'), linear-gradient(to bottom, rgba(69, 53, 103, 1), rgba(69, 53, 103, 1));
+  background-image: linear-gradient(to bottom, rgba(69, 53, 103, 0.5), rgba(115, 57, 125, 0.5)) no-repeat 50% 50% / cover,linear-gradient(to bottom, rgba(69, 53, 103, 1), rgba(69, 53, 103, 1)) no-repeat 50% 50% / cover;
   background-size: cover, cover, cover;
 }
 
@@ -1766,7 +1787,7 @@
   --radius: 30px;
   background-position: 50% 50%, 50% 50%, 50% 50%;
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-image: linear-gradient(to bottom, rgba(69, 53, 103, 0.5), rgba(115, 57, 125, 0.5)), url('images/34efd317ba1f966b96be8a62358daf3ac86691b29322a261df9487846c1bbbfcc1239e091da9aab1f62a7e7a230273bac6cab313b2aecc5185ae7b_1280.jpg'), linear-gradient(to bottom, rgba(69, 53, 103, 1), rgba(69, 53, 103, 1));
+  background-image: linear-gradient(to bottom, rgba(69, 53, 103, 0.5), rgba(115, 57, 125, 0.5)) no-repeat 50% 50% / cover,linear-gradient(to bottom, rgba(69, 53, 103, 1), rgba(69, 53, 103, 1)) no-repeat 50% 50% / cover;
   background-size: cover, cover, cover;
 }
 
@@ -1795,7 +1816,7 @@
   --radius: 30px;
   background-position: 50% 50%, 50% 50%, 50% 50%;
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-image: linear-gradient(to bottom, rgba(69, 53, 103, 0.5), rgba(115, 57, 125, 0.5)), url('images/2f093171be5decc389b498b051a8c62d80b1c6188b856f9aa8bc0fb012f27a708b39d331ae4d43304575fa3629bde86bdbe183d57a3d64ecd84949_1280.jpg'), linear-gradient(to bottom, rgba(69, 53, 103, 1), rgba(69, 53, 103, 1));
+  background-image: linear-gradient(to bottom, rgba(69, 53, 103, 0.5), rgba(115, 57, 125, 0.5)) no-repeat 50% 50% / cover,linear-gradient(to bottom, rgba(69, 53, 103, 1), rgba(69, 53, 103, 1)) no-repeat 50% 50% / cover;
   background-size: cover, cover, cover;
 }
 
@@ -1910,7 +1931,7 @@
     width: auto;
   }
 } .u-section-7 {
-  background-image: linear-gradient(0deg, rgba(115, 57, 125, 0.5), rgba(115, 57, 125, 0.5)), url('images/Morarkadesendedermatolojiileilgilistokfotorafolutur..jpg');
+  background-image: linear-gradient(0deg, rgba(115, 57, 125, 0.5), rgba(115, 57, 125, 0.5)) no-repeat 50% 50% / contain;
   background-position: 50% 50%, 50% 22.94%;
   background-repeat: no-repeat, no-repeat;
   background-size: contain, cover;
@@ -1968,7 +1989,7 @@
 .u-section-8 .u-image-1 {
   min-height: 515px;
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-image: linear-gradient(to bottom, rgba(69, 53, 103, 0.5), rgba(115, 57, 125, 0.5)), linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('images/dr-mehtap-vatansever-klinik-013.jpg');
+  background-image: linear-gradient(to bottom, rgba(69, 53, 103, 0.5), rgba(115, 57, 125, 0.5)) no-repeat 50% 50% / cover,linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) no-repeat 50% 50% / cover;
   background-size: cover, cover, cover;
   --radius: 50px;
   background-position: 50% 50%;
@@ -1985,7 +2006,7 @@
 .u-section-8 .u-image-2 {
   min-height: 515px;
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-image: linear-gradient(to bottom, rgba(69, 53, 103, 0.5), rgba(115, 57, 125, 0.5)), linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('images/dr-mehtap-vatansever-klinik-020.jpg');
+  background-image: linear-gradient(to bottom, rgba(69, 53, 103, 0.5), rgba(115, 57, 125, 0.5)) no-repeat 50% 50% / cover,linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) no-repeat 50% 50% / cover;
   background-size: cover, cover, cover;
   --radius: 50px;
   background-position: 50% 50%, 50% 50%, 50% 50%;
@@ -2003,7 +2024,7 @@
   min-height: 515px;
   background-position: 50% 50%, 50% 50%, 50% 50%;
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-image: linear-gradient(to bottom, rgba(69, 53, 103, 0.5), rgba(115, 57, 125, 0.5)), linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('images/dr-mehtap-vatansever-klinik-012.jpg');
+  background-image: linear-gradient(to bottom, rgba(69, 53, 103, 0.5), rgba(115, 57, 125, 0.5)) no-repeat 50% 50% / cover,linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) no-repeat 50% 50% / cover;
   background-size: cover, cover, cover;
   --radius: 50px;
 }
