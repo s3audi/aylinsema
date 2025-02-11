@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ...existing code... -->
+</head>
+<body>
+    <!-- ...existing code... -->
+    <div id="airtable-data"></div>
+    <!-- ...existing code... -->
+    <script>
+        async function fetchAirtableData() {
+            const apiKey = 'YOUR_AIRTABLE_API_KEY';
+            const baseId = 'YOUR_AIRTABLE_BASE_ID';
+            const tableName = 'YOUR_TABLE_NAME';
+
+            
+            const url = `https://api.airtable.com/v0/${baseId}/${tableName}`;
+
+            const response = await fetch(url, {
+                headers: {
+                    Authorization: `Bearer ${apiKey}`
+                }
+            });
+
+            const data = await response.json();
+            displayData(data.records);
+        }
+
+        function displayData(records) {
+            const container = document.getElementById('airtable-data');
+            records.forEach(record => {
+                const div = document.createElement('div');
+                div.textContent = JSON.stringify(record.fields);
+                container.appendChild(div);
+            });
+        }
+
+        fetchAirtableData();
+    </script>
+</body>
+</html>
