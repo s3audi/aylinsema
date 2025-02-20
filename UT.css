@@ -1,0 +1,301 @@
+ .u-section-1 {
+  background-image: linear-gradient(to bottom, rgba(131, 68, 150, 0.5), rgba(105, 70, 140, 0.5)), url('images/DrAylinSema_HakkindaBenler.jpg'), linear-gradient(to bottom, rgba(105, 70, 140, 1), rgba(105, 70, 140, 1));
+  background-position: 50% 50%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: cover, cover, cover;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 561px;
+}
+
+.u-section-1 .u-layout-wrap-1 {
+  margin-top: 23px;
+  margin-bottom: 0;
+}
+
+.u-section-1 .u-layout-cell-1 {
+  --animation-custom_in-translate_x: -200px;
+  --animation-custom_in-translate_y: 0px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 1;
+  min-height: 71px;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 0 0 22px;
+}
+
+.u-section-1 .u-layout-cell-2 {
+  --animation-custom_in-translate_x: 300px;
+  --animation-custom_in-translate_y: 0px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 1;
+  min-height: 46px;
+}
+
+.u-section-1 .u-container-layout-2 {
+  padding: 0 0 10px 30px;
+}
+
+.u-section-1 .u-text-1 {
+  text-transform: uppercase;
+  margin: 7px 0 0 207px;
+}
+
+.u-section-1 .u-text-2 {
+  margin: 23px auto 60px 0;
+}
+
+.u-section-1 .u-btn-1 {
+  background-image: none;
+  padding: 0;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 145px;
+  }
+
+  .u-section-1 .u-layout-cell-1 {
+    min-height: 59px;
+  }
+
+  .u-section-1 .u-layout-cell-2 {
+    min-height: 38px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-left: 107px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 207px;
+  }
+
+  .u-section-1 .u-layout-cell-1 {
+    min-height: 83px;
+  }
+
+  .u-section-1 .u-layout-cell-2 {
+    min-height: 94px;
+  }
+
+  .u-section-1 .u-container-layout-2 {
+    padding-left: 0;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 560px;
+  }
+
+  .u-section-1 .u-layout-cell-1 {
+    min-height: 68px;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-bottom: 0;
+  }
+
+  .u-section-1 .u-layout-cell-2 {
+    min-height: 100px;
+  }
+
+  .u-section-1 .u-container-layout-2 {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 575px) {
+   .u-section-1 {
+    background-position: 50% 50%, 50% 0%, 50% 50%;
+  }
+
+  .u-section-1 .u-sheet-1 {
+    min-height: 212px;
+  }
+
+  .u-section-1 .u-layout-cell-1 {
+    min-height: 43px;
+  }
+
+  .u-section-1 .u-layout-cell-2 {
+    min-height: 65px;
+  }
+
+  .u-section-1 .u-text-2 {
+    width: auto;
+  }
+}.u-section-2 .u-sheet-1 {
+  min-height: 880px;
+}
+
+.u-section-2 .u-text-1 {
+  font-size: 3rem;
+  margin: 36px auto 0;
+}
+
+.u-section-2 .u-text-2 {
+  margin: 21px 0 0;
+}
+
+.u-section-2 .u-layout-wrap-1 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.u-section-2 .u-image-1 {
+  background-position: 50% 50%, 50% 50%;
+  background-repeat: no-repeat, no-repeat;
+  background-image: linear-gradient(-359deg, rgba(131, 68, 150, 0), rgba(105, 70, 140, 0.75)), url('images/dfff.jpg');
+  background-size: cover, cover;
+  min-height: 610px;
+}
+
+.u-section-2 .u-container-layout-1 {
+  padding: 30px;
+}
+
+.u-section-2 .u-text-3 {
+  font-weight: 700;
+  margin: 0 auto 0 0;
+}
+
+.u-section-2 .u-image-2 {
+  background-repeat: no-repeat, no-repeat;
+  background-image: linear-gradient(-359deg, rgba(131, 68, 150, 0), rgba(105, 70, 140, 0.75)), url('images/great-wall_1359-1016.jpg');
+  background-size: cover, cover;
+  min-height: 305px;
+  background-position: 50% 50%, 50% 50%;
+}
+
+.u-section-2 .u-container-layout-2 {
+  padding: 30px;
+}
+
+.u-section-2 .u-text-4 {
+  font-weight: 700;
+  margin: 0 auto 0 0;
+}
+
+.u-section-2 .u-image-3 {
+  background-position: 50% 50%, 50% 50%;
+  background-repeat: no-repeat, no-repeat;
+  background-image: linear-gradient(-359deg, rgba(131, 68, 150, 0), rgba(105, 70, 140, 0.75)), url('images/7b3bdb407571994db3eb7aa84c164c27d9f6d91cd9b32033b6d980302d2ed3028c359285031c385ad0ce6ac0d998573e45763dfa814fa105cf9b62_1280.jpg');
+  background-size: cover, cover;
+  min-height: 305px;
+}
+
+.u-section-2 .u-container-layout-3 {
+  padding: 30px;
+}
+
+.u-section-2 .u-text-5 {
+  font-weight: 700;
+  margin: 0 auto 0 0;
+}
+
+@media (max-width: 1199px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 831px;
+  }
+
+  .u-section-2 .u-text-1 {
+    font-size: 2.25rem;
+  }
+
+  .u-section-2 .u-image-1 {
+    min-height: 503px;
+  }
+
+  .u-section-2 .u-image-2 {
+    min-height: 251px;
+  }
+
+  .u-section-2 .u-image-3 {
+    min-height: 251px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 1484px;
+  }
+
+  .u-section-2 .u-image-1 {
+    min-height: 771px;
+  }
+
+  .u-section-2 .u-image-2 {
+    min-height: 385px;
+  }
+
+  .u-section-2 .u-image-3 {
+    min-height: 385px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 2930px;
+  }
+
+  .u-section-2 .u-image-1 {
+    min-height: 578px;
+  }
+
+  .u-section-2 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-2 .u-image-2 {
+    min-height: 432px;
+  }
+
+  .u-section-2 .u-container-layout-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-2 .u-image-3 {
+    min-height: 578px;
+  }
+
+  .u-section-2 .u-container-layout-3 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 1967px;
+  }
+
+  .u-section-2 .u-text-1 {
+    font-size: 1.875rem;
+  }
+
+  .u-section-2 .u-image-1 {
+    min-height: 364px;
+  }
+
+  .u-section-2 .u-image-2 {
+    min-height: 272px;
+  }
+
+  .u-section-2 .u-image-3 {
+    min-height: 364px;
+  }
+}
