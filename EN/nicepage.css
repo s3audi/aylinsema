@@ -44999,6 +44999,11 @@ a.u-link.u-text-hover-grey-90:hover {
   padding: 0;
 }
 
+.u-footer .u-btn-18 {
+  background-image: none;
+  padding: 0;
+}
+
 .u-footer .u-social-icons-1 {
   height: 34px;
   min-height: 16px;
@@ -45039,7 +45044,7 @@ a.u-link.u-text-hover-grey-90:hover {
   margin: 0 auto;
 }
 
-.u-footer .u-btn-18 {
+.u-footer .u-btn-19 {
   background-image: none;
   padding: 0;
 }
