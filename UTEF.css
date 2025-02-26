@@ -170,6 +170,7 @@
 .u-section-2 .u-text-1 {
   font-family: Allura;
   font-weight: 700;
+  font-size: 3rem;
   margin: 20px auto 0 0;
 }
 
@@ -230,10 +231,6 @@
   .u-section-2 .u-image-1 {
     width: 518px;
     height: 644px;
-  }
-
-  .u-section-2 .u-text-1 {
-    font-size: 3rem;
   }
 
   .u-section-2 .u-layout-cell-2 {
