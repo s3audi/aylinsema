@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airtable Verileri</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    tr:hover {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Airtable'dan Gelen Veriler</h1>
+  <table id="data-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Veriler buraya dinamik olarak eklenecek -->
+    </tbody>
+  </table>
+
+  <script>
+    // Airtable Bilgileri
+    const BASE_ID = 'approfg0m1ZXRyJRL'; // Base ID'nizi buraya ekleyin
+    const TABLE_NAME = 'Datafetch2'; // Tablo adınızı buraya ekleyin
+    const TOKEN = 'patVkhPHax2NQlAWj.b5af5daa99e5c20c707613c8f9e763d9b29b175b8f9d0fcdf42bbf89be5cef22'; // Token'ınızı buraya ekleyin
+    const URL = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`;
+
+    // Verileri çekmek için fetch fonksiyonu
+    async function fetchData() {
+      try {
+        const response = await fetch(URL, {
+          headers: {
+            'Authorization': `Bearer ${TOKEN}` // Token'ı burada kullanın
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error('Veri çekme işlemi başarısız oldu.');
+        }
+
+        const data = await response.json();
+        const sortedData = data.records.sort((a, b) => a.fields.ID - b.fields.ID); // ID'ye göre sırala
+        displayData(sortedData); // Verileri tabloya ekle
+      } catch (error) {
+        console.error('Hata:', error);
+        document.getElementById('data-table').innerHTML = '<p>Veriler yüklenirken bir hata oluştu.</p>';
+      }
+    }
+
+    // Verileri HTML tablosuna ekleme
+    function displayData(records) {
+      const tbody = document.querySelector('#data-table tbody');
+      tbody.innerHTML = ''; // Tabloyu temizle
+
+      if (records.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="4">Tabloda veri bulunamadı.</td></tr>';
+        return;
+      }
+
+      records.forEach(record => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${record.fields.ID || ''}</td>
+          <td>${record.fields.Name || ''}</td>
+          <td>${record.fields.Username || ''}</td>
+          <td>${record.fields.Email || ''}</td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    // Sayfa yüklendiğinde verileri çek
+    document.addEventListener('DOMContentLoaded', fetchData);
+  </script>
+</body>
+</html>

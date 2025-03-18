@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klavye Kombinasyonu ile İçerik Değiştirme</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .fullscreen-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .info-text {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <img id="image" class="fullscreen-image" src="https://sun9-37.userapi.com/impg/3Xv5e5X4qRSdzy01jbG_0PgnERormdZ_WouGaQ/YfYX9_7RsnI.jpg?size=1472x832&quality=95&sign=403e7045bf1623cd6635ea4e9912a702&type=album?text=İlk+Resim" alt="Image 1">
+    <div id="info" class="info-text">S tuşuna basarak fotoğrafı değiştirin ve linki açın.</div>
+
+    <script>
+        let imageIndex = 0;
+        const images = [
+            { src: "https://sun9-66.userapi.com/impg/3sxuir5eSyriDhl-HA-eUb59TMlG63SG_bFEsg/kb52rVrjLto.jpg?size=1472x832&quality=95&sign=8ae2d5aab773cf5020f8467475283732&type=album", link: "https://semtasoft.com" },
+            { src: "https://sun9-50.userapi.com/impg/zfBbXavdtmFIXMtZctLZTRyEpC_5XU8LbM90zA/df2YU-qymOo.jpg?size=1472x832&quality=95&sign=425fc578797e5a986168ffc5266ff679&type=album", link: "https://example.com" }
+        ];
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 's' || event.key === 'S') {
+                imageIndex = (imageIndex + 1) % images.length;
+                const imageElement = document.getElementById('image');
+                const infoElement = document.getElementById('info');
+
+                if (imageIndex === 0) {
+                    imageElement.src = images[imageIndex].src;
+                    infoElement.textContent = "S tuşuna basarak fotoğrafı değiştirin ve linki açın.";
+                } else if (imageIndex === 1) {
+                    imageElement.src = images[imageIndex].src;
+                    infoElement.textContent = "S tuşuna tekrar basarak semtasoft.com'a gidin.";
+                } else if (imageIndex === 2) {
+                    window.location.href = images[1].link;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

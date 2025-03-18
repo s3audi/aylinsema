@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Klavye Kısayol Demo</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        #image-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+        }
+        #display-image {
+            width: 100%;
+            border-radius: 10px;
+        }
+        #link-text {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: #fff;
+            background-color: rgba(0,0,0,0.6);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="image-container">
+    <img id="display-image" src="https://sun9-37.userapi.com/impg/3Xv5e5X4qRSdzy01jbG_0PgnERormdZ_WouGaQ/YfYX9_7RsnI.jpg?size=1472x832&quality=95&sign=403e7045bf1623cd6635ea4e9912a702&type=album?text=İlk+Resim" alt="Image">
+    <div id="link-text">SemtaSoft.com</div>
+</div>
+
+<script>
+    let sPressCount = 0;
+    
+    // Görseller ve linkler dizisi
+    const data = [
+        {
+            image: 'https://via.placeholder.com/800x400.png?text=SemtaSoft',
+            link: 'https://semtasoft.com'
+        },
+        {
+            image: 'https://via.placeholder.com/800x400.png?text=OpenAI',
+            link: 'https://openai.com'
+        }
+    ];
+    
+    let currentIndex = 0;
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key.toLowerCase() === 's') {
+            sPressCount++;
+
+            if (sPressCount === 1) {
+                // Resmi ve link yazısını değiştir
+                currentIndex = (currentIndex + 1) % data.length;
+                document.getElementById('display-image').src = data[currentIndex].image;
+                document.getElementById('link-text').textContent = data[currentIndex].link;
+
+            } else if (sPressCount === 2) {
+                // Linke yönlendir
+                window.location.href = data[currentIndex].link;
+            }
+        }
+    });
+
+    // Her tuşa basma sonrası sayaç sıfırlansın istiyorsan zamanlayıcı koyabilirsin
+    document.addEventListener('keyup', (event) => {
+        if (event.key.toLowerCase() === 's') {
+            // Birkaç saniye bekleyip sıfırlayabilirsin, basit olması için sıfırlamıyorum şimdilik
+        }
+    });
+</script>
+
+</body>
+</html>

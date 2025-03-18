@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screenshot D2 - Klavye Kombinasyonu ile İçerik Değiştirme</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .fullscreen-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .info-text {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <img id="image" class="fullscreen-image" src="" alt="Image 1">
+    <div id="info" class="info-text">S tuşuna basarak fotoğrafı değiştirin. Enter tuşu ile linki açın.</div>
+
+    <script>
+        let imageIndex = 0;
+        let images = [];
+        let subSlideIndex = -1;
+
+        async function fetchAirtableData() {
+            const apiKey = 'YOUR_AIRTABLE_API_KEY';
+            const baseId = 'YOUR_AIRTABLE_BASE_ID';
+            const tableName = 'YOUR_TABLE_NAME'; // Replace with your Airtable table name
+            const url = `https://api.airtable.com/v0/${baseId}/${tableName}`;
+
+            const response = await fetch(url, {
+                headers: {
+                    Authorization: `Bearer ${apiKey}`
+                }
+            });
+
+            const data = await response.json();
+            images = data.records.map(record => record.fields); // Ensure your Airtable table has fields: 'src', 'link', and 'subSlides'
+            updateImageAndInfo();
+        }
+
+        function changeImage() {
+            subSlideIndex = -1;
+            imageIndex = (imageIndex + 1) % images.length;
+            updateImageAndInfo();
+        }
+
+        function changeToSubSlide() {
+            if (images[imageIndex].subSlides && images[imageIndex].subSlides.length > 0) {
+                subSlideIndex = (subSlideIndex + 1) % images[imageIndex].subSlides.length;
+                updateImageAndInfo();
+            }
+        }
+
+        function updateImageAndInfo() {
+            const imageElement = document.getElementById('image');
+            const infoElement = document.getElementById('info');
+
+            if (subSlideIndex === -1) {
+                imageElement.src = images[imageIndex].src;
+                infoElement.textContent = `S tuşuna basarak fotoğrafı değiştirin. Enter tuşu ile "${images[imageIndex].link}" açılacak.`;
+            } else {
+                imageElement.src = images[imageIndex].subSlides[subSlideIndex].src;
+                infoElement.textContent = `S tuşuna basarak fotoğrafı değiştirin. Enter tuşu ile "${images[imageIndex].subSlides[subSlideIndex].link}" açılacak.`;
+            }
+        }
+
+        function openLinkInNewTab() {
+            if (subSlideIndex === -1) {
+                window.open(images[imageIndex].link, '_blank');
+            } else {
+                window.open(images[imageIndex].subSlides[subSlideIndex].link, '_blank');
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            console.log(`Key pressed: ${event.key}`); // Debugging line
+            if (event.key === 's' || event.key === 'S') {
+                changeImage();
+            } else if (event.key === 'Enter') {
+                openLinkInNewTab();
+            } else if (event.key === 'r' || event.key === 'R') {
+                changeToSubSlide();
+            }
+        });
+
+        fetchAirtableData();
+    </script>
+</body>
+</html>
