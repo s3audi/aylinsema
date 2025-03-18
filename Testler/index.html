@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screenshot D2 - Klavye Kombinasyonu ile İçerik Değiştirme</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .fullscreen-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .info-text {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <img id="image" class="fullscreen-image" src="https://sun9-37.userapi.com/impg/3Xv5e5X4qRSdzy01jbG_0PgnERormdZ_WouGaQ/YfYX9_7RsnI.jpg?size=1472x832&quality=95&sign=403e7045bf1623cd6635ea4e9912a702&type=album?text=İlk+Resim" alt="Image 1">
+    <div id="info" class="info-text">S tuşuna basarak fotoğrafı değiştirin. Enter tuşu ile linki açın.</div>
+
+    <script>
+        let imageIndex = 0;
+        const images = [
+            { 
+                src: "https://sun9-37.userapi.com/impg/3Xv5e5X4qRSdzy01jbG_0PgnERormdZ_WouGaQ/YfYX9_7RsnI.jpg?size=1472x832&quality=95&sign=403e7045bf1623cd6635ea4e9912a702&type=album.jpg", 
+                link: "https://semtasoft.com",
+                subSlides: [
+                    { src: "https://sun9-67.userapi.com/impg/_Sc_C3RFHwuuUFLi2UjgY-lvmyxLzMl17qDg_g/GioDF4EDN1A.jpg?size=1120x1120&quality=95&sign=5661f5d471f551d6a017073f139654cd&type=album", link: "https://semtasoft.com/sub1" },
+                    { src: "https://sun9-73.userapi.com/impg/pm8wUvRWLuJJ3M83GIxXhOqmatEE2ejmqlgl1g/TTseuUm23OQ.jpg?size=1600x1600&quality=95&sign=e9b4972ca5490510f69e7e49d08fecb3&type=album", link: "https://semtasoft.com/sub2" }
+                ]
+            },
+            { 
+                src: "https://sun9-66.userapi.com/impg/3sxuir5eSyriDhl-HA-eUb59TMlG63SG_bFEsg/kb52rVrjLto.jpg?size=1472x832&quality=95&sign=8ae2d5aab773cf5020f8467475283732&type=album", 
+                link: "https://example.com",
+                subSlides: [
+                    { src: "https://sun9-62.userapi.com/impg/V5O7rWjYWZ7gucTqQPEcxL_O4v6-fkgp_uot4Q/tKazrxNyNYE.jpg?size=2560x1072&quality=95&sign=159d622e020240e6a7ef748c56087b6a&type=album", link: "https://example.com/sub1" },
+                    { src: "https://sun9-16.userapi.com/impg/5XszwagFCHOKFBavyLtuzTxrhYw-3LZTZNe4Kg/u-t7rPhneqU.jpg?size=480x360&quality=95&sign=a9c4af7620c8326ebda5a332a39cb09a&type=album", link: "https://example.com/sub2" }
+                ]
+            }
+        ];
+        let subSlideIndex = -1;
+
+        function changeImage() {
+            subSlideIndex = -1;
+            imageIndex = (imageIndex + 1) % images.length;
+            updateImageAndInfo();
+        }
+
+        function changeToSubSlide() {
+            if (images[imageIndex].subSlides.length > 0) {
+                subSlideIndex = (subSlideIndex + 1) % images[imageIndex].subSlides.length;
+                updateImageAndInfo();
+            }
+        }
+
+        function updateImageAndInfo() {
+            const imageElement = document.getElementById('image');
+            const infoElement = document.getElementById('info');
+
+            if (subSlideIndex === -1) {
+                imageElement.src = images[imageIndex].src;
+                infoElement.textContent = `S tuşuna basarak fotoğrafı değiştirin. Enter tuşu ile "${images[imageIndex].link}" açılacak.`;
+            } else {
+                imageElement.src = images[imageIndex].subSlides[subSlideIndex].src;
+                infoElement.textContent = `S tuşuna basarak fotoğrafı değiştirin. Enter tuşu ile "${images[imageIndex].subSlides[subSlideIndex].link}" açılacak.`;
+            }
+        }
+
+        function openLinkInNewTab() {
+            if (subSlideIndex === -1) {
+                window.open(images[imageIndex].link, '_blank');
+            } else {
+                window.open(images[imageIndex].subSlides[subSlideIndex].link, '_blank');
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            console.log(`Key pressed: ${event.key}`); // Debugging line
+            if (event.key === 's' || event.key === 'S') {
+                changeImage();
+            } else if (event.key === 'Enter') {
+                openLinkInNewTab();
+            } else if (event.key === 'r' || event.key === 'R') {
+                changeToSubSlide();
+            }
+        });
+
+        updateImageAndInfo();
+    </script>
+</body>
+</html>
