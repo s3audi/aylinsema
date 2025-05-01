@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Araç Şarj Takip Sistemi</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .tab-container {
+            margin-top: 20px;
+        }
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            margin-right: 5px;
+            border-radius: 5px 5px 0 0;
+        }
+        .tab.active {
+            background-color: #3498db;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-top: none;
+            background-color: white;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .dashboard-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .card .value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3498db;
+            margin: 10px 0;
+        }
+        .search-container {
+            margin-bottom: 20px;
+        }
+        .filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .filter-item {
+            flex: 1;
+        }
+        .reports-container {
+            margin-top: 20px;
+        }
+        .report-options {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>E-Araç Şarj Takip Sistemi</h1>
+    </header>
+    <div class="container">
+        <div class="tab-container">
+            <div class="tabs">
+                <div class="tab active" onclick="openTab(event, 'dashboard')">Dashboard</div>
+                <div class="tab" onclick="openTab(event, 'newCharging')">Yeni Şarj İşlemi</div>
+                <div class="tab" onclick="openTab(event, 'vehicles')">Araçlar</div>
+                <div class="tab" onclick="openTab(event, 'charging-history')">Şarj Geçmişi</div>
+                <div class="tab" onclick="openTab(event, 'reports')">Raporlar</div>
+                <div class="tab" onclick="openTab(event, 'settings')">Ayarlar</div>
+            </div>
+
+            <!-- Dashboard Tab -->
+            <div id="dashboard" class="tab-content active">
+                <h2>Genel Bakış</h2>
+                <div class="dashboard-cards">
+                    <div class="card">
+                        <h3>Bugünkü Şarj İşlemleri</h3>
+                        <div class="value" id="todayChargingCount">0</div>
+                    </div>
+                    <div class="card">
+                        <h3>Bu Ayki Toplam kWh</h3>
+                        <div class="value" id="monthlyKwh">0 kWh</div>
+                    </div>
+                    <div class="card">
+                        <h3>Bekleyen Ödemeler</h3>
+                        <div class="value" id="pendingPayments">0 ₺</div>
+                    </div>
+                </div>
+
+                <h3>Son Şarj İşlemleri</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tarih</th>
+                            <th>Araç</th>
+                            <th>Tüketim (kWh)</th>
+                            <th>Tutar</th>
+                            <th>Durum</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentChargingTable">
+                        <tr>
+                            <td colspan="5">Veri yükleniyor...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- New Charging Tab -->
+            <div id="newCharging" class="tab-content">
+                <h2>Yeni Şarj İşlemi</h2>
+                <form id="chargingForm">
+                    <div class="form-group">
+                        <label for="vehicle">Araç</label>
+                        <select id="vehicle" required>
+                            <option value="">Araç seçin...</option>
+                            <!-- Araçlar Airtable'dan yüklenecek -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="startTime">Başlangıç Zamanı</label>
+                        <input type="datetime-local" id="startTime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="endTime">Bitiş Zamanı</label>
+                        <input type="datetime-local" id="endTime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="kWh">Tüketilen kWh</label>
+                        <input type="number" id="kWh" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Birim Fiyat (₺/kWh)</label>
+                        <input type="number" id="price" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="totalPrice">Toplam Tutar (₺)</label>
+                        <input type="number" id="totalPrice" readonly>
+                    </div>
+                    <button type="submit">Kaydet</button>
+                </form>
+            </div>
+
+            <!-- Vehicles Tab -->
+            <div id="vehicles" class="tab-content">
+                <h2>Araçlar</h2>
+                <button id="addVehicleBtn">Yeni Araç Ekle</button>
+                
+                <div id="addVehicleForm" style="display: none; margin-top: 20px; padding: 20px; border: 1px solid #ddd; background-color: #f9f9f9;">
+                    <h3>Yeni Araç Ekle</h3>
+                    <form id="vehicleForm">
+                        <div class="form-group">
+                            <label for="plate">Plaka</label>
+                            <input type="text" id="plate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="model">Marka/Model</label>
+                            <input type="text" id="model" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="owner">Araç Sahibi</label>
+                            <input type="text" id="owner" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact">İletişim Bilgisi</label>
+                            <input type="text" id="contact" required>
+                        </div>
+                        <button type="submit">Kaydet</button>
+                        <button type="button" id="cancelVehicleBtn">İptal</button>
+                    </form>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Plaka</th>
+                            <th>Marka/Model</th>
+                            <th>Araç Sahibi</th>
+                            <th>İletişim Bilgisi</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vehiclesTable">
+                        <tr>
+                            <td colspan="5">Veri yükleniyor...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Charging History Tab -->
+            <div id="charging-history" class="tab-content">
+                <h2>Şarj Geçmişi</h2>
+                <div class="search-container">
+                    <div class="filters">
+                        <div class="filter-item">
+                            <label for="filterVehicle">Araç</label>
+                            <select id="filterVehicle">
+                                <option value="">Tümü</option>
+                                <!-- Araçlar Airtable'dan yüklenecek -->
+                            </select>
+                        </div>
+                        <div class="filter-item">
+                            <label for="filterDateFrom">Başlangıç Tarihi</label>
+                            <input type="date" id="filterDateFrom">
+                        </div>
+                        <div class="filter-item">
+                            <label for="filterDateTo">Bitiş Tarihi</label>
+                            <input type="date" id="filterDateTo">
+                        </div>
+                        <div class="filter-item">
+                            <label for="filterStatus">Ödeme Durumu</label>
+                            <select id="filterStatus">
+                                <option value="">Tümü</option>
+                                <option value="Paid">Ödendi</option>
+                                <option value="Pending">Ödenmedi</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="applyFilters">Filtrele</button>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tarih</th>
+                            <th>Araç</th>
+                            <th>Başlangıç</th>
+                            <th>Bitiş</th>
+                            <th>Tüketim (kWh)</th>
+                            <th>Tutar (₺)</th>
+                            <th>Ödeme Durumu</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody id="chargingHistoryTable">
+                        <tr>
+                            <td colspan="8">Veri yükleniyor...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Reports Tab -->
+            <div id="reports" class="tab-content">
+                <h2>Raporlar</h2>
+                
+                <div class="report-options">
+                    <h3>Aylık Rapor Oluştur</h3>
+                    <div class="form-group">
+                        <label for="reportMonth">Ay Seçin</label>
+                        <input type="month" id="reportMonth">
+                    </div>
+                    <div class="form-group">
+                        <label for="reportVehicle">Araç (Opsiyonel)</label>
+                        <select id="reportVehicle">
+                            <option value="">Tüm Araçlar</option>
+                            <!-- Araçlar Airtable'dan yüklenecek -->
+                        </select>
+                    </div>
+                    <button id="generateReport">Rapor Oluştur</button>
+                    <button id="sendPaymentRequests">Ödeme Talebi Gönder</button>
+                </div>
+                
+                <div class="reports-container">
+                    <h3>Rapor Sonuçları</h3>
+                    <div id="reportResults">
+                        <p>Rapor oluşturmak için yukarıdaki seçenekleri kullanın.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings Tab -->
+            <div id="settings" class="tab-content">
+                <h2>Sistem Ayarları</h2>
+                
+                <h3>kWh Fiyatlandırması</h3>
+                <form id="pricingForm">
+                    <div class="form-group">
+                        <label for="kwhPrice">Şarj Birimi Fiyatı (₺/kWh)</label>
+                        <input type="number" id="kwhPrice" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="validFrom">Geçerlilik Başlangıcı</label>
+                        <input type="date" id="validFrom" required>
+                    </div>
+                    <button type="submit">Fiyat Güncelle</button>
+                </form>
+                
+                <h3>API Ayarları</h3>
+                <form id="apiSettingsForm">
+                    <div class="form-group">
+                        <label for="airtableApiKey">Airtable API Anahtarı</label>
+                        <input type="password" id="airtableApiKey">
+                    </div>
+                    <div class="form-group">
+                        <label for="airtableBaseId">Airtable Base ID</label>
+                        <input type="text" id="airtableBaseId">
+                    </div>
+                    <button type="submit">Ayarları Kaydet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

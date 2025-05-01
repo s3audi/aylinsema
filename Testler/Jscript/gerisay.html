@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Coda Geri Sayım</title>
+</head>
+<body>
+  <h1 id="countdown">Hazır...</h1>
+  <button onclick="startCountdown()">Geri Sayımı Başlat</button>
+  <audio id="myAudio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+
+  <script>
+    const docId = "T24YMrdyRS";
+    const tableId = "grid-1h4SGE5AoL";
+    const apiToken = "19671b62-b1de-43ff-9e04-2248b75447cb";
+
+    async function getCountdownDate() {
+      const response = await fetch(`https://coda.io/apis/v1/docs/${docId}/tables/${tableId}/rows`, {
+        headers: {
+          'Authorization': `Bearer ${apiToken}`
+        }
+      });
+
+      const data = await response.json();
+      const row = data.items[0];
+      const values = row.values;
+
+      const rawDate = values['Zaman']; // Örn: "01.05.2025, 01:30:00"
+      console.log("Coda'dan gelen tarih:", rawDate);
+
+      // Türkçe tarih formatını ISO formatına dönüştür
+      const parts = rawDate.split(", ");
+      const dateParts = parts[0].split(".");
+      const timePart = parts[1];
+
+      const isoDateString = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}T${timePart}`;
+      console.log("ISO formatlı tarih:", isoDateString);
+
+      const countdownDate = new Date(isoDateString);
+
+      if (isNaN(countdownDate)) {
+        alert("Tarih biçimi hatalı: " + rawDate);
+        throw new Error("Geçersiz tarih");
+      }
+
+      return countdownDate;
+    }
+
+    async function startCountdown() {
+      const countdownDate = await getCountdownDate();
+
+      const x = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countdownDate.getTime() - now;
+
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("countdown").innerHTML = "ZAMAN DOLDU!";
+          document.getElementById("myAudio").play();
+        } else {
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          document.getElementById("countdown").innerHTML =
+            hours + "s " + minutes + "d " + seconds + "sn kaldı";
+        }
+      }, 1000);
+    }
+  </script>
+</body>
+</html>

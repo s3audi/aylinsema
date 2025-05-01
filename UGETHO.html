@@ -11,6 +11,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Semtasoft 7.2.3, nicepage.com">
+    <meta name="referrer" content="origin">
     <link rel="icon" href="images/favicon.png">
     
     
@@ -27,7 +28,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "Dr Aylin Sema Tırpancı",
-		"logo": "images/DRAylinSemaLogoSadeText2.png",
+		"logo": "images/LogoAylinSema2.png",
 		"sameAs": [
 				"https://facebook.com/name",
 				"https://twitter.com/name",
@@ -38,19 +39,114 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
     <meta name="twitter:site" content="@">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="UGETHO">
-    <meta name="twitter:description" content="Dr Aylin Sema Tırpancı">
+    <meta name="twitter:description" content="Zamansız güzelliğinizi öne çıkaran, doğal ve estetik dokunuşlarla ışıldayın! 
+Uzm. Dr. Aylin Sema Tırpancı. ">
     <meta property="og:title" content="UGETHO">
     <meta property="og:description" content="Zamansız güzelliğinizi öne çıkaran, doğal ve estetik dokunuşlarla ışıldayın! 
 Uzm. Dr. Aylin Sema Tırpancı. ">
     <meta property="og:type" content="website">
-  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <script>
+    function gdprConfirmed() {
+        return true;
+    }
+    function dynamicLoadScript() {
+        var script = document.createElement('script');
+        script.src = 'https://www.google.com/recaptcha/api.js?render=6LcCtSorAAAAAPh9TtE5XlsePk2V0hnqTt3V_wm2';
+        script.async = true;
+        document.body.appendChild(script);
+        script.onload = function() {
+            let event = new CustomEvent("recaptchaLoaded");
+            document.dispatchEvent(event);
+        };
+    }
+    function showRecaptchaError(error) {
+        error = error || '';
+        var formError = document.querySelector('.u-form-send-error');
+
+        if (formError) {
+            formError.innerText = 'Site Sahibi Hatası: ' + error.replace(/:[\s\S]*/, '');
+            formError.style.display = 'block';
+        }
+
+        console.error('Error in grecaptcha: ', error);
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+        var confirmButton = document.querySelector('.u-cookies-consent .u-button-confirm');
+        if (confirmButton) {
+            confirmButton.onclick = dynamicLoadScript;
+        }
+    });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            if (!gdprConfirmed()) {
+                return;
+            }
+            dynamicLoadScript();
+        });
+    </script>
+    <script>
+        document.addEventListener("recaptchaLoaded", function() {
+            if (!gdprConfirmed()) {
+                return;
+            }
+
+            (function (grecaptcha, sitekey, actions) {
+                var recaptcha = {
+                    execute: function (action, submitFormCb) {
+                        if (typeof grecaptcha === 'undefined' || typeof grecaptcha.execute !== 'function') {
+                            showRecaptchaError('reCAPTCHA script failed to load.');
+                            return;
+                        }
+
+                        grecaptcha.execute(sitekey, {action: action}).then((token) => {
+                            if (!token) {
+                                throw new Error('Empty token received from reCAPTCHA');
+                            }
+
+                            var forms = document.getElementsByTagName('form');
+
+                            for (var i = 0; i < forms.length; i++) {
+                                var response = forms[i].querySelector('[name="recaptchaResponse"]');
+
+                                if (!response) {
+                                    response = document.createElement('input');
+                                    response.setAttribute('type', 'hidden');
+                                    response.setAttribute('name', 'recaptchaResponse');
+                                    forms[i].appendChild(response);
+                                }
+
+                                response.value = token;
+                            }
+
+                            submitFormCb();
+                        }).catch((e) => {
+                            showRecaptchaError(e.message);
+                        });
+                    },
+
+                    executeContact: function (submitFormCb) {
+                        recaptcha.execute(actions['contact'], submitFormCb);
+                    }
+                };
+
+                window.recaptchaObject = recaptcha;
+            })(
+                grecaptcha,
+                
+                '6LcCtSorAAAAAPh9TtE5XlsePk2V0hnqTt3V_wm2',
+                {'contact': 'contact'}
+            );
+        });
+    </script>
+<meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
   <body data-path-to-root="./" data-include-products="false" class="u-body u-overlap u-overlap-transparent u-xl-mode" data-lang="tr"><header class="u-clearfix u-header u-header" id="sec-ed78"><div class="u-clearfix u-sheet u-sheet-1">
-        <a href="./" data-page-id="197495934" class="u-align-left u-image u-logo u-image-1" data-image-width="577" data-image-height="141" title="Anasayfa">
-          <img src="images/DRAylinSemaLogoSadeText2.png" class="u-logo-image u-logo-image-1">
+        <a href="./" data-page-id="197495934" class="u-align-left u-image u-logo u-image-1" data-image-width="620" data-image-height="204" title="Anasayfa">
+          <img src="images/LogoAylinSema2.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-align-right u-menu u-menu-dropdown u-menu-open-right u-offcanvas u-menu-1" data-responsive-from="MD">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
-            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-palette-2-light-1 u-hamburger-link-1" href="#">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-palette-2-light-1 u-hamburger-link-1" href="#" data-lang-tr="{&quot;content&quot;:&quot;<svg class=\&quot;u-svg-link\&quot; viewBox=\&quot;0 0 24 24\&quot;><use xlink:href=\&quot;#menu-hamburger\&quot;></use></svg><svg class=\&quot;u-svg-content\&quot; version=\&quot;1.1\&quot; id=\&quot;menu-hamburger\&quot; viewBox=\&quot;0 0 16 16\&quot; x=\&quot;0px\&quot; y=\&quot;0px\&quot; xmlns:xlink=\&quot;http://www.w3.org/1999/xlink\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot;>    <g>        <rect y=\&quot;1\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>        <rect y=\&quot;7\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>        <rect y=\&quot;13\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>    </g></svg>&quot;,&quot;href&quot;:&quot;#&quot;}" data-lang-en="{&quot;content&quot;:&quot;<svg class=\&quot;u-svg-link\&quot; viewBox=\&quot;0 0 24 24\&quot;><use xlink:href=\&quot;#menu-hamburger\&quot;></use></svg><svg class=\&quot;u-svg-content\&quot; version=\&quot;1.1\&quot; id=\&quot;menu-hamburger\&quot; viewBox=\&quot;0 0 16 16\&quot; x=\&quot;0px\&quot; y=\&quot;0px\&quot; xmlns:xlink=\&quot;http://www.w3.org/1999/xlink\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot;>    <g>        <rect y=\&quot;1\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>        <rect y=\&quot;7\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>        <rect y=\&quot;13\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>    </g></svg>&quot;,&quot;href&quot;:&quot;#&quot;}" data-lang-de="{&quot;content&quot;:&quot;<svg class=\&quot;u-svg-link\&quot; viewBox=\&quot;0 0 24 24\&quot;><use xlink:href=\&quot;#menu-hamburger\&quot;></use></svg><svg class=\&quot;u-svg-content\&quot; version=\&quot;1.1\&quot; id=\&quot;menu-hamburger\&quot; viewBox=\&quot;0 0 16 16\&quot; x=\&quot;0px\&quot; y=\&quot;0px\&quot; xmlns:xlink=\&quot;http://www.w3.org/1999/xlink\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot;>    <g>        <rect y=\&quot;1\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>        <rect y=\&quot;7\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>        <rect y=\&quot;13\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>    </g></svg>&quot;,&quot;href&quot;:&quot;#&quot;}">
               <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
               <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
 </g></svg>
@@ -155,13 +251,11 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="SSS_iletisim.html">İletişim</a>
 </li></ul>
                 <div class="custom-expanded u-clearfix u-custom-html u-custom-html-1"><!-- WhatsApp linki ve PNG ikonu -->
-                  <a href="https://wa.me/905558498411" target="_blank">
+                  <a href="https://wa.me/905058498433" target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 50px; height: 50px; display: block; margin: 0 auto;">
                   </a>
-                  <p style="text-align: center;">
-                    <span style="color: white;">
-                      <a href="tel:+905558498411" style="color: white; text-decoration: none;">+90 555 849 84 11</a>
-                    </span>
+                  <p style="text-align: center;"><span style="color: white;">
+                      <a href="tel:+905058498411" style="color: white; text-decoration: none;">+90 505 849 84 33</a></span>
                   </p>
                 </div>
               </div>
@@ -197,9 +291,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
         </div>
         <h5 class="u-align-left u-text u-text-body-alt-color u-text-default u-text-2">
           <a href="UYGULAMALAR.html" data-page-id="867018198" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-2-light-1 u-btn-1">U<span style="font-size: 1.125rem;">ygulamalar</span>
-          </a>
-          <span style="font-size: 1.125rem;"> &gt; <a href="UGE.html" data-page-id="86714482" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-2-light-2 u-btn-2">GETAT&nbsp;</a>&gt;&nbsp;<br>
-          </span>Homeopati
+          </a><span style="font-size: 1.125rem;"> &gt; <a href="UGE.html" data-page-id="86714482" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-2-light-2 u-btn-2">GETAT&nbsp;</a>&gt;&nbsp;<br></span>Homeopati
         </h5>
       </div>
     </section>
@@ -237,36 +329,20 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
     <section class="u-align-left u-clearfix u-container-align-left u-section-3" id="carousel_42cb">
       <div class="u-clearfix u-sheet u-sheet-1">
         <blockquote class="u-border-20 u-border-palette-2-dark-1 u-custom-font u-font-montserrat u-text u-text-default u-text-1"> Homeopati Hangi Durumlarda Kullanılır?</blockquote>
-        <p class="u-custom-font u-font-montserrat u-text u-text-2">
-          <span style="font-weight: 700;">
-            <span style="font-weight: 700;"></span>
-          </span>✅ Bağışıklık sistemini güçlendirmek<br>✅ Migren, baş ağrıları ve kronik ağrıları hafifletmek<br>✅ Alerjiler ve cilt rahatsızlıklarını (egzama, sedef vb.) tedavi etmek<br>✅ Sindirim sistemi rahatsızlıklarını (şişkinlik, reflü, irritabl bağırsak sendromu) iyileştirmek<br>✅ Uyku problemleri ve stres yönetimine yardımcı olmak<br>✅ Ruhsal dengeyi sağlamak (anksiyete, depresyon, panik atak)<br>✅ Solunum yolu hastalıklarını (astım, sinüzit, bronşit) tedavi etmek<br>✅ Kadın sağlığı sorunlarını (adet düzensizlikleri, menopoz semptomları) hafifletmek<br>
+        <p class="u-custom-font u-font-montserrat u-text u-text-2"><span style="font-weight: 700;"><span style="font-weight: 700;"></span></span>✅ Bağışıklık sistemini güçlendirmek<br>✅ Migren, baş ağrıları ve kronik ağrıları hafifletmek<br>✅ Alerjiler ve cilt rahatsızlıklarını (egzama, sedef vb.) tedavi etmek<br>✅ Sindirim sistemi rahatsızlıklarını (şişkinlik, reflü, irritabl bağırsak sendromu) iyileştirmek<br>✅ Uyku problemleri ve stres yönetimine yardımcı olmak<br>✅ Ruhsal dengeyi sağlamak (anksiyete, depresyon, panik atak)<br>✅ Solunum yolu hastalıklarını (astım, sinüzit, bronşit) tedavi etmek<br>✅ Kadın sağlığı sorunlarını (adet düzensizlikleri, menopoz semptomları) hafifletmek<br>
         </p>
         <blockquote class="u-border-20 u-border-palette-2-dark-1 u-custom-font u-font-montserrat u-text u-text-default u-text-3"> Homeopati Nasıl Uygulanır?</blockquote>
-        <p class="u-custom-font u-font-montserrat u-text u-text-4"> 🔹 <span style="font-weight: 700;">1. Kapsamlı Değerlendirme:</span> Homeopat, kişinin fiziksel, duygusal ve zihinsel durumunu analiz eder.<br>🔹 <span style="font-weight: 700;">2. Bireysel Tedavi Planı:</span> Kişinin semptomlarına ve genel sağlık durumuna uygun homeopatik ilaçlar belirlenir.<br>🔹<span style="font-weight: 700;"> 3. Düzenli Takip:</span> Tedavi süreci izlenerek gerektiğinde doz ayarlamaları yapılır.<br>
-          <span style="font-weight: 700;">⏳ Tedavi Süresi:</span> Kişinin sağlık durumuna ve bağışıklık sistemine bağlı olarak değişkenlik gösterebilir.<br>
+        <p class="u-custom-font u-font-montserrat u-text u-text-4"> 🔹 <span style="font-weight: 700;">1. Kapsamlı Değerlendirme:</span> Homeopat, kişinin fiziksel, duygusal ve zihinsel durumunu analiz eder.<br>🔹 <span style="font-weight: 700;">2. Bireysel Tedavi Planı:</span> Kişinin semptomlarına ve genel sağlık durumuna uygun homeopatik ilaçlar belirlenir.<br>🔹<span style="font-weight: 700;"> 3. Düzenli Takip:</span> Tedavi süreci izlenerek gerektiğinde doz ayarlamaları yapılır.<br><span style="font-weight: 700;">⏳ Tedavi Süresi:</span> Kişinin sağlık durumuna ve bağışıklık sistemine bağlı olarak değişkenlik gösterebilir.<br>
         </p>
         <blockquote class="u-border-20 u-border-palette-2-dark-1 u-custom-font u-font-montserrat u-text u-text-default u-text-5"> Homeopatinin Faydaları</blockquote>
         <p class="u-custom-font u-font-montserrat u-text u-text-6"> ✔ Doğal, yan etkisiz ve güvenlidir.<br>✔ Bağışıklık sistemini güçlendirerek vücudun kendi kendini iyileştirmesine yardımcı olur.<br>✔ Kronik hastalıkların semptomlarını hafifletir ve yaşam kalitesini artırır.<br>✔ Bütüncül bir yaklaşım sunarak fiziksel ve ruhsal sağlığı destekler.<br>✔ Çocuklar, hamileler ve yaşlılar için de güvenle uygulanabilir.<br>
         </p>
         <blockquote class="u-border-20 u-border-palette-2-dark-1 u-custom-font u-font-montserrat u-text u-text-default u-text-7"> Sıkça Sorulan Sorular (SSS)</blockquote>
-        <p class="u-custom-font u-font-montserrat u-text u-text-8">
-          <span style="font-weight: 700;">
-            <span style="font-weight: 700;"></span>
-            <span style="font-weight: 700;"></span> ❓ Homeopati bilimsel olarak kanıtlanmış bir yöntem midir?
-          </span>
-          <br>Homeopati, dünyada milyonlarca insan tarafından kullanılan ve birçok ülkede sağlık sistemi içinde yer alan bir tedavi yöntemidir. Avrupa'da ve Hindistan’da yaygın olarak uygulanmaktadır.<br>
-          <span style="font-weight: 700;">❓ Homeopatik ilaçlar güvenli mi?<br>
-          </span>Evet, homeopatik ilaçlar doğal içeriklerden üretilir ve toksik etkileri olmadığı için yan etkisizdir.<br>
-          <span style="font-weight: 700;">❓ Homeopati modern tıbbın yerine geçer mi?<br>
-          </span>Homeopati, modern tıbbın yerine değil, tamamlayıcı bir yöntem olarak uygulanmaktadır. Geleneksel tıbbi tedavilere destekleyici olarak kullanılabilir.<br>
-          <span style="font-weight: 700;">❓ Tedavi ne kadar sürede etkisini gösterir?<br>
-          </span>Hastalığın süresi ve bireysel bağışıklık sistemine bağlı olarak bazı durumlarda hızlı, bazı durumlarda uzun vadeli bir iyileşme süreci gerektirebilir.<br>
+        <p class="u-custom-font u-font-montserrat u-text u-text-8"><span style="font-weight: 700;"><span style="font-weight: 700;"></span><span style="font-weight: 700;"></span> ❓ Homeopati bilimsel olarak kanıtlanmış bir yöntem midir?</span>
+          <br>Homeopati, dünyada milyonlarca insan tarafından kullanılan ve birçok ülkede sağlık sistemi içinde yer alan bir tedavi yöntemidir. Avrupa'da ve Hindistan’da yaygın olarak uygulanmaktadır.<br><span style="font-weight: 700;">❓ Homeopatik ilaçlar güvenli mi?<br></span>Evet, homeopatik ilaçlar doğal içeriklerden üretilir ve toksik etkileri olmadığı için yan etkisizdir.<br><span style="font-weight: 700;">❓ Homeopati modern tıbbın yerine geçer mi?<br></span>Homeopati, modern tıbbın yerine değil, tamamlayıcı bir yöntem olarak uygulanmaktadır. Geleneksel tıbbi tedavilere destekleyici olarak kullanılabilir.<br><span style="font-weight: 700;">❓ Tedavi ne kadar sürede etkisini gösterir?<br></span>Hastalığın süresi ve bireysel bağışıklık sistemine bağlı olarak bazı durumlarda hızlı, bazı durumlarda uzun vadeli bir iyileşme süreci gerektirebilir.<br>
         </p>
         <blockquote class="u-border-20 u-border-palette-2-dark-1 u-custom-font u-font-montserrat u-text u-text-default u-text-9">neden bizi tercİH etmelİSİNİZ?</blockquote>
-        <p class="u-custom-font u-font-montserrat u-text u-text-10">
-          <span style="font-weight: 700;"></span>
-          <span style="font-weight: 700;"></span> Uzman dermatologlar tarafından gerçekleştirilen uygulamalar.<br>Kişiye özel tedavi planları ile etkili sonuçlar.<br>Modern ve steril klinik ortamı.<br>Doğal ve sağlıklı sonuçlar için FDA onaylı ürünler.<br>
+        <p class="u-custom-font u-font-montserrat u-text u-text-10"><span style="font-weight: 700;"></span><span style="font-weight: 700;"></span> Uzman dermatologlar tarafından gerçekleştirilen uygulamalar.<br>Kişiye özel tedavi planları ile etkili sonuçlar.<br>Modern ve steril klinik ortamı.<br>Doğal ve sağlıklı sonuçlar için FDA onaylı ürünler.<br>
         </p>
       </div>
     </section>
@@ -336,8 +412,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                 <div class="u-container-layout u-container-layout-2">
                   <h6 class="u-align-left u-text u-text-default u-text-1">03 Haziran 2025<br style="">
                   </h6>
-                  <h5 class="u-align-left u-text u-text-default u-text-2">Dolgu: Güzellik ve Sağlıkta Devrim Niteliğinde Bir Tedavi </h5>
-                  <span class="u-align-left u-file-icon u-icon u-text-palette-2-base u-icon-1"><img src="images/447092-7102b2f4.png" alt=""></span>
+                  <h5 class="u-align-left u-text u-text-default u-text-2">Dolgu: Güzellik ve Sağlıkta Devrim Niteliğinde Bir Tedavi </h5><span class="u-align-left u-file-icon u-icon u-text-palette-2-base u-icon-1"><img src="images/447092-7102b2f4.png" alt=""></span>
                 </div>
               </div>
             </div>
@@ -348,8 +423,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
               <div class="custom-expanded u-container-style u-group u-radius u-shape-round u-white u-group-2" data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-delay="0">
                 <div class="u-container-layout u-container-layout-4">
                   <h6 class="u-align-left u-text u-text-default u-text-3">10 Şubat 2025</h6>
-                  <h5 class="u-align-left u-text u-text-default u-text-4">Dolgu Nedir? Kullanım Alanları ve Riskleri</h5>
-                  <span class="u-align-left u-file-icon u-icon u-text-palette-2-base u-icon-2"><img src="images/4165380-b2d723c6.png" alt=""></span>
+                  <h5 class="u-align-left u-text u-text-default u-text-4">Dolgu Nedir? Kullanım Alanları ve Riskleri</h5><span class="u-align-left u-file-icon u-icon u-text-palette-2-base u-icon-2"><img src="images/4165380-b2d723c6.png" alt=""></span>
                 </div>
               </div>
             </div>
@@ -360,19 +434,18 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
               <div class="custom-expanded u-container-align-left u-container-style u-group u-radius u-shape-round u-white u-group-3" data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-delay="0">
                 <div class="u-container-layout u-container-layout-6">
                   <h6 class="u-align-left u-text u-text-default u-text-5">22 Şubat 2025</h6>
-                  <h5 class="u-align-left u-text u-text-default u-text-6">Akne ve Cilt Bakımında Dikkat Edilmesi Gerekenler</h5>
-                  <span class="u-align-left u-file-icon u-icon u-text-palette-2-base u-icon-3"><img src="images/9845752-b49a068f.png" alt=""></span>
+                  <h5 class="u-align-left u-text u-text-default u-text-6">Akne ve Cilt Bakımında Dikkat Edilmesi Gerekenler</h5><span class="u-align-left u-file-icon u-icon u-text-palette-2-base u-icon-3"><img src="images/9845752-b49a068f.png" alt=""></span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div><div class="u-container-style u-expanded-width u-group u-palette-2-base u-group-4">
+      </div><div class="custom-expanded u-container-style u-group u-palette-2-base u-group-4">
         <div class="u-container-layout u-container-layout-7">
           <p class="u-align-center u-custom-font u-text ustte u-text-7">Dermatolog gözüyle&nbsp;<br>anti aging yaklaşımı 
           </p>
           <a href="https://www.doktorsitesi.com/uzm-dr-aylin-sema-tirpanci/dermatoloji-geleneksel-ve-tamamlayici-tip-medikal-estetik-sertifikali-tip-doktoru/istanbul" class="orta u-align-center u-border-none u-btn u-button-style u-hover-palette-1-dark-1 u-palette-2-light-2 u-btn-1">raNDEVU ALMAK İÇİN TIKLAYIN </a>
-          <img class="enalt u-align-center-md u-align-center-sm u-align-center-xs u-expanded-width-xs u-hover-feature u-image u-image-contain u-image-default u-image-4" src="images/SolYaprakAlt.png" alt="" data-image-width="300" data-image-height="303" data-animation-name="customAnimationIn" data-animation-duration="5000" data-animation-delay="0">
+          <img class="enalt u-align-left u-expanded-width-xs u-hover-feature u-image u-image-contain u-image-default u-image-4" src="images/SolYaprakAlt.png" alt="" data-image-width="300" data-image-height="303" data-animation-name="customAnimationIn" data-animation-duration="5000" data-animation-delay="0">
         </div>
       </div><div class="custom-expanded data-layout-selected u-clearfix u-layout-wrap u-layout-wrap-1">
         <div class="u-layout">
@@ -386,33 +459,29 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                 </div>
               </div>
             </div>
-            <div class="u-align-left u-container-align-left u-container-style u-grey-10 u-layout-cell u-size-20 u-layout-cell-2">
+            <div class="u-align-left u-container-align-left-lg u-container-align-left-md u-container-align-left-sm u-container-align-left-xl u-container-style u-grey-10 u-layout-cell u-size-20 u-layout-cell-2">
               <div class="u-container-layout u-valign-top u-container-layout-9">
-                <h2 class="u-custom-font u-font-montserrat u-text u-text-8"> Bizimle irtibata geçin</h2>
+                <h2 class="u-align-center-xs u-custom-font u-font-montserrat u-text u-text-8"> Bizimle irtibata geçin</h2>
                 <div class="u-expanded-width u-list u-list-2">
                   <div class="u-repeater u-repeater-2">
                     <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle">
-                      <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-10">
-                        <span class="u-file-icon u-icon u-icon-4"><img src="images/1257.png" alt=""></span>
+                      <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-10"><span class="u-file-icon u-icon u-icon-4"><img src="images/1257.png" alt=""></span>
                         <h4 class="u-text u-text-9">Telefon</h4>
                         <p class="u-text u-text-10">
-                          <a href="#" class="u-active-none u-border-active-palette-2-base u-border-hover-palette-2-base u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-btn-2">
-                            <span class="u-icon"></span>&nbsp;​+0505 8498433
+                          <a href="#" class="u-active-none u-border-active-palette-2-base u-border-hover-palette-2-base u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-btn-2"><span class="u-icon"></span>&nbsp;​+0505 8498433
                           </a>
                         </p>
                       </div>
                     </div>
                     <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle">
-                      <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-11">
-                        <span class="u-file-icon u-icon u-text-palette-2-base u-icon-6"><img src="images/447031-84ff4fcd.png" alt=""></span>
+                      <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-11"><span class="u-file-icon u-icon u-text-palette-2-base u-icon-6"><img src="images/447031-84ff4fcd.png" alt=""></span>
                         <h4 class="u-text u-text-11">Muayenehane</h4>
                         <p class="u-text u-text-12">Bahçeşehir 2.Kısım Mah.<br>Ahmet Taner Kışlalı Bulvarı&nbsp;<br>Bina No:17 Villa No:3&nbsp;<br>Başakşehir/İSTANBUL 
                         </p>
                       </div>
                     </div>
                     <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle">
-                      <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-12">
-                        <span class="u-file-icon u-icon u-text-palette-2-base u-icon-7"><img src="images/542689-97823036.png" alt=""></span>
+                      <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-12"><span class="u-file-icon u-icon u-text-palette-2-base u-icon-7"><img src="images/542689-97823036.png" alt=""></span>
                         <h4 class="u-text u-text-13">Bize ulaşın</h4>
                         <p class="u-text u-text-14">
                           <a href="#" class="u-active-none u-border-active-palette-2-base u-border-hover-palette-2-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-text-20" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">info@draylinsema.com</a>
@@ -427,7 +496,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
               <div class="u-container-layout u-valign-top u-container-layout-13">
                 <h2 class="u-custom-font u-font-montserrat u-text u-text-15"> Bize ulaşın</h2>
                 <div class="u-align-left u-expanded-width-xs u-form u-form-1">
-                  <form action="./scripts/form-81e9-3b8b.php" class="u-clearfix u-form-spacing-28 u-form-vertical u-inner-form" style="padding: 0px;" source="customphp" name="form">
+                  <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-28 u-form-vertical u-inner-form" style="padding: 0px;" source="email" name="form">
                     <div class="u-form-group u-form-name u-label-top">
                       <label class="u-label">Adınız Soyadınız</label>
                       <input type="text" placeholder="Ad Soyad" id="name-5a14" name="name" class="u-grey-10 u-input u-input-rectangle u-radius-7 u-input-1" required="">
@@ -444,9 +513,11 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       <a href="#" class="u-active-black u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-black u-palette-2-base u-radius-7 u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-4">Gönder</a>
                       <input type="submit" value="submit" class="u-form-control-hidden">
                     </div>
-                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
-                    <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                    <div class="u-form-send-message u-form-send-success">Teşekkürler! Mesajınız iletildi. Size en kısa sürede geri dönüş yapacağız.</div>
+                    <div class="u-form-send-error u-form-send-message">Gönderilemedi. Lütfen hataları kontrol edip tekrar deneyiniz.</div>
                     <input type="hidden" value="" name="recaptchaResponse">
+                    <input type="hidden" name="formServices" value="0f3dc1c7-21d9-8a84-55b9-6946614f4100">
+                    <input type="hidden" name="siteKey" value="6LcCtSorAAAAAPh9TtE5XlsePk2V0hnqTt3V_wm2">
                   </form>
                 </div>
               </div>
@@ -456,9 +527,9 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
       </div><div class="custom-expanded data-layout-selected u-clearfix u-gutter-30 u-layout-wrap u-layout-wrap-2">
         <div class="u-gutter-0 u-layout">
           <div class="u-layout-row">
-            <div class="u-align-left u-container-align-left u-container-align-left-lg u-container-align-left-md u-container-align-left-sm u-container-align-left-xl u-container-style u-layout-cell u-left-cell u-size-15 u-layout-cell-4">
-              <div class="u-container-layout u-container-layout-14">
-                <img class="custom-expanded u-align-center-xs u-image u-image-contain u-image-default u-image-5" src="images/DRAylinSemaLogoSadeText1.png" alt="" data-image-width="690" data-image-height="141"><!--position-->
+            <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-15 u-layout-cell-4">
+              <div class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-14">
+                <img class="u-align-center-xs u-expanded-width-xs u-image u-image-contain u-image-default u-image-5" src="images/LogoAylinSema2.png" alt="" data-image-width="620" data-image-height="204"><!--position-->
                 <div data-position="" class="u-expanded-width u-position u-position-1"><!--block-->
                   <div class="u-block">
                     <div class="u-block-container u-clearfix"><!--block_header-->
@@ -506,8 +577,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       <h5 class="u-align-center u-block-header u-custom-font u-text u-text-palette-2-light-2 u-text-20"><!--block_header_content-->Menü<br>
                         <br><!--/block_header_content-->
                       </h5><!--/block_header--><!--block_content-->
-                      <div class="u-align-center u-block-content u-text"><!--block_content_content-->
-                        <span class="u-text-palette-3-light-1">
+                      <div class="u-align-center u-block-content u-text"><!--block_content_content--><span class="u-text-palette-3-light-1">
                           <a href="SSS_Hakkinda.html" data-page-id="892301088" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-11"> Dr. Aylin Sema Tırpancı<br>
                           </a>
                           <a href="SSS_Muayene.html" data-page-id="46417600" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-12">Muayenehanemiz<br>
@@ -516,8 +586,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                           </a>
                           <a href="blog/blog.html" data-page-id="3015910974" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-14">Blog<br>
                           </a>
-                          <a href="SSS_VLOG.html" data-page-id="277619326" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-15">Vlog</a>
-                        </span>
+                          <a href="SSS_VLOG.html" data-page-id="277619326" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-15">Vlog</a></span>
                         <br>Gizlilik Politikası (KVKK)<br>
                         <br><!--/block_content_content-->
                       </div><!--/block_content-->
@@ -535,28 +604,22 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                         <br><!--/block_header_content-->
                       </h5><!--/block_header--><!--block_content-->
                       <div class="u-block-content u-text u-text-23"><!--block_content_content--> &nbsp;<span class="u-file-icon u-icon u-text-palette-2-light-2"><img src="images/7297083-10aae893.png" alt=""></span>&nbsp;Bahçeşehir 2.Kısım Mh. Ahmet Taner Kışlalı Bulvarı<br>Bina No:17 Villa No:3<br>Başakşehir / İSTANBUL<br>
-                        <br>
-                        <span class="u-file-icon u-icon u-text-palette-2-light-2"><img src="images/7297083-10aae893.png" alt=""></span> &nbsp;Adresi Haritada Görüntüle<br>
-                        <span class="u-file-icon u-icon u-text-palette-2-light-2"><img src="images/7297083-10aae893.png" alt=""></span>
+                        <br><span class="u-file-icon u-icon u-text-palette-2-light-2"><img src="images/7297083-10aae893.png" alt=""></span> &nbsp;Adresi Haritada Görüntüle<br><span class="u-file-icon u-icon u-text-palette-2-light-2"><img src="images/7297083-10aae893.png" alt=""></span>
                         <a href="mailto:s3audi@hotmail.com?subject=Siteden%20bir%20mesaj%20var%20(Dr.Aylin%20Sema)" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-16"> info@draylinsema.com<br>
-                        </a>
-                        <span class="u-file-icon u-icon u-text-palette-2-light-2"><img src="images/7297083-10aae893.png" alt=""></span>
+                        </a><span class="u-file-icon u-icon u-text-palette-2-light-2"><img src="images/7297083-10aae893.png" alt=""></span>
                         <a href="tel:+905058498433" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-17">+90 505 8498433</a><!--/block_content_content-->
                       </div><!--/block_content-->
                     </div>
                   </div><!--/block-->
                 </div><!--/position-->
-                <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
-                  <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/name">
-                    <span class="u-icon u-social-facebook u-social-icon u-icon-12"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-d070"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-d070"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
+                <div class="u-align-left u-social-icons u-social-icons-1">
+                  <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/name"><span class="u-icon u-social-facebook u-social-icon u-icon-12"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-d070"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-d070"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
 c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
                   </a>
-                  <a class="u-social-url" title="twitter" target="_blank" href="https://twitter.com/name">
-                    <span class="u-icon u-social-icon u-social-twitter u-icon-13"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112.2 112.2" style=""><use xlink:href="#svg-15ea"></use></svg><svg class="u-svg-content" viewBox="0 0 112.2 112.2" x="0px" y="0px" id="svg-15ea"><circle fill="currentColor" cx="56" cy="56" r="55"></circle><path fill="#FFFFFF" d="M63.9,51l22.4-24h-8.6L60.3,45.9L46.9,27H24l23.3,32.8L24,85h8.2L51,64.9L65.3,85H88L63.9,51z M55.3,60.2
+                  <a class="u-social-url" title="twitter" target="_blank" href="https://twitter.com/name"><span class="u-icon u-social-icon u-social-twitter u-icon-13"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112.2 112.2" style=""><use xlink:href="#svg-15ea"></use></svg><svg class="u-svg-content" viewBox="0 0 112.2 112.2" x="0px" y="0px" id="svg-15ea"><circle fill="currentColor" cx="56" cy="56" r="55"></circle><path fill="#FFFFFF" d="M63.9,51l22.4-24h-8.6L60.3,45.9L46.9,27H24l23.3,32.8L24,85h8.2L51,64.9L65.3,85H88L63.9,51z M55.3,60.2
 l-3.7-5.1L35.7,33.1h8.1l12.3,17.2l3.7,5.1l16.6,23.4h-7.8L55.3,60.2z"></path></svg></span>
                   </a>
-                  <a class="u-social-url" title="instagram" target="_blank" href="https://www.instagram.com/draylinsema46/">
-                    <span class="u-icon u-social-icon u-social-instagram u-icon-14"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-e6d2"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-e6d2"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M55.9,38.2c-9.9,0-17.9,8-17.9,17.9C38,66,46,74,55.9,74c9.9,0,17.9-8,17.9-17.9C73.8,46.2,65.8,38.2,55.9,38.2
+                  <a class="u-social-url" title="instagram" target="_blank" href="https://www.instagram.com/draylinsema46/"><span class="u-icon u-social-icon u-social-instagram u-icon-14"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-e6d2"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-e6d2"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M55.9,38.2c-9.9,0-17.9,8-17.9,17.9C38,66,46,74,55.9,74c9.9,0,17.9-8,17.9-17.9C73.8,46.2,65.8,38.2,55.9,38.2
 z M55.9,66.4c-5.7,0-10.3-4.6-10.3-10.3c-0.1-5.7,4.6-10.3,10.3-10.3c5.7,0,10.3,4.6,10.3,10.3C66.2,61.8,61.6,66.4,55.9,66.4z"></path><path fill="#FFFFFF" d="M74.3,33.5c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2s4.2-1.9,4.2-4.2S76.6,33.5,74.3,33.5z"></path><path fill="#FFFFFF" d="M73.1,21.3H38.6c-9.7,0-17.5,7.9-17.5,17.5v34.5c0,9.7,7.9,17.6,17.5,17.6h34.5c9.7,0,17.5-7.9,17.5-17.5V38.8
 C90.6,29.1,82.7,21.3,73.1,21.3z M83,73.3c0,5.5-4.5,9.9-9.9,9.9H38.6c-5.5,0-9.9-4.5-9.9-9.9V38.8c0-5.5,4.5-9.9,9.9-9.9h34.5
 c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>

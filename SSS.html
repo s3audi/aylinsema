@@ -11,6 +11,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Semtasoft 7.2.3, nicepage.com">
+    <meta name="referrer" content="origin">
     
     <link rel="icon" href="images/favicon.png">
     
@@ -27,7 +28,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "Dr Aylin Sema Tırpancı",
-		"logo": "images/DRAylinSemaLogoSadeText2.png",
+		"logo": "images/LogoAylinSema2.png",
 		"sameAs": [
 				"https://facebook.com/name",
 				"https://twitter.com/name",
@@ -38,19 +39,114 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
     <meta name="twitter:site" content="@">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SSS">
-    <meta name="twitter:description" content="Dr Aylin Sema Tırpancı">
+    <meta name="twitter:description" content="Zamansız güzelliğinizi öne çıkaran, doğal ve estetik dokunuşlarla ışıldayın! 
+Uzm. Dr. Aylin Sema Tırpancı. ">
     <meta property="og:title" content="SSS">
     <meta property="og:description" content="Zamansız güzelliğinizi öne çıkaran, doğal ve estetik dokunuşlarla ışıldayın! 
 Uzm. Dr. Aylin Sema Tırpancı. ">
     <meta property="og:type" content="website">
-  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <script>
+    function gdprConfirmed() {
+        return true;
+    }
+    function dynamicLoadScript() {
+        var script = document.createElement('script');
+        script.src = 'https://www.google.com/recaptcha/api.js?render=6LcCtSorAAAAAPh9TtE5XlsePk2V0hnqTt3V_wm2';
+        script.async = true;
+        document.body.appendChild(script);
+        script.onload = function() {
+            let event = new CustomEvent("recaptchaLoaded");
+            document.dispatchEvent(event);
+        };
+    }
+    function showRecaptchaError(error) {
+        error = error || '';
+        var formError = document.querySelector('.u-form-send-error');
+
+        if (formError) {
+            formError.innerText = 'Site Sahibi Hatası: ' + error.replace(/:[\s\S]*/, '');
+            formError.style.display = 'block';
+        }
+
+        console.error('Error in grecaptcha: ', error);
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+        var confirmButton = document.querySelector('.u-cookies-consent .u-button-confirm');
+        if (confirmButton) {
+            confirmButton.onclick = dynamicLoadScript;
+        }
+    });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            if (!gdprConfirmed()) {
+                return;
+            }
+            dynamicLoadScript();
+        });
+    </script>
+    <script>
+        document.addEventListener("recaptchaLoaded", function() {
+            if (!gdprConfirmed()) {
+                return;
+            }
+
+            (function (grecaptcha, sitekey, actions) {
+                var recaptcha = {
+                    execute: function (action, submitFormCb) {
+                        if (typeof grecaptcha === 'undefined' || typeof grecaptcha.execute !== 'function') {
+                            showRecaptchaError('reCAPTCHA script failed to load.');
+                            return;
+                        }
+
+                        grecaptcha.execute(sitekey, {action: action}).then((token) => {
+                            if (!token) {
+                                throw new Error('Empty token received from reCAPTCHA');
+                            }
+
+                            var forms = document.getElementsByTagName('form');
+
+                            for (var i = 0; i < forms.length; i++) {
+                                var response = forms[i].querySelector('[name="recaptchaResponse"]');
+
+                                if (!response) {
+                                    response = document.createElement('input');
+                                    response.setAttribute('type', 'hidden');
+                                    response.setAttribute('name', 'recaptchaResponse');
+                                    forms[i].appendChild(response);
+                                }
+
+                                response.value = token;
+                            }
+
+                            submitFormCb();
+                        }).catch((e) => {
+                            showRecaptchaError(e.message);
+                        });
+                    },
+
+                    executeContact: function (submitFormCb) {
+                        recaptcha.execute(actions['contact'], submitFormCb);
+                    }
+                };
+
+                window.recaptchaObject = recaptcha;
+            })(
+                grecaptcha,
+                
+                '6LcCtSorAAAAAPh9TtE5XlsePk2V0hnqTt3V_wm2',
+                {'contact': 'contact'}
+            );
+        });
+    </script>
+<meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
   <body data-path-to-root="./" data-include-products="false" class="u-body u-overlap u-overlap-contrast u-overlap-transparent u-xl-mode" data-lang="tr"><header class="u-clearfix u-header u-header" id="sec-ed78"><div class="u-clearfix u-sheet u-sheet-1">
-        <a href="./" data-page-id="197495934" class="u-align-left u-image u-logo u-image-1" data-image-width="577" data-image-height="141" title="Anasayfa">
-          <img src="images/DRAylinSemaLogoSadeText2.png" class="u-logo-image u-logo-image-1">
+        <a href="./" data-page-id="197495934" class="u-align-left u-image u-logo u-image-1" data-image-width="620" data-image-height="204" title="Anasayfa">
+          <img src="images/LogoAylinSema2.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-align-right u-menu u-menu-dropdown u-menu-open-right u-offcanvas u-menu-1" data-responsive-from="MD">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
-            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-palette-2-light-1 u-hamburger-link-1" href="#">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-palette-2-light-1 u-hamburger-link-1" href="#" data-lang-tr="{&quot;content&quot;:&quot;<svg class=\&quot;u-svg-link\&quot; viewBox=\&quot;0 0 24 24\&quot;><use xlink:href=\&quot;#menu-hamburger\&quot;></use></svg><svg class=\&quot;u-svg-content\&quot; version=\&quot;1.1\&quot; id=\&quot;menu-hamburger\&quot; viewBox=\&quot;0 0 16 16\&quot; x=\&quot;0px\&quot; y=\&quot;0px\&quot; xmlns:xlink=\&quot;http://www.w3.org/1999/xlink\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot;>    <g>        <rect y=\&quot;1\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>        <rect y=\&quot;7\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>        <rect y=\&quot;13\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>    </g></svg>&quot;,&quot;href&quot;:&quot;#&quot;}" data-lang-en="{&quot;content&quot;:&quot;<svg class=\&quot;u-svg-link\&quot; viewBox=\&quot;0 0 24 24\&quot;><use xlink:href=\&quot;#menu-hamburger\&quot;></use></svg><svg class=\&quot;u-svg-content\&quot; version=\&quot;1.1\&quot; id=\&quot;menu-hamburger\&quot; viewBox=\&quot;0 0 16 16\&quot; x=\&quot;0px\&quot; y=\&quot;0px\&quot; xmlns:xlink=\&quot;http://www.w3.org/1999/xlink\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot;>    <g>        <rect y=\&quot;1\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>        <rect y=\&quot;7\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>        <rect y=\&quot;13\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>    </g></svg>&quot;,&quot;href&quot;:&quot;#&quot;}" data-lang-de="{&quot;content&quot;:&quot;<svg class=\&quot;u-svg-link\&quot; viewBox=\&quot;0 0 24 24\&quot;><use xlink:href=\&quot;#menu-hamburger\&quot;></use></svg><svg class=\&quot;u-svg-content\&quot; version=\&quot;1.1\&quot; id=\&quot;menu-hamburger\&quot; viewBox=\&quot;0 0 16 16\&quot; x=\&quot;0px\&quot; y=\&quot;0px\&quot; xmlns:xlink=\&quot;http://www.w3.org/1999/xlink\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot;>    <g>        <rect y=\&quot;1\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>        <rect y=\&quot;7\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>        <rect y=\&quot;13\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>    </g></svg>&quot;,&quot;href&quot;:&quot;#&quot;}">
               <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
               <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
 </g></svg>
@@ -155,13 +251,11 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="SSS_iletisim.html">İletişim</a>
 </li></ul>
                 <div class="custom-expanded u-clearfix u-custom-html u-custom-html-1"><!-- WhatsApp linki ve PNG ikonu -->
-                  <a href="https://wa.me/905558498411" target="_blank">
+                  <a href="https://wa.me/905058498433" target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 50px; height: 50px; display: block; margin: 0 auto;">
                   </a>
-                  <p style="text-align: center;">
-                    <span style="color: white;">
-                      <a href="tel:+905558498411" style="color: white; text-decoration: none;">+90 555 849 84 11</a>
-                    </span>
+                  <p style="text-align: center;"><span style="color: white;">
+                      <a href="tel:+905058498411" style="color: white; text-decoration: none;">+90 505 849 84 33</a></span>
                   </p>
                 </div>
               </div>
@@ -182,9 +276,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
     <section class="skrollable u-clearfix u-image u-shading u-section-1" id="sec-d17c">
       <div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-align-center u-custom-font u-font-oswald u-text u-text-1"> Sık Sorulan Soruları sizler için seçtik</p>
-        <h1 class="u-align-center u-custom-font u-text u-text-default u-text-2">SSS</h1>
-        <span class="u-align-left u-file-icon u-icon u-icon-1" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-delay="0"><img src="images/653220-43cee257.png" alt=""></span>
-        <span class="u-file-icon u-icon u-text-palette-1-base u-icon-2" data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-delay="0"><img src="images/5806342.png" alt=""></span>
+        <h1 class="u-align-center u-custom-font u-text u-text-default u-text-2">SSS</h1><span class="u-align-left u-file-icon u-icon u-icon-1" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-delay="0"><img src="images/653220-43cee257.png" alt=""></span><span class="u-file-icon u-icon u-text-palette-1-base u-icon-2" data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-delay="0"><img src="images/5806342.png" alt=""></span>
       </div>
     </section>
     <section class="u-clearfix u-white u-section-2" id="sec-47af">
@@ -196,9 +288,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                 <div class="u-container-layout u-container-layout-1">
                   <div class="u-accordion u-expanded-width u-faq u-accordion-1">
                     <div class="u-accordion-item">
-                      <a class="active u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-1" id="link-" aria-controls="" aria-selected="true">
-                        <span class="u-accordion-link-text"> Botoks nasıl etki eder?</span>
-                        <span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-3ce1"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-3ce1"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="active u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-1" id="link-" aria-controls="" aria-selected="true"><span class="u-accordion-link-text"> Botoks nasıl etki eder?</span><span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-3ce1"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-3ce1"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-active u-accordion-pane u-container-style u-accordion-pane-1" aria-labelledby="link-" aria-expanded="true">
@@ -210,9 +300,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-2" id="link-" aria-controls="" aria-selected="false">
-                        <span class="u-accordion-link-text"> Botoksun yaş sınırı var mıdır?</span>
-                        <span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-48b1"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-48b1"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-2" id="link-" aria-controls="" aria-selected="false"><span class="u-accordion-link-text"> Botoksun yaş sınırı var mıdır?</span><span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-48b1"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-48b1"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-2" id="" aria-labelledby="link-">
@@ -224,9 +312,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-3" id="link-" aria-controls="" aria-selected="false">
-                        <span class="u-accordion-link-text"> Botoks ne zaman etkisini gösterir?</span>
-                        <span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-ab89"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-ab89"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-3" id="link-" aria-controls="" aria-selected="false"><span class="u-accordion-link-text"> Botoks ne zaman etkisini gösterir?</span><span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-ab89"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-ab89"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-3" aria-labelledby="link-">
@@ -238,9 +324,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-4" id="link-f2db" aria-controls="f2db" aria-selected="false">
-                        <span class="u-accordion-link-text"> Botoks uygulamasının bir riski var mıdır? Herkese uygulanabilir mi?</span>
-                        <span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-6f8f"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-6f8f"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-4" id="link-f2db" aria-controls="f2db" aria-selected="false"><span class="u-accordion-link-text"> Botoks uygulamasının bir riski var mıdır? Herkese uygulanabilir mi?</span><span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-6f8f"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-6f8f"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-4" id="f2db" aria-labelledby="link-f2db">
@@ -252,9 +336,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-5" id="link-3405" aria-controls="3405" aria-selected="false">
-                        <span class="u-accordion-link-text"> Botoks sonrası dikkat edilmesi gereken kurallar nelerdir?</span>
-                        <span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-5"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-31ed"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-31ed"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-5" id="link-3405" aria-controls="3405" aria-selected="false"><span class="u-accordion-link-text"> Botoks sonrası dikkat edilmesi gereken kurallar nelerdir?</span><span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-5"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-31ed"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-31ed"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-5" id="3405" aria-labelledby="link-3405">
@@ -266,9 +348,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-6" id="link-e26a" aria-controls="e26a" aria-selected="false">
-                        <span class="u-accordion-link-text">Botoks uygulama ne sıklıkta tekrarlanır?</span>
-                        <span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-6"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-5afc"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-5afc"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-6" id="link-e26a" aria-controls="e26a" aria-selected="false"><span class="u-accordion-link-text">Botoks uygulama ne sıklıkta tekrarlanır?</span><span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-6"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-5afc"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-5afc"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-6" id="e26a" aria-labelledby="link-e26a">
@@ -280,9 +360,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-7" id="link-f746" aria-controls="f746" aria-selected="false">
-                        <span class="u-accordion-link-text">Terleme için botoks uygulaması hangi bölgelere ve nasıl yapılır? Etkisi ne kadar sürer?</span>
-                        <span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-7"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-2102"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-2102"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-7" id="link-f746" aria-controls="f746" aria-selected="false"><span class="u-accordion-link-text">Terleme için botoks uygulaması hangi bölgelere ve nasıl yapılır? Etkisi ne kadar sürer?</span><span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-7"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-2102"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-2102"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-7" id="f746" aria-labelledby="link-f746">
@@ -300,9 +378,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                 <div class="u-container-layout u-container-layout-9">
                   <div class="u-accordion u-expanded-width u-faq u-accordion-2">
                     <div class="u-accordion-item">
-                      <a class="active u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-8" id="link-" aria-controls="" aria-selected="true">
-                        <span class="u-accordion-link-text"> Burun dolgusu ne kadar kalıcıdır?</span>
-                        <span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-8"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-08aa"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-08aa"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="active u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-8" id="link-" aria-controls="" aria-selected="true"><span class="u-accordion-link-text"> Burun dolgusu ne kadar kalıcıdır?</span><span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-8"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-08aa"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-08aa"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-active u-accordion-pane u-container-style u-accordion-pane-8" aria-labelledby="link-" aria-expanded="true">
@@ -314,9 +390,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-9" id="link-" aria-controls="" aria-selected="false">
-                        <span class="u-accordion-link-text"> Hangi durumlarda botoks yapılmaz?</span>
-                        <span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-9"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-1a2d"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-1a2d"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-9" id="link-" aria-controls="" aria-selected="false"><span class="u-accordion-link-text"> Hangi durumlarda botoks yapılmaz?</span><span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-9"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-1a2d"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-1a2d"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-9" id="" aria-labelledby="link-">
@@ -328,9 +402,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-10" id="link-" aria-controls="" aria-selected="false">
-                        <span class="u-accordion-link-text"> Botoks kırışıklıkları tamamen ortadan kaldırır mı?</span>
-                        <span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-10"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-9bf9"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-9bf9"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-10" id="link-" aria-controls="" aria-selected="false"><span class="u-accordion-link-text"> Botoks kırışıklıkları tamamen ortadan kaldırır mı?</span><span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-10"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-9bf9"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-9bf9"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-10" aria-labelledby="link-">
@@ -342,9 +414,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-11" id="link-f2db" aria-controls="f2db" aria-selected="false">
-                        <span class="u-accordion-link-text"> Botoks yaptırdığımda ifadesiz donuk bir yüze sahip olur muyum?</span>
-                        <span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-11"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-55a8"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-55a8"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-11" id="link-f2db" aria-controls="f2db" aria-selected="false"><span class="u-accordion-link-text"> Botoks yaptırdığımda ifadesiz donuk bir yüze sahip olur muyum?</span><span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-11"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-55a8"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-55a8"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-11" id="f2db" aria-labelledby="link-f2db">
@@ -356,9 +426,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-12" id="link-3405" aria-controls="3405" aria-selected="false">
-                        <span class="u-accordion-link-text"> FDA onaylı ne demektir?</span>
-                        <span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-12"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-d3bc"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-d3bc"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-12" id="link-3405" aria-controls="3405" aria-selected="false"><span class="u-accordion-link-text"> FDA onaylı ne demektir?</span><span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-12"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-d3bc"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-d3bc"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-12" id="3405" aria-labelledby="link-3405">
@@ -370,9 +438,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-13" id="link-e26a" aria-controls="e26a" aria-selected="false">
-                        <span class="u-accordion-link-text">Botoksun etkisi geçince yüz kötü olur mu?</span>
-                        <span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-13"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-e354"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-e354"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-13" id="link-e26a" aria-controls="e26a" aria-selected="false"><span class="u-accordion-link-text">Botoksun etkisi geçince yüz kötü olur mu?</span><span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-13"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-e354"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-e354"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-13" id="e26a" aria-labelledby="link-e26a">
@@ -384,9 +450,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-14" id="link-f746" aria-controls="f746" aria-selected="false">
-                        <span class="u-accordion-link-text">Botoks işlemi sonrası neden uzun süreli öne eğilmemeliyiz?</span>
-                        <span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-14"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-71b3"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-71b3"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-14" id="link-f746" aria-controls="f746" aria-selected="false"><span class="u-accordion-link-text">Botoks işlemi sonrası neden uzun süreli öne eğilmemeliyiz?</span><span class="u-accordion-link-icon u-icon u-icon-rounded u-palette-2-base u-text-white u-icon-14"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-71b3"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-71b3"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-14" id="f746" aria-labelledby="link-f746">
@@ -624,9 +688,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                 <div class="u-container-layout u-container-layout-2">
                   <div class="u-accordion u-expanded-width u-faq u-accordion-1">
                     <div class="u-accordion-item">
-                      <a class="active u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-1" id="link-" aria-controls="" aria-selected="true">
-                        <span class="u-accordion-link-text">Estetik dolgu nedir?</span>
-                        <span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-8c6f"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-8c6f"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="active u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-1" id="link-" aria-controls="" aria-selected="true"><span class="u-accordion-link-text">Estetik dolgu nedir?</span><span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-8c6f"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-8c6f"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-active u-accordion-pane u-container-style u-accordion-pane-1" aria-labelledby="link-" aria-expanded="true">
@@ -638,9 +700,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-2" id="link-" aria-controls="" aria-selected="false">
-                        <span class="u-accordion-link-text"> Dolgunun vüduda zararı var mı?</span>
-                        <span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-c412"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-c412"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-2" id="link-" aria-controls="" aria-selected="false"><span class="u-accordion-link-text"> Dolgunun vüduda zararı var mı?</span><span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-c412"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-c412"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-2" aria-labelledby="link-">
@@ -652,9 +712,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-3" id="link-" aria-controls="" aria-selected="false">
-                        <span class="u-accordion-link-text"> Dolgu uygulamasında bir sınır var mıdır? Bakınca dolgu yapıldığı anlaşılır mı?</span>
-                        <span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-f0d3"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-f0d3"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-3" id="link-" aria-controls="" aria-selected="false"><span class="u-accordion-link-text"> Dolgu uygulamasında bir sınır var mıdır? Bakınca dolgu yapıldığı anlaşılır mı?</span><span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-f0d3"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-f0d3"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-3" aria-labelledby="link-">
@@ -666,9 +724,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-4" id="link-3c21" aria-controls="3c21" aria-selected="false">
-                        <span class="u-accordion-link-text"> Dolguların kalıcılık süresi ne kadardır?</span>
-                        <span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-4005"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-4005"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-4" id="link-3c21" aria-controls="3c21" aria-selected="false"><span class="u-accordion-link-text"> Dolguların kalıcılık süresi ne kadardır?</span><span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-4005"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-4005"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-4" id="3c21" aria-labelledby="link-3c21">
@@ -680,9 +736,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-5" id="link-00b0" aria-controls="00b0" aria-selected="false">
-                        <span class="u-accordion-link-text">Dolgu nasıl uygulanır? Uygulama sırasında acı olur mu?</span>
-                        <span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-5"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-5ef0"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-5ef0"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-5" id="link-00b0" aria-controls="00b0" aria-selected="false"><span class="u-accordion-link-text">Dolgu nasıl uygulanır? Uygulama sırasında acı olur mu?</span><span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-5"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-5ef0"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-5ef0"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-5" id="00b0" aria-labelledby="link-00b0">
@@ -694,9 +748,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-6" id="link-1c5b" aria-controls="1c5b" aria-selected="false">
-                        <span class="u-accordion-link-text">Dolguda hemen sonuç belli olur mu?</span>
-                        <span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-6"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-23a8"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-23a8"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-6" id="link-1c5b" aria-controls="1c5b" aria-selected="false"><span class="u-accordion-link-text">Dolguda hemen sonuç belli olur mu?</span><span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-6"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-23a8"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-23a8"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-6" id="1c5b" aria-labelledby="link-1c5b">
@@ -708,9 +760,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-7" id="link-a060" aria-controls="a060" aria-selected="false">
-                        <span class="u-accordion-link-text">Rus tekniği dudak uygulaması ve naturel dudak uygulaması arasındaki fark nedir?</span>
-                        <span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-7"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-4d61"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-4d61"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-7" id="link-a060" aria-controls="a060" aria-selected="false"><span class="u-accordion-link-text">Rus tekniği dudak uygulaması ve naturel dudak uygulaması arasındaki fark nedir?</span><span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-7"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-4d61"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-4d61"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-7" id="a060" aria-labelledby="link-a060">
@@ -722,9 +772,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-8" id="link-8b0d" aria-controls="8b0d" aria-selected="false">
-                        <span class="u-accordion-link-text">Dudak dolgusunda kaç ml yeterli olur?</span>
-                        <span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-8"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-18b1"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-18b1"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-8" id="link-8b0d" aria-controls="8b0d" aria-selected="false"><span class="u-accordion-link-text">Dudak dolgusunda kaç ml yeterli olur?</span><span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-8"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-18b1"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-18b1"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-8" id="8b0d" aria-labelledby="link-8b0d">
@@ -736,9 +784,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-9" id="link-14be" aria-controls="14be" aria-selected="false">
-                        <span class="u-accordion-link-text">Burun dolgusu ne kadar kalıcıdır?</span>
-                        <span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-9"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-80d3"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-80d3"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-9" id="link-14be" aria-controls="14be" aria-selected="false"><span class="u-accordion-link-text">Burun dolgusu ne kadar kalıcıdır?</span><span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-9"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-80d3"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-80d3"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-9" id="14be" aria-labelledby="link-14be">
@@ -769,9 +815,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                 <div class="u-container-layout u-container-layout-2">
                   <div class="u-accordion u-expanded-width u-faq u-accordion-1">
                     <div class="u-accordion-item">
-                      <a class="active u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-1" id="link-" aria-controls="" aria-selected="true">
-                        <span class="u-accordion-link-text">Dolgu yaptırılmaya karar verildiğinde, dikkat edilmesi gereken noktalar nelerdir?</span>
-                        <span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-8c6f"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-8c6f"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="active u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-1" id="link-" aria-controls="" aria-selected="true"><span class="u-accordion-link-text">Dolgu yaptırılmaya karar verildiğinde, dikkat edilmesi gereken noktalar nelerdir?</span><span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-8c6f"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-8c6f"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-active u-accordion-pane u-container-style u-accordion-pane-1" aria-labelledby="link-" aria-expanded="true">
@@ -783,9 +827,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-2" id="link-" aria-controls="" aria-selected="false">
-                        <span class="u-accordion-link-text"> Dolgu uygulamasından sonra nelere dikkat etmelisiniz?</span>
-                        <span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-c412"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-c412"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-2" id="link-" aria-controls="" aria-selected="false"><span class="u-accordion-link-text"> Dolgu uygulamasından sonra nelere dikkat etmelisiniz?</span><span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-c412"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-c412"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-2" aria-labelledby="link-">
@@ -797,9 +839,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-3" id="link-" aria-controls="" aria-selected="false">
-                        <span class="u-accordion-link-text"> Dolgu maddeleri nasıl etki eder?</span>
-                        <span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-f0d3"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-f0d3"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-3" id="link-" aria-controls="" aria-selected="false"><span class="u-accordion-link-text"> Dolgu maddeleri nasıl etki eder?</span><span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-f0d3"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-f0d3"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-3" aria-labelledby="link-">
@@ -811,9 +851,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-4" id="link-3c21" aria-controls="3c21" aria-selected="false">
-                        <span class="u-accordion-link-text"> Dolgu yan etki yapar mı?</span>
-                        <span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-4005"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-4005"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-4" id="link-3c21" aria-controls="3c21" aria-selected="false"><span class="u-accordion-link-text"> Dolgu yan etki yapar mı?</span><span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-4005"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-4005"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-4" id="3c21" aria-labelledby="link-3c21">
@@ -825,9 +863,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-5" id="link-00b0" aria-controls="00b0" aria-selected="false">
-                        <span class="u-accordion-link-text">Dolgu nerelere uygulanır?</span>
-                        <span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-5"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-5ef0"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-5ef0"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-5" id="link-00b0" aria-controls="00b0" aria-selected="false"><span class="u-accordion-link-text">Dolgu nerelere uygulanır?</span><span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-5"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-5ef0"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-5ef0"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-5" id="00b0" aria-labelledby="link-00b0">
@@ -850,9 +886,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-6" id="link-1c5b" aria-controls="1c5b" aria-selected="false">
-                        <span class="u-accordion-link-text">Göz altı ışık dolgusunun aktif maddesi nedir? Yüze yapılan dolgulardan farkı nedir?</span>
-                        <span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-6"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-23a8"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-23a8"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-6" id="link-1c5b" aria-controls="1c5b" aria-selected="false"><span class="u-accordion-link-text">Göz altı ışık dolgusunun aktif maddesi nedir? Yüze yapılan dolgulardan farkı nedir?</span><span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-6"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-23a8"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-23a8"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-6" id="1c5b" aria-labelledby="link-1c5b">
@@ -864,9 +898,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-7" id="link-a060" aria-controls="a060" aria-selected="false">
-                        <span class="u-accordion-link-text">Göz altı ışık dolgusu kalıcı bir tedavi midir? Herhangi bir yan etkisi var mıdır?</span>
-                        <span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-7"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-4d61"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-4d61"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-7" id="link-a060" aria-controls="a060" aria-selected="false"><span class="u-accordion-link-text">Göz altı ışık dolgusu kalıcı bir tedavi midir? Herhangi bir yan etkisi var mıdır?</span><span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-7"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-4d61"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-4d61"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-7" id="a060" aria-labelledby="link-a060">
@@ -878,9 +910,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-8" id="link-8b0d" aria-controls="8b0d" aria-selected="false">
-                        <span class="u-accordion-link-text">Göz altı ışık dolgusu için yaş sınırı var mıdır?</span>
-                        <span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-8"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-18b1"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-18b1"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-8" id="link-8b0d" aria-controls="8b0d" aria-selected="false"><span class="u-accordion-link-text">Göz altı ışık dolgusu için yaş sınırı var mıdır?</span><span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-8"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-18b1"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-18b1"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-8" id="8b0d" aria-labelledby="link-8b0d">
@@ -892,9 +922,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-9" id="link-14be" aria-controls="14be" aria-selected="false">
-                        <span class="u-accordion-link-text">Yüze yapılan dolgu maddelerinin bir kısmı, göz altına enjekte edilse olmaz mı?</span>
-                        <span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-9"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-80d3"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-80d3"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-9" id="link-14be" aria-controls="14be" aria-selected="false"><span class="u-accordion-link-text">Yüze yapılan dolgu maddelerinin bir kısmı, göz altına enjekte edilse olmaz mı?</span><span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-9"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-80d3"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-80d3"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-9" id="14be" aria-labelledby="link-14be">
@@ -909,9 +937,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       </div>
                     </div>
                     <div class="u-accordion-item">
-                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-10" id="link-abe5" aria-controls="abe5" aria-selected="false">
-                        <span class="u-accordion-link-text">Jawline dolgu nedir? Ne amaçla yapılır? Kalıcılığı ne kadardır?</span>
-                        <span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-10"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-0016"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-0016"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                      <a class="u-accordion-link u-button-style u-custom-font u-font-oswald u-text-body-color u-accordion-link-10" id="link-abe5" aria-controls="abe5" aria-selected="false"><span class="u-accordion-link-text">Jawline dolgu nedir? Ne amaçla yapılır? Kalıcılığı ne kadardır?</span><span class="u-accordion-link-icon u-black u-icon u-icon-rounded u-text-white u-icon-10"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-0016"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-0016"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
 	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
                       </a>
                       <div class="u-accordion-pane u-container-style u-accordion-pane-10" id="abe5" aria-labelledby="link-abe5">
@@ -944,8 +970,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                 <div class="u-container-layout u-container-layout-2">
                   <h6 class="u-align-left u-text u-text-default u-text-1">03 Haziran 2025<br style="">
                   </h6>
-                  <h5 class="u-align-left u-text u-text-default u-text-2">Dolgu: Güzellik ve Sağlıkta Devrim Niteliğinde Bir Tedavi </h5>
-                  <span class="u-align-left u-file-icon u-icon u-text-palette-2-base u-icon-1"><img src="images/447092-7102b2f4.png" alt=""></span>
+                  <h5 class="u-align-left u-text u-text-default u-text-2">Dolgu: Güzellik ve Sağlıkta Devrim Niteliğinde Bir Tedavi </h5><span class="u-align-left u-file-icon u-icon u-text-palette-2-base u-icon-1"><img src="images/447092-7102b2f4.png" alt=""></span>
                 </div>
               </div>
             </div>
@@ -956,8 +981,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
               <div class="custom-expanded u-container-style u-group u-radius u-shape-round u-white u-group-2" data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-delay="0">
                 <div class="u-container-layout u-container-layout-4">
                   <h6 class="u-align-left u-text u-text-default u-text-3">10 Şubat 2025</h6>
-                  <h5 class="u-align-left u-text u-text-default u-text-4">Dolgu Nedir? Kullanım Alanları ve Riskleri</h5>
-                  <span class="u-align-left u-file-icon u-icon u-text-palette-2-base u-icon-2"><img src="images/4165380-b2d723c6.png" alt=""></span>
+                  <h5 class="u-align-left u-text u-text-default u-text-4">Dolgu Nedir? Kullanım Alanları ve Riskleri</h5><span class="u-align-left u-file-icon u-icon u-text-palette-2-base u-icon-2"><img src="images/4165380-b2d723c6.png" alt=""></span>
                 </div>
               </div>
             </div>
@@ -968,19 +992,18 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
               <div class="custom-expanded u-container-align-left u-container-style u-group u-radius u-shape-round u-white u-group-3" data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-delay="0">
                 <div class="u-container-layout u-container-layout-6">
                   <h6 class="u-align-left u-text u-text-default u-text-5">22 Şubat 2025</h6>
-                  <h5 class="u-align-left u-text u-text-default u-text-6">Akne ve Cilt Bakımında Dikkat Edilmesi Gerekenler</h5>
-                  <span class="u-align-left u-file-icon u-icon u-text-palette-2-base u-icon-3"><img src="images/9845752-b49a068f.png" alt=""></span>
+                  <h5 class="u-align-left u-text u-text-default u-text-6">Akne ve Cilt Bakımında Dikkat Edilmesi Gerekenler</h5><span class="u-align-left u-file-icon u-icon u-text-palette-2-base u-icon-3"><img src="images/9845752-b49a068f.png" alt=""></span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div><div class="u-container-style u-expanded-width u-group u-palette-2-base u-group-4">
+      </div><div class="custom-expanded u-container-style u-group u-palette-2-base u-group-4">
         <div class="u-container-layout u-container-layout-7">
           <p class="u-align-center u-custom-font u-text ustte u-text-7">Dermatolog gözüyle&nbsp;<br>anti aging yaklaşımı 
           </p>
           <a href="https://www.doktorsitesi.com/uzm-dr-aylin-sema-tirpanci/dermatoloji-geleneksel-ve-tamamlayici-tip-medikal-estetik-sertifikali-tip-doktoru/istanbul" class="orta u-align-center u-border-none u-btn u-button-style u-hover-palette-1-dark-1 u-palette-2-light-2 u-btn-1">raNDEVU ALMAK İÇİN TIKLAYIN </a>
-          <img class="enalt u-align-center-md u-align-center-sm u-align-center-xs u-expanded-width-xs u-hover-feature u-image u-image-contain u-image-default u-image-4" src="images/SolYaprakAlt.png" alt="" data-image-width="300" data-image-height="303" data-animation-name="customAnimationIn" data-animation-duration="5000" data-animation-delay="0">
+          <img class="enalt u-align-left u-expanded-width-xs u-hover-feature u-image u-image-contain u-image-default u-image-4" src="images/SolYaprakAlt.png" alt="" data-image-width="300" data-image-height="303" data-animation-name="customAnimationIn" data-animation-duration="5000" data-animation-delay="0">
         </div>
       </div><div class="custom-expanded data-layout-selected u-clearfix u-layout-wrap u-layout-wrap-1">
         <div class="u-layout">
@@ -994,33 +1017,29 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                 </div>
               </div>
             </div>
-            <div class="u-align-left u-container-align-left u-container-style u-grey-10 u-layout-cell u-size-20 u-layout-cell-2">
+            <div class="u-align-left u-container-align-left-lg u-container-align-left-md u-container-align-left-sm u-container-align-left-xl u-container-style u-grey-10 u-layout-cell u-size-20 u-layout-cell-2">
               <div class="u-container-layout u-valign-top u-container-layout-9">
-                <h2 class="u-custom-font u-font-montserrat u-text u-text-8"> Bizimle irtibata geçin</h2>
+                <h2 class="u-align-center-xs u-custom-font u-font-montserrat u-text u-text-8"> Bizimle irtibata geçin</h2>
                 <div class="u-expanded-width u-list u-list-2">
                   <div class="u-repeater u-repeater-2">
                     <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle">
-                      <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-10">
-                        <span class="u-file-icon u-icon u-icon-4"><img src="images/1257.png" alt=""></span>
+                      <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-10"><span class="u-file-icon u-icon u-icon-4"><img src="images/1257.png" alt=""></span>
                         <h4 class="u-text u-text-9">Telefon</h4>
                         <p class="u-text u-text-10">
-                          <a href="#" class="u-active-none u-border-active-palette-2-base u-border-hover-palette-2-base u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-btn-2">
-                            <span class="u-icon"></span>&nbsp;​+0505 8498433
+                          <a href="#" class="u-active-none u-border-active-palette-2-base u-border-hover-palette-2-base u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-btn-2"><span class="u-icon"></span>&nbsp;​+0505 8498433
                           </a>
                         </p>
                       </div>
                     </div>
                     <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle">
-                      <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-11">
-                        <span class="u-file-icon u-icon u-text-palette-2-base u-icon-6"><img src="images/447031-84ff4fcd.png" alt=""></span>
+                      <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-11"><span class="u-file-icon u-icon u-text-palette-2-base u-icon-6"><img src="images/447031-84ff4fcd.png" alt=""></span>
                         <h4 class="u-text u-text-11">Muayenehane</h4>
                         <p class="u-text u-text-12">Bahçeşehir 2.Kısım Mah.<br>Ahmet Taner Kışlalı Bulvarı&nbsp;<br>Bina No:17 Villa No:3&nbsp;<br>Başakşehir/İSTANBUL 
                         </p>
                       </div>
                     </div>
                     <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle">
-                      <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-12">
-                        <span class="u-file-icon u-icon u-text-palette-2-base u-icon-7"><img src="images/542689-97823036.png" alt=""></span>
+                      <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-12"><span class="u-file-icon u-icon u-text-palette-2-base u-icon-7"><img src="images/542689-97823036.png" alt=""></span>
                         <h4 class="u-text u-text-13">Bize ulaşın</h4>
                         <p class="u-text u-text-14">
                           <a href="#" class="u-active-none u-border-active-palette-2-base u-border-hover-palette-2-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-text-20" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">info@draylinsema.com</a>
@@ -1035,7 +1054,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
               <div class="u-container-layout u-valign-top u-container-layout-13">
                 <h2 class="u-custom-font u-font-montserrat u-text u-text-15"> Bize ulaşın</h2>
                 <div class="u-align-left u-expanded-width-xs u-form u-form-1">
-                  <form action="./scripts/form-07ea-3b8b.php" class="u-clearfix u-form-spacing-28 u-form-vertical u-inner-form" style="padding: 0px;" source="customphp" name="form">
+                  <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-28 u-form-vertical u-inner-form" style="padding: 0px;" source="email" name="form">
                     <div class="u-form-group u-form-name u-label-top">
                       <label class="u-label">Adınız Soyadınız</label>
                       <input type="text" placeholder="Ad Soyad" id="name-5a14" name="name" class="u-grey-10 u-input u-input-rectangle u-radius-7 u-input-1" required="">
@@ -1052,9 +1071,11 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       <a href="#" class="u-active-black u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-black u-palette-2-base u-radius-7 u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-4">Gönder</a>
                       <input type="submit" value="submit" class="u-form-control-hidden">
                     </div>
-                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
-                    <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                    <div class="u-form-send-message u-form-send-success">Teşekkürler! Mesajınız iletildi. Size en kısa sürede geri dönüş yapacağız.</div>
+                    <div class="u-form-send-error u-form-send-message">Gönderilemedi. Lütfen hataları kontrol edip tekrar deneyiniz.</div>
                     <input type="hidden" value="" name="recaptchaResponse">
+                    <input type="hidden" name="formServices" value="0f3dc1c7-21d9-8a84-55b9-6946614f4100">
+                    <input type="hidden" name="siteKey" value="6LcCtSorAAAAAPh9TtE5XlsePk2V0hnqTt3V_wm2">
                   </form>
                 </div>
               </div>
@@ -1064,9 +1085,9 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
       </div><div class="custom-expanded data-layout-selected u-clearfix u-gutter-30 u-layout-wrap u-layout-wrap-2">
         <div class="u-gutter-0 u-layout">
           <div class="u-layout-row">
-            <div class="u-align-left u-container-align-left u-container-align-left-lg u-container-align-left-md u-container-align-left-sm u-container-align-left-xl u-container-style u-layout-cell u-left-cell u-size-15 u-layout-cell-4">
-              <div class="u-container-layout u-container-layout-14">
-                <img class="custom-expanded u-align-center-xs u-image u-image-contain u-image-default u-image-5" src="images/DRAylinSemaLogoSadeText1.png" alt="" data-image-width="690" data-image-height="141"><!--position-->
+            <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-15 u-layout-cell-4">
+              <div class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-14">
+                <img class="u-align-center-xs u-expanded-width-xs u-image u-image-contain u-image-default u-image-5" src="images/LogoAylinSema2.png" alt="" data-image-width="620" data-image-height="204"><!--position-->
                 <div data-position="" class="u-expanded-width u-position u-position-1"><!--block-->
                   <div class="u-block">
                     <div class="u-block-container u-clearfix"><!--block_header-->
@@ -1114,8 +1135,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       <h5 class="u-align-center u-block-header u-custom-font u-text u-text-palette-2-light-2 u-text-20"><!--block_header_content-->Menü<br>
                         <br><!--/block_header_content-->
                       </h5><!--/block_header--><!--block_content-->
-                      <div class="u-align-center u-block-content u-text"><!--block_content_content-->
-                        <span class="u-text-palette-3-light-1">
+                      <div class="u-align-center u-block-content u-text"><!--block_content_content--><span class="u-text-palette-3-light-1">
                           <a href="SSS_Hakkinda.html" data-page-id="892301088" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-11"> Dr. Aylin Sema Tırpancı<br>
                           </a>
                           <a href="SSS_Muayene.html" data-page-id="46417600" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-12">Muayenehanemiz<br>
@@ -1124,8 +1144,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                           </a>
                           <a href="blog/blog.html" data-page-id="3015910974" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-14">Blog<br>
                           </a>
-                          <a href="SSS_VLOG.html" data-page-id="277619326" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-15">Vlog</a>
-                        </span>
+                          <a href="SSS_VLOG.html" data-page-id="277619326" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-15">Vlog</a></span>
                         <br>Gizlilik Politikası (KVKK)<br>
                         <br><!--/block_content_content-->
                       </div><!--/block_content-->
@@ -1143,28 +1162,22 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                         <br><!--/block_header_content-->
                       </h5><!--/block_header--><!--block_content-->
                       <div class="u-block-content u-text u-text-23"><!--block_content_content--> &nbsp;<span class="u-file-icon u-icon u-text-palette-2-light-2"><img src="images/7297083-10aae893.png" alt=""></span>&nbsp;Bahçeşehir 2.Kısım Mh. Ahmet Taner Kışlalı Bulvarı<br>Bina No:17 Villa No:3<br>Başakşehir / İSTANBUL<br>
-                        <br>
-                        <span class="u-file-icon u-icon u-text-palette-2-light-2"><img src="images/7297083-10aae893.png" alt=""></span> &nbsp;Adresi Haritada Görüntüle<br>
-                        <span class="u-file-icon u-icon u-text-palette-2-light-2"><img src="images/7297083-10aae893.png" alt=""></span>
+                        <br><span class="u-file-icon u-icon u-text-palette-2-light-2"><img src="images/7297083-10aae893.png" alt=""></span> &nbsp;Adresi Haritada Görüntüle<br><span class="u-file-icon u-icon u-text-palette-2-light-2"><img src="images/7297083-10aae893.png" alt=""></span>
                         <a href="mailto:s3audi@hotmail.com?subject=Siteden%20bir%20mesaj%20var%20(Dr.Aylin%20Sema)" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-16"> info@draylinsema.com<br>
-                        </a>
-                        <span class="u-file-icon u-icon u-text-palette-2-light-2"><img src="images/7297083-10aae893.png" alt=""></span>
+                        </a><span class="u-file-icon u-icon u-text-palette-2-light-2"><img src="images/7297083-10aae893.png" alt=""></span>
                         <a href="tel:+905058498433" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-17">+90 505 8498433</a><!--/block_content_content-->
                       </div><!--/block_content-->
                     </div>
                   </div><!--/block-->
                 </div><!--/position-->
-                <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
-                  <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/name">
-                    <span class="u-icon u-social-facebook u-social-icon u-icon-12"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-d070"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-d070"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
+                <div class="u-align-left u-social-icons u-social-icons-1">
+                  <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/name"><span class="u-icon u-social-facebook u-social-icon u-icon-12"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-d070"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-d070"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
 c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
                   </a>
-                  <a class="u-social-url" title="twitter" target="_blank" href="https://twitter.com/name">
-                    <span class="u-icon u-social-icon u-social-twitter u-icon-13"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112.2 112.2" style=""><use xlink:href="#svg-15ea"></use></svg><svg class="u-svg-content" viewBox="0 0 112.2 112.2" x="0px" y="0px" id="svg-15ea"><circle fill="currentColor" cx="56" cy="56" r="55"></circle><path fill="#FFFFFF" d="M63.9,51l22.4-24h-8.6L60.3,45.9L46.9,27H24l23.3,32.8L24,85h8.2L51,64.9L65.3,85H88L63.9,51z M55.3,60.2
+                  <a class="u-social-url" title="twitter" target="_blank" href="https://twitter.com/name"><span class="u-icon u-social-icon u-social-twitter u-icon-13"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112.2 112.2" style=""><use xlink:href="#svg-15ea"></use></svg><svg class="u-svg-content" viewBox="0 0 112.2 112.2" x="0px" y="0px" id="svg-15ea"><circle fill="currentColor" cx="56" cy="56" r="55"></circle><path fill="#FFFFFF" d="M63.9,51l22.4-24h-8.6L60.3,45.9L46.9,27H24l23.3,32.8L24,85h8.2L51,64.9L65.3,85H88L63.9,51z M55.3,60.2
 l-3.7-5.1L35.7,33.1h8.1l12.3,17.2l3.7,5.1l16.6,23.4h-7.8L55.3,60.2z"></path></svg></span>
                   </a>
-                  <a class="u-social-url" title="instagram" target="_blank" href="https://www.instagram.com/draylinsema46/">
-                    <span class="u-icon u-social-icon u-social-instagram u-icon-14"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-e6d2"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-e6d2"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M55.9,38.2c-9.9,0-17.9,8-17.9,17.9C38,66,46,74,55.9,74c9.9,0,17.9-8,17.9-17.9C73.8,46.2,65.8,38.2,55.9,38.2
+                  <a class="u-social-url" title="instagram" target="_blank" href="https://www.instagram.com/draylinsema46/"><span class="u-icon u-social-icon u-social-instagram u-icon-14"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-e6d2"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-e6d2"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M55.9,38.2c-9.9,0-17.9,8-17.9,17.9C38,66,46,74,55.9,74c9.9,0,17.9-8,17.9-17.9C73.8,46.2,65.8,38.2,55.9,38.2
 z M55.9,66.4c-5.7,0-10.3-4.6-10.3-10.3c-0.1-5.7,4.6-10.3,10.3-10.3c5.7,0,10.3,4.6,10.3,10.3C66.2,61.8,61.6,66.4,55.9,66.4z"></path><path fill="#FFFFFF" d="M74.3,33.5c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2s4.2-1.9,4.2-4.2S76.6,33.5,74.3,33.5z"></path><path fill="#FFFFFF" d="M73.1,21.3H38.6c-9.7,0-17.5,7.9-17.5,17.5v34.5c0,9.7,7.9,17.6,17.5,17.6h34.5c9.7,0,17.5-7.9,17.5-17.5V38.8
 C90.6,29.1,82.7,21.3,73.1,21.3z M83,73.3c0,5.5-4.5,9.9-9.9,9.9H38.6c-5.5,0-9.9-4.5-9.9-9.9V38.8c0-5.5,4.5-9.9,9.9-9.9h34.5
 c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
@@ -1182,7 +1195,6 @@ c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
             <br>Tüm hakları saklıdır.
           </p>
         </div>
-      </div></footer>
-    <span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px; padding: 15px" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-palette-1-base" data-href="#"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg><svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg></span>
+      </div></footer><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px; padding: 15px" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-palette-1-base" data-href="#"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg><svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg></span>
   
 </body></html>

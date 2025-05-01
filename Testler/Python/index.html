@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>N11 Ürünleri</title>
+</head>
+<body>
+  <h1>Finish Ürünleri</h1>
+  <div id="n11-products"></div>
+
+  <script>
+    fetch('http://localhost:5000/api/finish-products')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('n11-products');
+        data.forEach(p => {
+          container.innerHTML += `
+            <div style="margin-bottom:20px;">
+              <img src="${p.image}" width="100">
+              <h3>${p.title}</h3>
+              <p>${p.price}</p>
+              <a href="${p.link}" target="_blank">N11'de Gör</a>
+            </div>
+          `;
+        });
+      });
+  </script>
+</body>
+</html>
