@@ -45501,18 +45501,21 @@ a.u-link.u-text-hover-grey-90:hover {
     margin-right: 12px;
   }
 
+  .u-footer .u-group-4 {
+    min-height: 421px;
+  }
+
   .u-footer .u-text-7 {
     font-size: 3rem;
   }
 
   .u-footer .u-image-4 {
-    height: NaNpx;
-    margin-top: -237px;
     transition-duration: 0.5s;
     --animation-custom_in-rotate: -320deg;
-    margin-right: initial;
-    margin-left: initial;
-    width: auto;
+    width: 208px;
+    height: 168px;
+    margin-top: 15px;
+    margin-bottom: 0;
   }
 
   .u-footer .u-layout-wrap-1 {
@@ -45521,10 +45524,6 @@ a.u-link.u-text-hover-grey-90:hover {
 
   .u-footer .u-layout-cell-1 {
     min-height: 574px;
-  }
-
-  .u-footer .u-text-8 {
-    margin: 0;
   }
 
   .u-footer .u-text-9 {
