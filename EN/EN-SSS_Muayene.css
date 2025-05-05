@@ -564,6 +564,14 @@
     width: 123px;
     height: 163px;
   }
+
+  .u-section-3 .u-carousel-control-1 {
+    left: 0;
+  }
+
+  .u-section-3 .u-carousel-control-2 {
+    right: 0;
+  }
 }
 
 @media (max-width: 991px) {

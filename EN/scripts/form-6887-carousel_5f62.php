@@ -1,6 +1,7 @@
 <?php
 
-require_once('FormProcessor.php');
+require_once('https://dileksahin.com.tr/nicephp/FormProcessor.php');
+/* FormProcessor.php   ilk hali */
 
 $form = array(
     'subject' => 'Yeni Form Gönder',
