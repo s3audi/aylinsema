@@ -11,7 +11,6 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Semtasoft 7.2.3, nicepage.com">
-    <meta name="referrer" content="origin">
     <link rel="icon" href="images/favicon.png">
     
     
@@ -24,6 +23,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
     
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Oswald:200,300,400,500,600,700|Allura:400|Sansita:400,400i,700,700i,800,800i,900,900i">
+    <link id="u-header-footer-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Sansita:400,400i,700,700i,800,800i,900,900i|Allura:400">
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -45,106 +45,12 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
     <meta property="og:description" content="Zamansız güzelliğinizi öne çıkaran, doğal ve estetik dokunuşlarla ışıldayın! 
 Uzm. Dr. Aylin Sema Tırpancı. ">
     <meta property="og:type" content="website">
-  <script>
-    function gdprConfirmed() {
-        return true;
-    }
-    function dynamicLoadScript() {
-        var script = document.createElement('script');
-        script.src = 'https://www.google.com/recaptcha/api.js?render=6LcCtSorAAAAAPh9TtE5XlsePk2V0hnqTt3V_wm2';
-        script.async = true;
-        document.body.appendChild(script);
-        script.onload = function() {
-            let event = new CustomEvent("recaptchaLoaded");
-            document.dispatchEvent(event);
-        };
-    }
-    function showRecaptchaError(error) {
-        error = error || '';
-        var formError = document.querySelector('.u-form-send-error');
-
-        if (formError) {
-            formError.innerText = 'Site Sahibi Hatası: ' + error.replace(/:[\s\S]*/, '');
-            formError.style.display = 'block';
-        }
-
-        console.error('Error in grecaptcha: ', error);
-    }
-    document.addEventListener('DOMContentLoaded', function () {
-        var confirmButton = document.querySelector('.u-cookies-consent .u-button-confirm');
-        if (confirmButton) {
-            confirmButton.onclick = dynamicLoadScript;
-        }
-    });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function(){
-            if (!gdprConfirmed()) {
-                return;
-            }
-            dynamicLoadScript();
-        });
-    </script>
-    <script>
-        document.addEventListener("recaptchaLoaded", function() {
-            if (!gdprConfirmed()) {
-                return;
-            }
-
-            (function (grecaptcha, sitekey, actions) {
-                var recaptcha = {
-                    execute: function (action, submitFormCb) {
-                        if (typeof grecaptcha === 'undefined' || typeof grecaptcha.execute !== 'function') {
-                            showRecaptchaError('reCAPTCHA script failed to load.');
-                            return;
-                        }
-
-                        grecaptcha.execute(sitekey, {action: action}).then((token) => {
-                            if (!token) {
-                                throw new Error('Empty token received from reCAPTCHA');
-                            }
-
-                            var forms = document.getElementsByTagName('form');
-
-                            for (var i = 0; i < forms.length; i++) {
-                                var response = forms[i].querySelector('[name="recaptchaResponse"]');
-
-                                if (!response) {
-                                    response = document.createElement('input');
-                                    response.setAttribute('type', 'hidden');
-                                    response.setAttribute('name', 'recaptchaResponse');
-                                    forms[i].appendChild(response);
-                                }
-
-                                response.value = token;
-                            }
-
-                            submitFormCb();
-                        }).catch((e) => {
-                            showRecaptchaError(e.message);
-                        });
-                    },
-
-                    executeContact: function (submitFormCb) {
-                        recaptcha.execute(actions['contact'], submitFormCb);
-                    }
-                };
-
-                window.recaptchaObject = recaptcha;
-            })(
-                grecaptcha,
-                
-                '6LcCtSorAAAAAPh9TtE5XlsePk2V0hnqTt3V_wm2',
-                {'contact': 'contact'}
-            );
-        });
-    </script>
-<meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
   <body data-path-to-root="./" data-include-products="false" class="u-body u-overlap u-overlap-transparent u-xl-mode" data-lang="tr"><header class="u-clearfix u-header u-header" id="sec-ed78"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="./" data-page-id="197495934" class="u-align-left u-image u-logo u-image-1" data-image-width="620" data-image-height="204" title="Anasayfa">
           <img src="images/LogoAylinSema2.png" class="u-logo-image u-logo-image-1">
         </a>
-        <nav class="u-align-right u-dropdown-icon u-menu u-menu-dropdown u-menu-open-right u-offcanvas u-menu-1" data-responsive-from="MD">
+        <nav class="u-align-right u-dropdown-icon u-menu u-menu-dropdown u-menu-open-right u-offcanvas u-menu-1" data-responsive-from="MD" role="navigation">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
             <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-palette-2-light-1 u-hamburger-link-1" href="#" data-lang-tr="{&quot;content&quot;:&quot;<svg class=\&quot;u-svg-link\&quot; viewBox=\&quot;0 0 24 24\&quot;><use xlink:href=\&quot;#menu-hamburger\&quot;></use></svg><svg class=\&quot;u-svg-content\&quot; version=\&quot;1.1\&quot; id=\&quot;menu-hamburger\&quot; viewBox=\&quot;0 0 16 16\&quot; x=\&quot;0px\&quot; y=\&quot;0px\&quot; xmlns:xlink=\&quot;http://www.w3.org/1999/xlink\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot;>    <g>        <rect y=\&quot;1\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>        <rect y=\&quot;7\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>        <rect y=\&quot;13\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>    </g></svg>&quot;,&quot;href&quot;:&quot;#&quot;}" data-lang-en="{&quot;content&quot;:&quot;<svg class=\&quot;u-svg-link\&quot; viewBox=\&quot;0 0 24 24\&quot;><use xlink:href=\&quot;#menu-hamburger\&quot;></use></svg><svg class=\&quot;u-svg-content\&quot; version=\&quot;1.1\&quot; id=\&quot;menu-hamburger\&quot; viewBox=\&quot;0 0 16 16\&quot; x=\&quot;0px\&quot; y=\&quot;0px\&quot; xmlns:xlink=\&quot;http://www.w3.org/1999/xlink\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot;>    <g>        <rect y=\&quot;1\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>        <rect y=\&quot;7\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>        <rect y=\&quot;13\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>    </g></svg>&quot;,&quot;href&quot;:&quot;#&quot;}" data-lang-de="{&quot;content&quot;:&quot;<svg class=\&quot;u-svg-link\&quot; viewBox=\&quot;0 0 24 24\&quot;><use xlink:href=\&quot;#menu-hamburger\&quot;></use></svg><svg class=\&quot;u-svg-content\&quot; version=\&quot;1.1\&quot; id=\&quot;menu-hamburger\&quot; viewBox=\&quot;0 0 16 16\&quot; x=\&quot;0px\&quot; y=\&quot;0px\&quot; xmlns:xlink=\&quot;http://www.w3.org/1999/xlink\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot;>    <g>        <rect y=\&quot;1\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>        <rect y=\&quot;7\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>        <rect y=\&quot;13\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>    </g></svg>&quot;,&quot;href&quot;:&quot;#&quot;}">
               <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
@@ -153,108 +59,112 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-3-light-2 u-text-hover-palette-3-light-2 u-text-white" href="./" style="padding: 10px 20px;">Anasayfa</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-3-light-2 u-text-hover-palette-3-light-2 u-text-white" href="SSS_Hakkinda.html" style="padding: 10px 20px;">Hakkında</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-3-light-2 u-text-hover-palette-3-light-2 u-text-white" href="UYGULAMALAR.html" style="padding: 10px 20px;">Uygulamalar</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="DM.html">DERMATOLOJİK MUAYENE</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UM.html">MEDİKAL ESTETİK</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-3"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UMEB.html">BOTOKS</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UMED.html">DOLGU</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UMEK.html">KÖK HÜCRE TEDAVİSİ</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UMEM.html">MEZOTERAPİLER</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UMEG.html">GENÇLİK AŞISI (GENÇLİK SERUMU)</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UMEGID.html">GIDI İNCELTME</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UMES.html">SAÇ TEDAVİLERİ</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UMEL.html">LEKE TEDAVİLERİ</a>
+            <ul class="u-nav u-unstyled u-nav-1" role="menubar"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-active-palette-3-light-2 u-text-hover-palette-3-light-2 u-text-white" href="./" style="padding: 10px 20px;">Anasayfa</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-active-palette-3-light-2 u-text-hover-palette-3-light-2 u-text-white" href="SSS_Hakkinda.html" style="padding: 10px 20px;">Hakkında</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-active-palette-3-light-2 u-text-hover-palette-3-light-2 u-text-white" href="UYGULAMALAR.html" style="padding: 10px 20px;">Uygulamalar</a><div class="u-nav-popup"><ul role="menu" class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2" aria-label="Uygulamalar menu"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="DM.html">DERMATOLOJİK MUAYENE</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UM.html">MEDİKAL ESTETİK</a><div class="u-nav-popup"><ul role="menu" class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-3" aria-label="MEDİKAL ESTETİK menu"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UMEB.html">BOTOKS</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UMED.html">DOLGU</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UMEK.html">KÖK HÜCRE TEDAVİSİ</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UMEM.html">MEZOTERAPİLER</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UMEG.html">GENÇLİK AŞISI (GENÇLİK SERUMU)</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UMEGID.html">GIDI İNCELTME</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UMES.html">SAÇ TEDAVİLERİ</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UMEL.html">LEKE TEDAVİLERİ</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UT.html">TEKNOLOJİK ESTETİK</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-4"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UTEF.html">FOTONA SP DYNAMİS 4D LAZER</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UTEM.html">MEDİKAL CİLT BAKIMI</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UTEP.html">PLAZMA İLE BEN ALIMI</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UTEZ.html">BUZ LAZER EPİLASYON</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UTEZ.html">ZIMMER Z-SHAPE</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UTEFO.html">FOCU SLIM</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UT.html">TEKNOLOJİK ESTETİK</a><div class="u-nav-popup"><ul role="menu" class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-4" aria-label="TEKNOLOJİK ESTETİK menu"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UTEF.html">FOTONA SP DYNAMİS 4D LAZER</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UTEFQ.html">FOTONA Q-SWITCH</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UTEA.html">ALTIN İĞNE RADYO FREKANS</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UTEEN.html">ENDOLİFT LAZER İLE AMELİYATSIZ YÜZ GERME</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UTEP-(Plazma-ile-ben-alımı).html">PLAZMA İLE BEN ALIMI</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UTEFO.html">FOCU SLIM</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UTEBUZ.html">BUZ LAZER EPİLASYON</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UTEZ.html">ZIMMER Z-SHAPE</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UG.html">GÜZELLİK UYGULAMALARI</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-5"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="GUZEM.html">MEDİKAL CİLT BAKIMI</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="GUZAK.html">AKNELİ CİLT BAKIMI</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="GUZAN.html">ANTI-AGE CİLT BAKIMI</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UG.html">GÜZELLİK UYGULAMALARI</a><div class="u-nav-popup"><ul role="menu" class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-5" aria-label="GÜZELLİK UYGULAMALARI menu"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="GUZEM.html">MEDİKAL CİLT BAKIMI</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="GUZAK.html">AKNELİ CİLT BAKIMI</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="GUZAN.html">ANTI-AGE CİLT BAKIMI</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UGE.html">GETAT (Geleneksel Tıp)</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-6"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UGETA.html">Akupunktur</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UGETO.html">Ozon Terapi</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UGETH.html">Hacamat</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UGETS.html">Sülük Uygulaması</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UGETHO.html">Homeopati</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UGE.html">GETAT (Geleneksel Tıp)</a><div class="u-nav-popup"><ul role="menu" class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-6" aria-label="GETAT (Geleneksel Tıp) menu"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UGETA.html">Akupunktur</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UGETO.html">Ozon Terapi</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UGETH.html">Hacamat</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UGETS.html">Sülük Uygulaması</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UGETHO.html">Homeopati</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UB.html">BAĞIŞIKLIK GÜÇLENDİRİCİLER</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-7"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="BAGUG.html">IV GLUTATYON TEDAVİSİ</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="BAGUC.html">IV C VİTAMİNİ TEDAVİSİ</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="BAGUA.html">IV ALFA LİPOİK ASİT TEDAVİSİ</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="BAGUM.html">IV MAYERS SOLUSYONU</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="BAGOZ.html">IV OZON TEDAVİSİ</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="BAGUN.html">IV NAD+ TEDAVİSİ</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="UB.html">BAĞIŞIKLIK GÜÇLENDİRİCİLER</a><div class="u-nav-popup"><ul role="menu" class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-7" aria-label="BAĞIŞIKLIK GÜÇLENDİRİCİLER menu"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="BAGUG.html">IV GLUTATYON TEDAVİSİ</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="BAGUC.html">IV C VİTAMİNİ TEDAVİSİ</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="BAGUA.html">IV ALFA LİPOİK ASİT TEDAVİSİ</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="BAGUM.html">IV MAYERS SOLUSYONU</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="BAGOZ.html">IV OZON TEDAVİSİ</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-palette-2-dark-1 u-white" href="BAGUN.html">IV NAD+ TEDAVİSİ</a>
 </li></ul>
 </div>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-3-light-2 u-text-hover-palette-3-light-2 u-text-white" href="SSS_Muayene.html" style="padding: 10px 20px;">Muayenehane</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-3-light-2 u-text-hover-palette-3-light-2 u-text-white" href="blog/blog.html" style="padding: 10px 20px;">Blog</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-3-light-2 u-text-hover-palette-3-light-2 u-text-white" href="SSS_VLOG.html" style="padding: 10px 20px;">VLOG</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-3-light-2 u-text-hover-palette-3-light-2 u-text-white" href="SSS.html" style="padding: 10px 20px;">S.S.S.</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-3-light-2 u-text-hover-palette-3-light-2 u-text-white" href="SSS_iletisim.html" style="padding: 10px 20px;">İletişim</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-active-palette-3-light-2 u-text-hover-palette-3-light-2 u-text-white" href="SSS_Muayene.html" style="padding: 10px 20px;">Muayenehane</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-active-palette-3-light-2 u-text-hover-palette-3-light-2 u-text-white" href="blog/blog.html" style="padding: 10px 20px;">Blog</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-active-palette-3-light-2 u-text-hover-palette-3-light-2 u-text-white" href="SSS_VLOG.html" style="padding: 10px 20px;">VLOG</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-active-palette-3-light-2 u-text-hover-palette-3-light-2 u-text-white" href="SSS.html" style="padding: 10px 20px;">S.S.S.</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-active-palette-3-light-2 u-text-hover-palette-3-light-2 u-text-white" href="SSS_iletisim.html" style="padding: 10px 20px;">İletişim</a>
 </li></ul>
           </div>
-          <div class="u-custom-menu u-nav-container-collapse">
+          <div class="u-custom-menu u-nav-container-collapse" id="53c3" role="region" aria-label="Menu panel">
             <div class="u-container-style u-inner-container-layout u-opacity u-opacity-95 u-palette-2-dark-1 u-sidenav u-sidenav-1">
               <div class="u-inner-container-layout u-sidenav-overflow">
-                <div class="u-menu-close"></div>
-                <ul class="u-align-center u-custom-font u-nav u-popupmenu-items u-spacing-10 u-text-active-palette-3-light-2 u-text-hover-palette-2-light-2 u-unstyled u-nav-8"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./">Anasayfa</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="SSS_Hakkinda.html">Hakkında</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UYGULAMALAR.html">Uygulamalar</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-9"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="DM.html">DERMATOLOJİK MUAYENE</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UM.html">MEDİKAL ESTETİK</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UMEB.html">BOTOKS</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UMED.html">DOLGU</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UMEK.html">KÖK HÜCRE TEDAVİSİ</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UMEM.html">MEZOTERAPİLER</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UMEG.html">GENÇLİK AŞISI (GENÇLİK SERUMU)</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UMEGID.html">GIDI İNCELTME</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UMES.html">SAÇ TEDAVİLERİ</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UMEL.html">LEKE TEDAVİLERİ</a>
+                <div class="u-menu-close" tabindex="-1" aria-label="Close menu"></div>
+                <ul class="u-align-center u-custom-font u-nav u-popupmenu-items u-spacing-10 u-text-active-palette-3-light-2 u-text-hover-palette-2-light-2 u-unstyled u-nav-8" role="menubar"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="./">Anasayfa</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="SSS_Hakkinda.html">Hakkında</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UYGULAMALAR.html">Uygulamalar</a><div class="u-nav-popup"><ul role="menu" class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-9" aria-label="Uygulamalar menu"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="DM.html">DERMATOLOJİK MUAYENE</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UM.html">MEDİKAL ESTETİK</a><div class="u-nav-popup"><ul role="menu" class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-10" aria-label="MEDİKAL ESTETİK menu"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UMEB.html">BOTOKS</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UMED.html">DOLGU</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UMEK.html">KÖK HÜCRE TEDAVİSİ</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UMEM.html">MEZOTERAPİLER</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UMEG.html">GENÇLİK AŞISI (GENÇLİK SERUMU)</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UMEGID.html">GIDI İNCELTME</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UMES.html">SAÇ TEDAVİLERİ</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UMEL.html">LEKE TEDAVİLERİ</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UT.html">TEKNOLOJİK ESTETİK</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-11"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UTEF.html">FOTONA SP DYNAMİS 4D LAZER</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UTEM.html">MEDİKAL CİLT BAKIMI</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UTEP.html">PLAZMA İLE BEN ALIMI</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UTEZ.html">BUZ LAZER EPİLASYON</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UTEZ.html">ZIMMER Z-SHAPE</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UTEFO.html">FOCU SLIM</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UT.html">TEKNOLOJİK ESTETİK</a><div class="u-nav-popup"><ul role="menu" class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-11" aria-label="TEKNOLOJİK ESTETİK menu"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UTEF.html">FOTONA SP DYNAMİS 4D LAZER</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UTEFQ.html">FOTONA Q-SWITCH</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UTEA.html">ALTIN İĞNE RADYO FREKANS</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UTEEN.html">ENDOLİFT LAZER İLE AMELİYATSIZ YÜZ GERME</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UTEP-(Plazma-ile-ben-alımı).html">PLAZMA İLE BEN ALIMI</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UTEFO.html">FOCU SLIM</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UTEBUZ.html">BUZ LAZER EPİLASYON</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UTEZ.html">ZIMMER Z-SHAPE</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UG.html">GÜZELLİK UYGULAMALARI</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-12"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="GUZEM.html">MEDİKAL CİLT BAKIMI</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="GUZAK.html">AKNELİ CİLT BAKIMI</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="GUZAN.html">ANTI-AGE CİLT BAKIMI</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UG.html">GÜZELLİK UYGULAMALARI</a><div class="u-nav-popup"><ul role="menu" class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-12" aria-label="GÜZELLİK UYGULAMALARI menu"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="GUZEM.html">MEDİKAL CİLT BAKIMI</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="GUZAK.html">AKNELİ CİLT BAKIMI</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="GUZAN.html">ANTI-AGE CİLT BAKIMI</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UGE.html">GETAT (Geleneksel Tıp)</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-13"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UGETA.html">Akupunktur</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UGETO.html">Ozon Terapi</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UGETH.html">Hacamat</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UGETS.html">Sülük Uygulaması</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UGETHO.html">Homeopati</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UGE.html">GETAT (Geleneksel Tıp)</a><div class="u-nav-popup"><ul role="menu" class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-13" aria-label="GETAT (Geleneksel Tıp) menu"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UGETA.html">Akupunktur</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UGETO.html">Ozon Terapi</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UGETH.html">Hacamat</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UGETS.html">Sülük Uygulaması</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UGETHO.html">Homeopati</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UB.html">BAĞIŞIKLIK GÜÇLENDİRİCİLER</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-14"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="BAGUG.html">IV GLUTATYON TEDAVİSİ</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="BAGUC.html">IV C VİTAMİNİ TEDAVİSİ</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="BAGUA.html">IV ALFA LİPOİK ASİT TEDAVİSİ</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="BAGUM.html">IV MAYERS SOLUSYONU</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="BAGOZ.html">IV OZON TEDAVİSİ</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="BAGUN.html">IV NAD+ TEDAVİSİ</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="UB.html">BAĞIŞIKLIK GÜÇLENDİRİCİLER</a><div class="u-nav-popup"><ul role="menu" class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-14" aria-label="BAĞIŞIKLIK GÜÇLENDİRİCİLER menu"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="BAGUG.html">IV GLUTATYON TEDAVİSİ</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="BAGUC.html">IV C VİTAMİNİ TEDAVİSİ</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="BAGUA.html">IV ALFA LİPOİK ASİT TEDAVİSİ</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="BAGUM.html">IV MAYERS SOLUSYONU</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="BAGOZ.html">IV OZON TEDAVİSİ</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="BAGUN.html">IV NAD+ TEDAVİSİ</a>
 </li></ul>
 </div>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="SSS_Muayene.html">Muayenehane</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="blog/blog.html">Blog</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="SSS_VLOG.html">VLOG</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="SSS.html">S.S.S.</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="SSS_iletisim.html">İletişim</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="SSS_Muayene.html">Muayenehane</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="blog/blog.html">Blog</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="SSS_VLOG.html">VLOG</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="SSS.html">S.S.S.</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="SSS_iletisim.html">İletişim</a>
 </li></ul>
                 <div class="custom-expanded u-clearfix u-custom-html u-custom-html-1"><!-- WhatsApp linki ve PNG ikonu -->
                   <a href="https://wa.me/905058498433" target="_blank">
@@ -506,7 +416,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                       <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-12"><span class="u-file-icon u-icon u-text-palette-2-base u-icon-7"><img src="images/542689-97823036.png" alt=""></span>
                         <h4 class="u-text u-text-13">Bize ulaşın</h4>
                         <p class="u-text u-text-14">
-                          <a href="#" class="u-active-none u-border-active-palette-2-base u-border-hover-palette-2-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-text-20" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">info@draylinsema.com</a>
+                          <a href="#" class="u-active-none u-border-active-palette-2-base u-border-hover-palette-2-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-text-19" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">info@draylinsema.com</a>
                         </p>
                       </div>
                     </div>
@@ -515,32 +425,58 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
               </div>
             </div>
             <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-size-20 u-white u-layout-cell-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
-              <div class="u-container-layout u-valign-top u-container-layout-13">
-                <h2 class="u-custom-font u-font-montserrat u-text u-text-15"> Bize ulaşın</h2>
-                <div class="u-align-left u-expanded-width-xs u-form u-form-1">
-                  <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-28 u-form-vertical u-inner-form" style="padding: 0px;" source="email" name="form">
-                    <div class="u-form-group u-form-name u-label-top">
-                      <label class="u-label">Adınız Soyadınız</label>
-                      <input type="text" placeholder="Ad Soyad" id="name-5a14" name="name" class="u-grey-10 u-input u-input-rectangle u-radius-7 u-input-1" required="">
-                    </div>
-                    <div class="u-form-email u-form-group u-label-top">
-                      <label class="u-label">Email</label>
-                      <input type="email" placeholder="Geçerli bir mail adresi giriniz" id="email-5a14" name="email" class="u-grey-10 u-input u-input-rectangle u-radius-7 u-input-2" required="">
-                    </div>
-                    <div class="u-form-group u-form-message u-label-top">
-                      <label class="u-label">Size nasıl yardımcı olabiliriz?</label>
-                      <textarea placeholder="​" id="message-5a14" name="message" class="u-grey-10 u-input u-input-rectangle u-radius-7 u-input-3" required=""></textarea>
-                    </div>
-                    <div class="u-align-right u-form-group u-form-submit u-label-top">
-                      <a href="#" class="u-active-black u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-black u-palette-2-base u-radius-7 u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-4">Gönder</a>
-                      <input type="submit" value="submit" class="u-form-control-hidden">
-                    </div>
-                    <div class="u-form-send-message u-form-send-success">Teşekkürler! Mesajınız iletildi. Size en kısa sürede geri dönüş yapacağız.</div>
-                    <div class="u-form-send-error u-form-send-message">Gönderilemedi. Lütfen hataları kontrol edip tekrar deneyiniz.</div>
-                    <input type="hidden" value="" name="recaptchaResponse">
-                    <input type="hidden" name="formServices" value="0f3dc1c7-21d9-8a84-55b9-6946614f4100">
-                    <input type="hidden" name="siteKey" value="6LcCtSorAAAAAPh9TtE5XlsePk2V0hnqTt3V_wm2">
-                  </form>
+              <div class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-sm u-container-layout-13">
+                <div class="custom-expanded u-clearfix u-custom-html u-custom-html-1">
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title></title>
+                  <style> body {
+            margin: 0;
+            padding: 0;
+            background: white;
+            overflow: hidden;
+        }
+        
+        .form-container {
+            width: 100%;
+            height: 70vh;
+            position: relative;
+            overflow: hidden;
+            -ms-overflow-style: none;  /* IE ve Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        
+        .form-container::-webkit-scrollbar {
+            display: none; /* Chrome, Safari ve Opera */
+        }
+        
+        .responsive-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            overflow: hidden;
+        }
+        
+        /* Tüm Google Forms kaydırma çubuklarını gizleme */
+        .freebirdFormviewerViewNavigationPasswordWarning,
+        .freebirdFormviewerViewScrollContainer,
+        .freebirdFormviewerViewCenteredContent {
+            overflow: hidden !important;
+        }
+        
+        /* Footer ve oturum açma uyarılarını gizleme */
+        [role="contentinfo"], 
+        .freebirdFormviewerViewFooterDisclaimer,
+        .uc-footer-container,
+        .freebirdFormviewerViewFooterContainer {
+            display: none !important;
+        } </style>
+                  <div class="form-container">
+                    <iframe class="responsive-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSfpn26J7P2NtlfSShv66SSEZg9L6_UchFJAEP9eGwoJprfUPA/viewform?embedded=true&amp;headers=false" frameborder="0" marginheight="0" marginwidth="0" scrolling="no">Yükleniyor…</iframe>
+                  </div>
                 </div>
               </div>
             </div>
@@ -556,7 +492,7 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                   <div class="u-block">
                     <div class="u-block-container u-clearfix"><!--block_header-->
                       <h5 class="u-block-header u-text"><!--block_header_content--><!--/block_header_content--></h5><!--/block_header--><!--block_content-->
-                      <div class="u-align-center u-block-content u-custom-font u-text u-text-17"><!--block_content_content--> Dermatolog gözüyle&nbsp;<br>anti-aging yaklaşımı<br>
+                      <div class="u-align-center u-block-content u-custom-font u-text u-text-16"><!--block_content_content--> Dermatolog gözüyle&nbsp;<br>anti-aging yaklaşımı<br>
                         <br>"Nasıl sağlıklı ve güzel yaş alırız"<!--/block_content_content-->
                       </div><!--/block_content-->
                     </div>
@@ -569,22 +505,22 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                 <div data-position="" class="u-position u-position-2"><!--block-->
                   <div class="u-block">
                     <div class="u-block-container u-clearfix"><!--block_header-->
-                      <h5 class="u-align-center u-block-header u-custom-font u-text u-text-palette-2-light-2 u-text-18"><!--block_header_content--> Uygulamalarımız<br>
+                      <h5 class="u-align-center u-block-header u-custom-font u-text u-text-palette-2-light-2 u-text-17"><!--block_header_content--> Uygulamalarımız<br>
                         <br>
                         <br><!--/block_header_content-->
                       </h5><!--/block_header--><!--block_content-->
                       <div class="u-align-center u-block-content u-text"><!--block_content_content-->
-                        <a href="DM.html" data-page-id="310303808" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-5">Dermatolojik Muayene<br>
+                        <a href="DM.html" data-page-id="310303808" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-4">Dermatolojik Muayene<br>
                         </a>
-                        <a href="UM.html" data-page-id="34369534" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-6">Medikal Estetik<br>
+                        <a href="UM.html" data-page-id="34369534" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-5">Medikal Estetik<br>
                         </a>
-                        <a href="UGE.html" data-page-id="86714482" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-7">GETAT (Geleneksel Tıp)</a>
+                        <a href="UGE.html" data-page-id="86714482" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-6">GETAT (Geleneksel Tıp)</a>
                         <br>
-                        <a href="UT.html" data-page-id="873918735" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-8">Teknolojik Estetik<br>
+                        <a href="UT.html" data-page-id="873918735" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-7">Teknolojik Estetik<br>
                         </a>
-                        <a href="UG.html" data-page-id="1072718343" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-9">Güzellik Uygulamaları<br>
+                        <a href="UG.html" data-page-id="1072718343" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-8">Güzellik Uygulamaları<br>
                         </a>
-                        <a href="UB.html" data-page-id="25533878" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-10">Bağışıklık Güçlendiriciler </a><!--/block_content_content-->
+                        <a href="UB.html" data-page-id="25533878" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-9">Bağışıklık Güçlendiriciler </a><!--/block_content_content-->
                       </div><!--/block_content-->
                     </div>
                   </div><!--/block-->
@@ -596,19 +532,19 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                 <div data-position="" class="u-position u-position-3"><!--block-->
                   <div class="u-block u-btn-2">
                     <div class="u-block-container u-clearfix"><!--block_header-->
-                      <h5 class="u-align-center u-block-header u-custom-font u-text u-text-palette-2-light-2 u-text-20"><!--block_header_content-->Menü<br>
+                      <h5 class="u-align-center u-block-header u-custom-font u-text u-text-palette-2-light-2 u-text-19"><!--block_header_content-->Menü<br>
                         <br><!--/block_header_content-->
                       </h5><!--/block_header--><!--block_content-->
                       <div class="u-align-center u-block-content u-text"><!--block_content_content--><span class="u-text-palette-3-light-1">
-                          <a href="SSS_Hakkinda.html" data-page-id="892301088" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-11"> Dr. Aylin Sema Tırpancı<br>
+                          <a href="SSS_Hakkinda.html" data-page-id="892301088" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-10"> Dr. Aylin Sema Tırpancı<br>
                           </a>
-                          <a href="SSS_Muayene.html" data-page-id="46417600" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-12">Muayenehanemiz<br>
+                          <a href="SSS_Muayene.html" data-page-id="46417600" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-11">Muayenehanemiz<br>
                           </a>
-                          <a href="SSS.html" data-page-id="289807831" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-13">Sıkça Sorulan Sorular<br>
+                          <a href="SSS.html" data-page-id="289807831" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-12">Sıkça Sorulan Sorular<br>
                           </a>
-                          <a href="blog/blog.html" data-page-id="3015910974" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-14">Blog<br>
+                          <a href="blog/blog.html" data-page-id="3015910974" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-13">Blog<br>
                           </a>
-                          <a href="SSS_VLOG.html" data-page-id="277619326" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-15">Vlog</a></span>
+                          <a href="SSS_VLOG.html" data-page-id="277619326" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-14">Vlog</a></span>
                         <br>Gizlilik Politikası (KVKK)<br>
                         <br><!--/block_content_content-->
                       </div><!--/block_content-->
@@ -622,14 +558,14 @@ Uzm. Dr. Aylin Sema Tırpancı. ">
                 <div data-position="" class="custom-expanded u-position u-position-4"><!--block-->
                   <div class="u-block">
                     <div class="u-block-container u-clearfix"><!--block_header-->
-                      <h5 class="u-block-header u-custom-font u-text u-text-palette-2-light-2 u-text-22"><!--block_header_content-->İletişim<br>
+                      <h5 class="u-block-header u-custom-font u-text u-text-palette-2-light-2 u-text-21"><!--block_header_content-->İletişim<br>
                         <br><!--/block_header_content-->
                       </h5><!--/block_header--><!--block_content-->
-                      <div class="u-block-content u-text u-text-23"><!--block_content_content--> &nbsp;<span class="u-file-icon u-icon u-text-palette-2-light-2"><img src="images/7297083-10aae893.png" alt=""></span>&nbsp;Bahçeşehir 2.Kısım Mh. Ahmet Taner Kışlalı Bulvarı<br>Bina No:17 Villa No:3<br>Başakşehir / İSTANBUL<br>
+                      <div class="u-block-content u-text u-text-22"><!--block_content_content--> &nbsp;<span class="u-file-icon u-icon u-text-palette-2-light-2"><img src="images/7297083-10aae893.png" alt=""></span>&nbsp;Bahçeşehir 2.Kısım Mh. Ahmet Taner Kışlalı Bulvarı<br>Bina No:17 Villa No:3<br>Başakşehir / İSTANBUL<br>
                         <br><span class="u-file-icon u-icon u-text-palette-2-light-2"><img src="images/7297083-10aae893.png" alt=""></span> &nbsp;Adresi Haritada Görüntüle<br><span class="u-file-icon u-icon u-text-palette-2-light-2"><img src="images/7297083-10aae893.png" alt=""></span>
-                        <a href="mailto:s3audi@hotmail.com?subject=Siteden%20bir%20mesaj%20var%20(Dr.Aylin%20Sema)" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-16"> info@draylinsema.com<br>
+                        <a href="mailto:s3audi@hotmail.com?subject=Siteden%20bir%20mesaj%20var%20(Dr.Aylin%20Sema)" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-15"> info@draylinsema.com<br>
                         </a><span class="u-file-icon u-icon u-text-palette-2-light-2"><img src="images/7297083-10aae893.png" alt=""></span>
-                        <a href="tel:+905058498433" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-17">+90 505 8498433</a><!--/block_content_content-->
+                        <a href="tel:+905058498433" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-3-light-1 u-btn-16">+90 505 8498433</a><!--/block_content_content-->
                       </div><!--/block_content-->
                     </div>
                   </div><!--/block-->
@@ -653,8 +589,8 @@ c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
         </div>
       </div><div class="u-container-style u-expanded-width-xs u-group u-palette-2-base u-group-5">
         <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-valign-top-xs u-container-layout-18">
-          <p class="u-align-center u-text u-text-24"> © Tasarım ve Kodlama @2025&nbsp;<font color="rgba(0, 0, 0, 0)">
-              <a href="http://www.semtasoft.com/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-4-light-1 u-btn-18" target="_blank">Semtasoft®</a>
+          <p class="u-align-center u-text u-text-23"> © Tasarım ve Kodlama @2025&nbsp;<font color="rgba(0, 0, 0, 0)">
+              <a href="http://www.semtasoft.com/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-4-light-1 u-btn-17" target="_blank">Semtasoft®</a>
             </font>
             <br>Tüm hakları saklıdır.
           </p>
