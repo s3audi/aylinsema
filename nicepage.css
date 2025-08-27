@@ -19265,8 +19265,8 @@ blockquote .small:before {
 }
 .u-search button span {
   display: block;
-  height: 1em;
-  width: 1em;
+  min-height: 1em;
+  min-width: 1em;
   line-height: 1em;
 }
 .u-search input {
@@ -22553,6 +22553,9 @@ a.pswp__share--download:hover {
   flex-direction: column;
   grid-gap: 0 !important;
 }
+.u-layout-thumbnails .u-gallery-inner {
+  display: flex;
+}
 .u-layout-thumbnails .u-over-slide {
   display: none;
 }
@@ -24973,6 +24976,9 @@ span.product-remove:after {
 .u-calendar .u-calendar-error-message,
 .u-calendar .u-calendar-conflict-message {
   background: #F95D51;
+}
+.u-calendar-time-slot {
+  border-width: 0;
 }
 .u-form-date .qs-datepicker-container {
   position: absolute;
@@ -46094,7 +46100,6 @@ a.u-link.u-text-hover-color-var:hover {
 
 .u-header .u-nav-1 {
   font-size: 1rem;
-  letter-spacing: normal;
 }
 
 .u-header .u-nav-2 {
@@ -46183,6 +46188,10 @@ a.u-link.u-text-hover-color-var:hover {
   .u-header .u-menu-1 {
     margin-top: -40px;
     margin-right: 0;
+  }
+
+  .u-header .u-nav-1 {
+    letter-spacing: normal;
   }
 
   .u-header .u-custom-html-1 {
